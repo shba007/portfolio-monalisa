@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="src/index.css" />
     <title>Monalisa Bairagi</title>
   </head>
-  <body>
+  <body class="font-sansation">
     <header class="">
       <div
-        class="relative grid grid-cols-3 w-[93%] h-20 mx-auto border-solid border-mygrey border-x border-b px-4 place-content-center"
+        class="relative grid grid-cols-3 w-[93%] h-20 mx-auto border-solid border-mygrey border-x px-4 place-content-center"
       >
         <p class="text-3xl">Monalisa Bairagi</p>
-        <nav class="text-xl">
-          <ui class="flex list-none space-x-6 justify-center">
+        <nav class="">
+          <ui
+            class="h-full text-xl flex list-none space-x-6 justify-center items-center"
+          >
             <li class=""><a href="#">Home</a></li>
             <li><a href="#">Testimonials</a></li>
             <li><a href="#">Contact</a></li>
           </ui>
         </nav>
-        <a href=""
+        <a class="my-auto" href=""
           ><img
             class="absolute right-4"
             src="src/img/hamburger.svg"
@@ -28,6 +30,37 @@
         /></a>
       </div>
     </header>
+    <main class="border-solid border-mygrey border-t">
+      <section
+        class="w-[93%] mx-auto border-solid border-mygrey border-x h-screen flex flex-col"
+      >
+        <div>
+          <img
+            class="mt-8 w-[11.5rem] mx-auto"
+            src="./src/img/logo.svg"
+            alt="logo"
+          />
+          <div class="">
+            <h1 class="text-[3.5rem] text-center w-fit mx-auto">
+              Be Kind to Your Mind
+            </h1>
+            <p
+              class="text-2xl text-center leading-relaxed max-w-[33rem] mx-auto mt-4"
+            >
+              A world-class psychologist will help you to regain the control of
+              your life
+            </p>
+          </div>
+          <div class="flex mt-6">
+            <button
+              class="mx-auto text-2xl text-white py-4 px-8 bg-btn-green border-solid border-4 border-btn-green-light rounded-full shadow-md"
+            >
+              Get Appointment
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
