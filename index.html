@@ -8,9 +8,9 @@
     <title>Monalisa Bairagi</title>
   </head>
   <body class="font-sansation">
-    <header class="">
+    <header class="h-screen mx-auto">
       <div
-        class="relative grid grid-cols-3 w-[93%] h-20 mx-auto border-solid border-mygrey border-x px-4 place-content-center"
+        class="grid grid-cols-3 w-[93%] h-20 mx-auto border-solid border-mygrey border-x px-4 place-content-center"
       >
         <p class="text-3xl">Monalisa Bairagi</p>
         <nav class="">
@@ -29,10 +29,9 @@
             alt="hamburger"
         /></a>
       </div>
-    </header>
-    <main class="border-solid border-mygrey border-t">
+      <hr />
       <section
-        class="w-[93%] mx-auto border-solid border-mygrey border-x h-screen flex flex-col"
+        class="relative w-[93%] mx-auto border-solid border-mygrey border-x h-[calc(100vh-5rem)] flex flex-col"
       >
         <div>
           <img
@@ -40,27 +39,36 @@
             src="./src/img/logo.svg"
             alt="logo"
           />
-          <div class="">
-            <h1 class="text-[3.5rem] text-center w-fit mx-auto">
-              Be Kind to Your Mind
-            </h1>
-            <p
-              class="text-2xl text-center leading-relaxed max-w-[33rem] mx-auto mt-4"
-            >
-              A world-class psychologist will help you to regain the control of
-              your life
-            </p>
-          </div>
-          <div class="flex mt-6">
-            <button
-              class="mx-auto text-2xl text-white py-4 px-8 bg-btn-green border-solid border-4 border-btn-green-light rounded-full shadow-md"
-            >
-              Get Appointment
-            </button>
-          </div>
+
+          <h1 class="text-[3.5rem] text-center w-fit mx-auto">
+            Be Kind to Your Mind
+          </h1>
+          <p
+            class="text-2xl text-center leading-relaxed max-w-[33rem] mx-auto mt-4"
+          >
+            A world-class psychologist will help you to regain the control of
+            your life
+          </p>
         </div>
+        <div class="flex mt-6">
+          <button
+            class="mx-auto text-2xl text-white py-4 px-8 bg-btn-green border-solid border-4 border-btn-green-light rounded-full shadow-md"
+          >
+            Get Appointment
+          </button>
+        </div>
+        <img
+          class="absolute bottom-0 z-10"
+          src="./src/img/Images.png"
+          alt="photos"
+        />
+        <img
+          class="absolute bottom-0 left-12 overflow-hidden -z-10"
+          src="./src/img/grid-wo-border.svg"
+          alt="grid"
+        />
       </section>
-    </main>
+    </header>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
