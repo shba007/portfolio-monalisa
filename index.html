@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="src/index.css" />
     <title>Monalisa Bairagi</title>
   </head>
-  <body class="font-sansation">
-    <header class="h-screen mx-auto">
+
+  <body class="font-sansation bg-bg-grey">
+    <header class="mx-auto">
       <div
-        class="grid grid-cols-3 w-[93%] h-20 mx-auto border-solid border-mygrey border-x px-4 place-content-center"
+        class="relative grid grid-cols-3 w-[93%] h-20 mx-auto border-solid border-mygrey border-x px-4 place-content-center"
       >
         <p class="text-3xl">Monalisa Bairagi</p>
         <nav class="">
-          <ui
+          <ul
             class="h-full text-xl flex list-none space-x-6 justify-center items-center"
           >
             <li class=""><a href="#">Home</a></li>
             <li><a href="#">Testimonials</a></li>
             <li><a href="#">Contact</a></li>
-          </ui>
+          </ul>
         </nav>
         <a class="my-auto" href=""
           ><img
@@ -30,46 +31,72 @@
         /></a>
       </div>
       <hr />
-      <section
-        class="relative w-[93%] mx-auto border-solid border-mygrey border-x h-[calc(100vh-5rem)] flex flex-col"
-      >
-        <div>
-          <img
-            class="mt-8 w-[11.5rem] mx-auto"
-            src="./src/img/logo.svg"
-            alt="logo"
-          />
-
-          <h1 class="text-[3.5rem] text-center w-fit mx-auto">
-            Be Kind to Your Mind
-          </h1>
-          <p
-            class="text-2xl text-center leading-relaxed max-w-[33rem] mx-auto mt-4"
-          >
-            A world-class psychologist will help you to regain the control of
-            your life
-          </p>
-        </div>
-        <div class="flex mt-6">
-          <button
-            class="mx-auto text-2xl text-white py-4 px-8 bg-btn-green border-solid border-4 border-btn-green-light rounded-full shadow-md"
-          >
-            Get Appointment
-          </button>
-        </div>
-        <img
-          class="absolute bottom-0 z-10"
-          src="./src/img/Images.png"
-          alt="photos"
-        />
-        <img
-          class="absolute bottom-0 left-12 overflow-hidden -z-10"
-          src="./src/img/grid-wo-border.svg"
-          alt="grid"
-        />
-      </section>
     </header>
+    <section
+      class="relative w-[93%] mx-auto border-solid border-mygrey border-x h-[calc(100vh-5rem)] flex flex-col"
+    >
+      <div>
+        <img
+          class="mt-8 w-[11.5rem] mx-auto"
+          src="./src/img/logo.svg"
+          alt="logo"
+        />
 
-    <script type="module" src="/src/main.ts"></script>
+        <h1 class="text-[3.5rem] text-center w-fit mx-auto">
+          Be Kind to Your Mind
+        </h1>
+        <p
+          class="text-2xl text-center leading-relaxed max-w-[33rem] mx-auto mt-4"
+        >
+          A world-class psychologist will help you to regain the control of your
+          life
+        </p>
+      </div>
+      <div class="flex mt-6">
+        <button
+          class="mx-auto text-2xl text-white py-4 px-8 bg-btn-green border-solid border-4 border-btn-green-light rounded-full shadow-md"
+        >
+          Get Appointment
+        </button>
+      </div>
+      <!-- <img class="absolute bottom-0" src="./src/img/Images.png" alt="photos" /> -->
+      <div class="h-[60%] w-full grid grid-cols-4 absolute bottom-16">
+        <img
+          class="-z-10 relative left-2 top-12"
+          src="./src/img/depressed.png"
+          alt="depressed-logo"
+        />
+        <div class="relative">
+          <img
+            class="-z-10 absolute -left-20 top-24"
+            src="./src/img/arrow.svg"
+            alt="arrow"
+          />
+          <img
+            class="-z-10 absolute bottom-0"
+            src="./src/img/smiling.png"
+            alt="smiling-logo"
+          />
+        </div>
+        <div class="relative col-span-2">
+          <img
+            class="-z-10 absolute right-2"
+            src="./src/img/doc.png"
+            alt="doctor"
+          />
+          <img
+            class="absolute -bottom-4 left-[60%] -z-10"
+            src="./src/img/youtube.svg"
+            alt="youtube"
+          />
+        </div>
+      </div>
+      <img
+        class="absolute bottom-0 right-28 -z-20"
+        src="./src/img/grid-wo-border.svg"
+        alt="grid"
+      />
+    </section>
+    <!-- <script type="module" src="/src/main.ts"></script> -->
   </body>
 </html>

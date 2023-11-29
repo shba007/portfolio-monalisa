@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         mygrey: "#D9D9D9",
+        "bg-grey": "#F9F8F2",
         "btn-green": "#66CD5B",
         "btn-green-light": "#98DA8B",
       },
