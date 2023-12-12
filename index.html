@@ -1,63 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css" />
+    <title>Monalisa Bairagi</title>
+  </head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="src/index.css" />
-  <title>Monalisa Bairagi</title>
-</head>
+  <body class="font-sansation bg-light-400">
+    <header class="border-light-500 border-b border-solid">
+      <div
+        class="relative flex items-center mx-12 px-4 py-6 border-solid border-light-500 border-x"
+      >
+        <span class="text-3xl whitespace-nowrap basis-1/3"
+          >Monalisa Bairagi</span
+        >
+        <nav class="basis-1/3 max-lg:hidden">
+          <ul
+            class="h-full text-xl flex list-none space-x-6 justify-center items-center"
+          >
+            <li class=""><a href="#">Home</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
 
-<body class="font-sansation bg-light-400">
-  <header class="border-light-500 border-b border-solid">
-    <div class="relative flex items-center mx-12 px-4 py-6 border-solid border-light-500 border-x">
-      <span class="text-3xl whitespace-nowrap basis-1/3">Monalisa Bairagi</span>
-      <nav class="basis-1/3 max-lg:hidden">
-        <ul class="h-full text-xl flex list-none space-x-6 justify-center items-center">
-          <li class=""><a href="#">Home</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-
-      <span class="basis-1/3 flex flex-row-reverse max-lg:flex-grow"><a class="" href="#"><img class=""
-            src="src/img/hamburger.svg" alt="hamburger" /></a></span>
-    </div>
-  </header>
-  <section id="hero-section"
-    class="relative mx-12 border-solid border-light-500 border-x h-[calc(100vh-5rem)] flex flex-col">
-    <div>
-      <img class="mt-8 w-[11.5rem] mx-auto" src="./src/img/logo.svg" alt="logo" />
-
-      <h1 class="text-[3.5rem] text-center w-fit mx-auto">
-        Be Kind to Your Mind
-      </h1>
-      <p class="text-2xl text-center leading-relaxed max-w-[33rem] mx-auto mt-4">
-        A world-class psychologist will help you to regain the control of your
-        life
-      </p>
-    </div>
-    <div class="flex mt-6">
-      <button
-        class="mx-auto text-2xl text-white py-4 px-8 bg-primary-500 border-solid border-4 border-primary-400 rounded-full shadow-md">
-        Get Appointment
-      </button>
-    </div>
-
-    <div class="h-[60%] w-full grid grid-cols-4 absolute bottom-16">
-      <img class="-z-10 relative left-2 top-12" src="./src/img/depressed.png" alt="depressed-logo" />
-      <div class="relative">
-        <img class="-z-20 absolute -left-20 top-24" src="./src/img/arrow.svg" alt="arrow" />
-        <img class="-z-10 absolute bottom-0" src="./src/img/smiling.png" alt="smiling-logo" />
+        <span class="basis-1/3 flex flex-row-reverse max-lg:flex-grow"
+          ><a class="" href="#"
+            ><img class="" src="src/img/hamburger.svg" alt="hamburger" /></a
+        ></span>
       </div>
-      <div class="relative col-span-2">
-        <img class="-z-10 absolute right-2" src="./src/img/doc.png" alt="doctor" />
-        <img class="absolute -bottom-4 left-[60%] -z-10" src="./src/img/youtube.svg" alt="youtube" />
-      </div>
-    </div>
+    </header>
+    <section
+      id="hero-section"
+      class="relative mx-12 border-solid border-light-500 border-x h-[calc(100vh-5rem)] flex flex-col"
+    >
+      <div>
+        <img
+          class="mt-8 w-[11.5rem] mx-auto"
+          src="./src/img/logo.svg"
+          alt="logo"
+        />
 
-    <!-- <div
+        <h1 class="text-[3.5rem] text-center w-fit mx-auto">
+          Be Kind to Your Mind
+        </h1>
+        <p
+          class="text-2xl text-center leading-relaxed max-w-[33rem] mx-auto mt-4"
+        >
+          A world-class psychologist will help you to regain the control of your
+          life
+        </p>
+      </div>
+      <div class="flex mt-6">
+        <button
+          class="mx-auto text-2xl text-white py-4 px-8 bg-primary-500 border-solid border-4 border-primary-400 rounded-full shadow-md"
+        >
+          Get Appointment
+        </button>
+      </div>
+
+      <div class="h-[60%] w-full grid grid-cols-4 absolute bottom-16">
+        <img
+          class="-z-10 relative left-2 top-12"
+          src="./src/img/depressed.png"
+          alt="depressed-logo"
+        />
+        <div class="relative">
+          <img
+            class="-z-20 absolute -left-20 top-24"
+            src="./src/img/arrow.svg"
+            alt="arrow"
+          />
+          <img
+            class="-z-10 absolute bottom-0"
+            src="./src/img/smiling.png"
+            alt="smiling-logo"
+          />
+        </div>
+        <div class="relative col-span-2">
+          <img
+            class="-z-10 absolute right-2"
+            src="./src/img/doc.png"
+            alt="doctor"
+          />
+          <img
+            class="absolute -bottom-4 left-[60%] -z-10"
+            src="./src/img/youtube.svg"
+            alt="youtube"
+          />
+        </div>
+      </div>
+
+      <!-- <div
         class="bg-grid-pattern bg-cover relative bottom-0 -z-20 border-solid border-4 h-full w-full"
       >
         <img
@@ -67,51 +103,75 @@
         />
       </div> -->
 
-    <img class="absolute -bottom-28 right-36 -z-20" src="./src/img/grid-wo-border.svg" alt="grid" />
-  </section>
-  <section id="Testimonials" class="text-3xl">
-    <h2 class="text-center">All Testimonials</h2>
-    <div class="card-container">
-      <div id="card-1"></div>
-    </div>
-  </section>
-  <section class="splide h-screen mt-12" aria-labelledby="carousel-heading"></section>
-  <footer class="" style="
+      <img
+        class="absolute -bottom-28 right-36 -z-20"
+        src="./src/img/grid-wo-border.svg"
+        alt="grid"
+      />
+    </section>
+    <section id="Testimonials" class="text-3xl">
+      <h2 class="text-center">All Testimonials</h2>
+      <div class="card-container">
+        <div id="card-1"></div>
+      </div>
+    </section>
+    <!-- <section
+      class="splide h-screen mt-12"
+      aria-labelledby="carousel-heading"
+    ></section> -->
+    <footer
+      class=""
+      style="
         background-image: url('./src/img/footer-bg.svg');
         background-position: bottom 0px right 0px;
         background-repeat: no-repeat;
-      ">
-    <!-- <img src="./src/img/footer-bg.svg" alt="" /> -->
-    <p class="text-center text-xl pt-60 text-white">
-      Want to get tips about improving Mental Health <br />
-      Join my Weekly Newsletter
-    </p>
-    <div class="flex items-center px-12 py-6">
-      <div class="text-base text-white basis-1/3">
-        <p>© 2023-2023</p>
-        <p>MIT License</p>
-      </div>
-      <div class="pl-6 pr-2 py-2 rounded-full bg-light-400 flex basis-1/3">
-        <input type="email" name="send-email" id="send-email" pattern=".+@example\.com" size="30" class=" grow bg-light-400 border-none text-xl text-black placeholder:text-black placeholder:text-xl"  placeholder="Enter your Email address"/>
+      "
+    >
+      <!-- <img src="./src/img/footer-bg.svg" alt="" /> -->
+      <p class="text-center text-xl pt-60 text-white">
+        Want to get tips about improving Mental Health <br />
+        Join my Weekly Newsletter
+      </p>
+      <div class="flex items-center mx-12 py-6">
+        <div class="text-base text-white basis-1/3 pl-4">
+          <p>© 2023-2023</p>
+          <p>MIT License</p>
+        </div>
+        <div class="pl-6 pr-2 py-2 rounded-full bg-light-400 flex basis-1/3">
+          <input
+            type="email"
+            name="send-email"
+            id="send-email"
+            pattern=".+@example\.com"
+            size="30"
+            class="grow bg-light-400 border-none text-xl text-black placeholder:text-black placeholder:text-xl"
+            placeholder="Enter your Email address"
+          />
 
-        <div class="h-12 w-12 bg-primary-500 rounded-full p-2" style="
+          <div
+            class="h-12 w-12 bg-primary-500 rounded-full p-2"
+            style="
               background-image: url('./src/img/send-mail.svg');
               background-repeat: no-repeat;
               background-position: center;
-            "></div>
+            "
+          ></div>
+        </div>
+        <div class="basis-1/3">
+          <div class="flex space-x-8 mx-auto justify-end">
+            <a class="" href="#" target="_blank"
+              ><img src="./src/img/in.svg" alt="linkedin" />
+            </a>
+            <a class="" href="#" target="_blank">
+              <img src="./src/img/yt.svg" alt="youtube" />
+            </a>
+            <a class="" href="#" target="_blank">
+              <img src="./src/img/insta.svg" alt="instagram" />
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="  basis-1/3" >
-        <div class="flex space-x-8 flex-row-reverse">
-        <a class="" href="#" target="_blank" ></a><img src="./src/img/in.svg" alt="linkedin" />
-        </a> 
-        <a class="" href="#" target="_blank"></a> <img src="./src/img/yt.svg" alt="youtube" />
-        </a> 
-        <a class="" href="#" target="_blank"></a> <img src="./src/img/insta.svg" alt="instagram" />
-      </a></div>
-      </div>
-    </div>
-  </footer>
-  <script type="module" src="/src/main.ts"></script>
-</body>
-
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
