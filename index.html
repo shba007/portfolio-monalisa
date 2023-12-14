@@ -33,6 +33,12 @@
       </div>
     </header>
     <section
+      style="
+        background-image: url(./src/img/grid-wo-border.svg);
+        z-index: -20;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
       id="hero-section"
       class="relative mx-12 border-solid border-light-500 border-x h-[calc(100vh-5rem)] flex flex-col"
     >
@@ -61,13 +67,15 @@
         </button>
       </div>
 
-      <div class="h-[60%] w-full grid grid-cols-4 absolute bottom-16">
+      <div
+        class="h-[60%] w-full grid grid-cols-4 relative bottom-16 max-lg:grid-cols-2"
+      >
         <img
           class="-z-10 relative left-2 top-12"
           src="./src/img/depressed.png"
           alt="depressed-logo"
         />
-        <div class="relative">
+        <div class="relative max-lg:hidden">
           <img
             class="-z-20 absolute -left-20 top-24"
             src="./src/img/arrow.svg"
@@ -103,57 +111,111 @@
         />
       </div> -->
 
-      <img
+      <!-- <img
         class="absolute -bottom-28 right-36 -z-20"
         src="./src/img/grid-wo-border.svg"
         alt="grid"
-      />
+      /> -->
     </section>
     <section id="Testimonials" class="text-3xl">
       <h2 class="text-center">All Testimonials</h2>
-      <div class="card-container">
-        <div id="card-1"></div>
-      </div>
+
+      <!-- carousel -->
+
+      <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="flex justify-center items-center mb-4 mt-24 gap-24">
+                <div
+                  class="flex flex-col justify-center items-center w-[31.25rem] h-[18.75rem] bg-white shadow-xl rounded-3xl relative"
+                >
+                  <!-- layer 1 -->
+                  <div
+                    class="w-[28.125rem] h-[16.875rem] bg-white shadow-xl rounded-3xl absolute -right-4 -z-10 opacity-60"
+                  ></div>
+                  <div
+                    class="w-[28.125rem] h-[16.875rem] bg-white shadow-xl rounded-3xl absolute -left-4 -z-10 opacity-60"
+                  ></div>
+
+                  <!-- layer 2 -->
+                  <div
+                    class="w-[25.3125rem] h-[15.1875rem] bg-white shadow-xl rounded-3xl absolute -right-8 -z-20 opacity-40"
+                  ></div>
+                  <div
+                    class="w-[25.3125rem] h-[15.1875rem] bg-white shadow-xl rounded-3xl absolute -left-8 -z-20 opacity-40"
+                  ></div>
+
+                  <!-- layer 0 -->
+
+                  <img
+                    src="./src/img/testimonials-pic-1.png"
+                    alt=""
+                    class="absolute -top-16"
+                  />
+                  <h4 class="text-[2rem] py-1 text-primary-600">
+                    Aarushi Kaur
+                  </h4>
+                  <p
+                    class="text-2xl leading-relaxed text-dark-400 text-center px-12"
+                  >
+                    You won't Regret it. Thank you. It helped me in the longer
+                    run, for the better future
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="splide__slide">
+              <div class="flex justify-center items-center mb-4 mt-24 gap-24">
+                <div
+                  class="flex flex-col justify-center items-center w-[31.25rem] h-[18.75rem] bg-white shadow-xl rounded-3xl relative"
+                >
+                  <!-- layer 1 -->
+                  <div
+                    class="w-[28.125rem] h-[16.875rem] bg-white shadow-xl rounded-3xl absolute -right-4 -z-10 opacity-60"
+                  ></div>
+                  <div
+                    class="w-[28.125rem] h-[16.875rem] bg-white shadow-xl rounded-3xl absolute -left-4 -z-10 opacity-60"
+                  ></div>
+
+                  <!-- layer 2 -->
+                  <div
+                    class="w-[25.3125rem] h-[15.1875rem] bg-white shadow-xl rounded-3xl absolute -right-8 -z-20 opacity-40"
+                  ></div>
+                  <div
+                    class="w-[25.3125rem] h-[15.1875rem] bg-white shadow-xl rounded-3xl absolute -left-8 -z-20 opacity-40"
+                  ></div>
+
+                  <!-- layer 0 -->
+
+                  <img
+                    src="./src/img/testimonials-pic-1.png"
+                    alt=""
+                    class="absolute -top-16"
+                  />
+                  <h4 class="text-[2rem] py-1 text-primary-600">
+                    Aarushi Kaur
+                  </h4>
+                  <p
+                    class="text-2xl leading-relaxed text-dark-400 text-center px-12"
+                  >
+                    You won't Regret it. Thank you. It helped me in the longer
+                    run, for the better future
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </section>
 
-    <!-- carousel -->
-
-    <!-- <section id="image-carousel" class="splide" aria-label="Beautiful Images">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="./src/img/depressed.png" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="./src/img/smiling.png" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="./src/img/depressed.png" alt="" />
-          </li>
-        </ul>
-      </div>
-    </section> -->
-
     <!-- testimonials card -->
-    <div class="flex justify-center my-24 relative">
-      <img
-        src="./src/img/testimonials-pic-1.png"
-        alt=""
-        class="absolute -top-16"
-      />
-      <div
-        class="flex flex-col justify-center items-center max-w-[31.25rem] h-[18.75rem] bg-white shadow-xl rounded-3xl"
-      >
-        <h4 class="text-[2rem] py-1 text-primary-600">Aarushi Kaur</h4>
-        <p class="text-2xl leading-relaxed text-dark-400 text-center px-12">
-          You won't Regret it. Thank you. It helped me in the longer run, for
-          the better future
-        </p>
-      </div>
-    </div>
+
     <!-- carousal end -->
     <footer
-      class="relative"
+      class="relative overflow-y-hidden"
       style="
         background-image: url('./src/img/footer-bg.svg');
         background-position: bottom 0px right 0px;
@@ -163,10 +225,10 @@
       <img
         src="./src/img/neuron.png"
         alt="neuron-img"
-        class="absolute -z-10 -top-32 overflow-y-hidden rotate-[10deg]"
+        class="absolute -z-10 -top-10 overflow-y-hidden rotate-[10deg]"
       />
       <!-- <img src="./src/img/footer-bg.svg" alt="" /> -->
-      <p class="text-center text-xl pt-60 text-white">
+      <p class="text-center text-xl pt-80 text-white">
         Want to get tips about improving Mental Health <br />
         Join my Weekly Newsletter
       </p>
