@@ -36,11 +36,11 @@
       style="
         background-image: url(./src/img/grid-wo-border.svg);
         z-index: -20;
-        background-position: center;
+        background-position: bottom -7rem right 9rem;
         background-repeat: no-repeat;
       "
       id="hero-section"
-      class="relative mx-12 border-solid border-light-500 border-x h-[calc(100vh-5rem)] flex flex-col"
+      class="relative mx-12 border-solid border-light-500 border-x h-[calc(100vh-5rem)] flex flex-col max-lg:bg-center"
     >
       <div>
         <img
@@ -59,30 +59,30 @@
           life
         </p>
       </div>
-      <div class="flex mt-6">
+      <div class="flex mt-6 justify-center">
         <button
-          class="mx-auto text-2xl text-white py-4 px-8 bg-primary-500 border-solid border-4 border-primary-400 rounded-full shadow-md"
+          class="text-2xl text-white py-3 px-7 bg-primary-500 border-solid border-4 border-primary-400 rounded-full shadow-md"
         >
           Get Appointment
         </button>
       </div>
 
       <div
-        class="h-[60%] w-full grid grid-cols-4 relative bottom-16 max-lg:grid-cols-2"
+        class="h-[40.8125rem] w-full grid grid-cols-4 absolute bottom-36 max-lg:grid-cols-2"
       >
         <img
-          class="-z-10 relative left-2 top-12"
+          class="-z-10 relative left-2 top-0"
           src="./src/img/depressed.png"
           alt="depressed-logo"
         />
         <div class="relative max-lg:hidden">
           <img
-            class="-z-20 absolute -left-20 top-24"
+            class="-z-20 absolute -left-20 top-40"
             src="./src/img/arrow.svg"
             alt="arrow"
           />
           <img
-            class="-z-10 absolute bottom-0"
+            class="-z-10 absolute bottom-0 -left-12"
             src="./src/img/smiling.png"
             alt="smiling-logo"
           />
@@ -94,14 +94,19 @@
             alt="doctor"
           />
           <img
+            class="absolute -z-10 right-0 bottom-4"
+            src="./src/img/Indicator.png"
+            alt="Indicator"
+          />
+          <img
             class="absolute -bottom-4 left-[60%] -z-10"
             src="./src/img/youtube.svg"
             alt="youtube"
           />
         </div>
       </div>
-
-      <!-- <div
+      <!-- 
+      <div
         class="bg-grid-pattern bg-cover relative bottom-0 -z-20 border-solid border-4 h-full w-full"
       >
         <img
@@ -110,8 +115,8 @@
           alt="grid"
         />
       </div> -->
-
-      <!-- <img
+      <!-- 
+      <img
         class="absolute -bottom-28 right-36 -z-20"
         src="./src/img/grid-wo-border.svg"
         alt="grid"

@@ -8,7 +8,10 @@
     src: url("./fonts/Sansation_Regular.ttf");
   }
 }
+
 /* #hero-section {
-  background-image: url("./src/img/grid-wo-border.svg");
-  background-size: cover;
+  background-image: url(./src/img/grid-wo-border.svg);
+  z-index: -20;
+  background-position: bottom -7rem right 9rem;
+  background-repeat: no-repeat;
 } */
