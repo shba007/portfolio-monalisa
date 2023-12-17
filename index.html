@@ -11,9 +11,10 @@
   <body class="font-sansation bg-light-400">
     <header class="border-light-500 border-b border-solid">
       <div
-        class="relative flex items-center mx-12 px-4 py-6 border-solid border-light-500 border-x"
+        class="relative flex items-center mx-12 px-4 py-6 border-solid border-light-500 border-x max-md:justify-center max-md:mx-4"
       >
-        <span class="text-3xl whitespace-nowrap basis-1/3"
+        <span
+          class="text-3xl whitespace-nowrap basis-1/3 max-sm:text-2xl max-sm:grow"
           >Monalisa Bairagi</span
         >
         <nav class="basis-1/3 max-lg:hidden">
@@ -40,7 +41,7 @@
         background-repeat: no-repeat;
       "
       id="hero-section"
-      class="relative mx-12 border-solid border-light-500 border-x h-[calc(100vh-5rem)] flex flex-col max-lg:bg-center"
+      class="relative mx-12 border-solid border-light-500 border-x h-[calc(100vh-5rem)] overflow-y-clip flex flex-col max-md:mx-4"
     >
       <div>
         <img
@@ -49,11 +50,11 @@
           alt="logo"
         />
 
-        <h1 class="text-[3.5rem] text-center w-fit mx-auto">
+        <h1 class="text-[3.5rem] text-center w-fit mx-auto max-md:text-2xl">
           Be Kind to Your Mind
         </h1>
         <p
-          class="text-2xl text-center leading-relaxed max-w-[33rem] mx-auto mt-4"
+          class="text-2xl text-center leading-relaxed max-w-[33rem] mx-auto mt-4 max-md:text-base"
         >
           A world-class psychologist will help you to regain the control of your
           life
@@ -61,35 +62,35 @@
       </div>
       <div class="flex mt-6 justify-center">
         <button
-          class="text-2xl text-white py-3 px-7 bg-primary-500 border-solid border-4 border-primary-400 rounded-full shadow-md"
+          class="text-2xl text-white py-3 px-7 bg-primary-500 border-solid border-4 border-primary-400 rounded-full shadow-md max-md:px-5 max-md:py-2"
         >
           Get Appointment
         </button>
       </div>
 
       <div
-        class="h-[40.8125rem] w-full grid grid-cols-4 absolute bottom-36 max-lg:grid-cols-2"
+        class="h-[40.8125rem] w-full grid grid-cols-4 absolute bottom-36 max-xl:bottom-6 max-lg:h-[30rem] max-md:static max-md:flex max-md:justify-center max-md:items-center max-md:h-full"
       >
         <img
-          class="-z-10 relative left-2 top-0"
+          class="-z-10 relative left-2 top-0 max-md:hidden"
           src="./src/img/depressed.png"
           alt="depressed-logo"
         />
-        <div class="relative max-lg:hidden">
+        <div class="relative">
           <img
-            class="-z-20 absolute -left-20 top-40"
+            class="-z-20 absolute -left-20 top-40 max-xl:top-52 max-md:hidden"
             src="./src/img/arrow.svg"
             alt="arrow"
           />
           <img
-            class="-z-10 absolute bottom-0 -left-12"
+            class="-z-10 absolute bottom-0 -left-12 max-md:hidden"
             src="./src/img/smiling.png"
             alt="smiling-logo"
           />
         </div>
-        <div class="relative col-span-2">
+        <div class="relative col-span-2 max-md:static">
           <img
-            class="-z-10 absolute right-2"
+            class="-z-10 absolute right-2 max-md:static"
             src="./src/img/doc.png"
             alt="doctor"
           />
@@ -122,12 +123,23 @@
         alt="grid"
       /> -->
     </section>
-    <section id="Testimonials" class="text-3xl">
+    <section
+      id="Testimonials"
+      class="text-3xl mx-12 border-solid border-light-500 border-x max-md:mx-4"
+    >
       <h2 class="text-center">All Testimonials</h2>
 
       <!-- carousel -->
 
       <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <img src="./src/img/arrow-left.svg" alt="prev" />
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <img src="./src/img/arrow-right.svg" alt="next" />
+          </button>
+        </div>
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
@@ -220,7 +232,7 @@
 
     <!-- carousal end -->
     <footer
-      class="relative overflow-y-hidden"
+      class="overflow-y-hidden relative"
       style="
         background-image: url('./src/img/footer-bg.svg');
         background-position: bottom 0px right 0px;
@@ -230,50 +242,53 @@
       <img
         src="./src/img/neuron.png"
         alt="neuron-img"
-        class="absolute -z-10 -top-10 overflow-y-hidden rotate-[10deg]"
+        class="absolute -z-30 -top-10 overflow-y-hidden rotate-[10deg]"
       />
       <!-- <img src="./src/img/footer-bg.svg" alt="" /> -->
-      <p class="text-center text-xl pt-80 text-white">
-        Want to get tips about improving Mental Health <br />
-        Join my Weekly Newsletter
-      </p>
-      <div class="flex items-center mx-12 py-6">
-        <div class="text-base text-white basis-1/3 pl-4">
-          <p>© 2023-2023</p>
-          <p>MIT License</p>
-        </div>
-        <div
-          class="pl-6 pr-2 py-2 rounded-full bg-light-400 flex basis-1/3 shadow-lg"
-        >
-          <input
-            type="email"
-            name="send-email"
-            id="send-email"
-            pattern=".+@example\.com"
-            class="grow bg-light-400 border-none text-xl text-black placeholder:text-black placeholder:text-xl"
-            placeholder="Enter your Email address"
-          />
 
+      <div class="max-w-7xl ml-auto">
+        <p class="text-center text-xl pt-80 text-white">
+          Want to get tips about improving Mental Health <br />
+          Join my Weekly Newsletter
+        </p>
+        <div class="flex flex-wrap items-center mx-12 py-6 justify-center">
+          <div class="text-base text-white basis-1/3 pl-4 max-lg:basis-1/2">
+            <p>© 2023-2023</p>
+            <p>MIT License</p>
+          </div>
           <div
-            class="h-12 w-12 bg-primary-500 rounded-full p-2"
-            style="
-              background-image: url('./src/img/send-mail.svg');
-              background-repeat: no-repeat;
-              background-position: center;
-            "
-          ></div>
-        </div>
-        <div class="basis-1/3">
-          <div class="flex space-x-8 mx-auto justify-end">
-            <a class="" href="#" target="_blank"
-              ><img src="./src/img/in.svg" alt="linkedin" />
-            </a>
-            <a class="" href="#" target="_blank">
-              <img src="./src/img/yt.svg" alt="youtube" />
-            </a>
-            <a class="" href="#" target="_blank">
-              <img src="./src/img/insta.svg" alt="instagram" />
-            </a>
+            class="pl-6 pr-2 py-2 rounded-full bg-light-400 flex flex-initial basis-1/3 shadow-lg max-lg:-order-10 max-lg:basis-full max-lg:max-w-sm max-lg:px-4 max-lg:mb-4"
+          >
+            <input
+              type="email"
+              name="send-email"
+              id="send-email"
+              pattern=".+@example\.com"
+              class="grow min-w-max bg-light-400 border-none text-xl text-black placeholder:text-black placeholder:text-xl"
+              placeholder="Enter your Email address"
+            />
+
+            <div
+              class="h-12 w-12 bg-primary-500 rounded-full p-2"
+              style="
+                background-image: url('./src/img/send-mail.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+              "
+            ></div>
+          </div>
+          <div class="basis-1/3 max-lg:basis-1/2">
+            <div class="flex space-x-8 mx-auto justify-end">
+              <a class="" href="#" target="_blank"
+                ><img src="./src/img/in.svg" alt="linkedin" />
+              </a>
+              <a class="" href="#" target="_blank">
+                <img src="./src/img/yt.svg" alt="youtube" />
+              </a>
+              <a class="" href="#" target="_blank">
+                <img src="./src/img/insta.svg" alt="instagram" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
