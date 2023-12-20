@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import footerBg from "~~/assets/images/footer-bg.svg"
 </script>
 
 <template>
@@ -10,34 +9,29 @@ import footerBg from "~~/assets/images/footer-bg.svg"
     <SectionHero />
     <!-- <SectionTestimonials /> -->
   </main>
-  <footer class="relative overflow-y-hidden" :class="`bg-[url(${footerBg})]`">
-    <img src="assets/images/neuron.png" alt="neuron-img"
-      class="absolute -z-30 -top-10 overflow-y-hidden rotate-[10deg]" />
-    <div class="max-w-7xl ml-auto">
-      <p class="text-center text-xl pt-80 text-white">
+  <footer
+    class="relative grid grid-rows-1 grid-cols-3 items-end ml-12 p-9 pt-64 text-white bg-[url(assets/images/footer-bg.svg)] bg-no-repeat bg-left-bottom overflow-hidden before:content-[''] before:absolute before:w-full before:h-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:420px_420px] before:bg-no-repeat before:bg-[128px_-32px] before:opacity-60 before:-z-10 ">
+    <div class="justify-self-start flex flex-col gap-1">
+      <span>&copy; 2023-2024</span>
+      <span>MIT License</span>
+    </div>
+    <div class="flex flex-col justify-center items-center gap-7">
+      <p class="text-center text-lg whitespace-nowrap">
         Want to get tips about improving Mental Health <br />
         Join my Weekly Newsletter
       </p>
-      <div class="flex flex-wrap items-center mx-12 py-6 justify-center">
-        <div class="text-base text-white basis-1/3 pl-4 max-lg:basis-1/2">
-          <p>&copy; 2023-2024</p>
-          <p>MIT License</p>
-        </div>
-        <NewsletterBox />
-        <div class="basis-1/3 max-lg:basis-1/2">
-          <div class="flex gap-8 justify-end">
-            <NuxtLink to="https://www.youtube.com/@mindful-healing-path" target="_blank">
-              <NuxtIcon name="youtube" />
-            </NuxtLink>
-            <NuxtLink to="https://www.instagram.com/mindful.healing.path/" target="_blank">
-              <NuxtIcon name="instagram" />
-            </NuxtLink>
-            <NuxtLink to="https://www.linkedin.com/in/monalisa-bairagi/" target="_blank">
-              <NuxtIcon name="linkedin" />
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
+      <NewsletterBox />
+    </div>
+    <div class="justify-self-end flex gap-8">
+      <NuxtLink to="https://www.youtube.com/@mindful-healing-path" target="_blank">
+        <NuxtIcon name="youtube" class="text-[48px]" />
+      </NuxtLink>
+      <NuxtLink to="https://www.instagram.com/mindful.healing.path/" target="_blank">
+        <NuxtIcon name="instagram" class="text-[48px]" />
+      </NuxtLink>
+      <NuxtLink to="https://www.linkedin.com/in/monalisa-bairagi/" target="_blank">
+        <NuxtIcon name="linkedin" class="text-[48px]" />
+      </NuxtLink>
     </div>
   </footer>
 </template>

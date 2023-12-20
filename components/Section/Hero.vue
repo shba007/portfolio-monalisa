@@ -35,7 +35,7 @@ import heroImg from "~~/assets/images/hero.png";
     </div>
     <div
       class="justify-self-end row-start-2 row-span-full col-start-4 col-span-2 relative grid grid-rows-2 grid-cols-2 pl-16 mix-blend-luminosity">
-      <img :src="heroImg" alt="monalisa bairagi"
+      <img src="assets/images/hero.png" alt="monalisa bairagi"
         class="row-start-1 row-span-full col-start-1 col-span-full aspect-[3/4] object-cover" />
       <NuxtIcon name="youtube" class="row-start-2 col-start-2 justify-items-start self-end text-[48px] text-light-600" />
     </div>
