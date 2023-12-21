@@ -6,7 +6,7 @@ const email = ref<string>()
 
 <template>
   <div
-    class="flex justify-between mx-auto rounded-full pl-6 pr-[6px] py-[6px] w-full max-w-[328px] sm:max-w-[400px] md:max-w-[472px] h-fit align-middle bg-white dark:bg-dark-500 focus-within:outline outline-offset-2 outline-2 outline-white transition-[outline] duration-300 shadow-[2px_2px_6px_0px_rgba(0,0,0,0.38)]">
+    class="flex justify-between mx-auto rounded-full pl-6 pr-[6px] py-[6px] w-full max-w-[328px] sm:max-w-[400px] md:max-w-[472px] h-fit align-middle text-black dark:text-white bg-white dark:bg-dark-500 focus-within:outline outline-offset-2 outline-2 outline-white transition-[outline] duration-300 shadow-[2px_2px_6px_0px_rgba(0,0,0,0.38)]">
     <ClientOnly>
       <input v-model="email" type="email" placeholder="Email address" class="w-full mr-2 bg-transparent outline-none">
     </ClientOnly>

@@ -5,12 +5,12 @@
   <header class="relative flex flex-col gap-8 mx-auto px-4 md:px-12 max-w-[85rem]">
     <Navbar />
   </header>
-  <main class="relative flex flex-col gap-8 mx-auto px-4 md:px-12 !pb-0 max-w-[85rem]">
+  <main class="relative flex flex-col gap-24 mx-auto px-4 md:px-12 !pb-0 max-w-[85rem]">
     <SectionHero />
-    <!-- <SectionTestimonials /> -->
+    <SectionTestimonials />
   </main>
   <footer
-    class="relative grid grid-rows-1 grid-cols-3 items-end ml-12 p-9 pt-64 text-white bg-[url(assets/images/footer-bg.svg)] bg-no-repeat bg-left-bottom overflow-hidden before:content-[''] before:absolute before:w-full before:h-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:420px_420px] before:bg-no-repeat before:bg-[128px_-32px] before:opacity-60 before:-z-10 ">
+    class="relative grid grid-rows-1 grid-cols-3 items-end mt-12 mx-auto p-9 pl-12 pt-64 max-w-[85rem] text-white bg-[url(assets/images/footer-bg.svg)] bg-no-repeat bg-left-bottom overflow-hidden before:content-[''] before:absolute before:w-full before:h-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:420px_420px] before:bg-no-repeat before:bg-[128px_-32px] before:opacity-60 before:-z-10">
     <div class="justify-self-start flex flex-col gap-1">
       <span>&copy; 2023-2024</span>
       <span>MIT License</span>
