@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import heroGrid from "~~/assets/images/grid.svg";
 import personBefore from "~~/assets/images/person-before.png";
 import personAfter from "~~/assets/images/person-after.png";
 </script>
 
 <template>
   <picture class="absolute -top-20 bottom-0 -left-4 right-4 lg:left-auto -z-50 object-cover">
-    <source :srcset="heroGrid" media="(min-width: 1024px)" />
-    <source :srcset="heroGrid" media="(min-width: 768px)" />
-    <source :srcset="heroGrid" media="(min-width: 100px)" />
-    <NuxtImg :src="heroGrid" alt="Hero Grid" />
+    <source src="/images/grid.svg" media="(min-width: 1024px)" />
+    <source src="/images/grid.svg" media="(min-width: 768px)" />
+    <source src="/images/grid.svg" media="(min-width: 100px)" />
+    <NuxtImg src="/images/grid.svg" alt="Hero Grid" />
   </picture>
   <section id="hero" class="grid grid-flow-col grid-rows-[repeat(7,minmax(0,1fr))] grid-cols-5 gap-4">
     <div
