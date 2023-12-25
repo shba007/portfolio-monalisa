@@ -5,33 +5,36 @@
   <header class="relative flex flex-col gap-8 mx-auto px-4 md:px-12 max-w-[85rem]">
     <Navbar />
   </header>
-  <main class="relative flex flex-col gap-24 mx-auto px-4 md:px-12 !pb-0 max-w-[85rem]">
+  <main class="relative flex flex-col gap-4 md:gap-24 mx-auto px-4 md:px-12 !pb-0 max-w-[85rem]">
     <SectionHero />
     <SectionTestimonials />
   </main>
   <footer
-    class="relative grid grid-rows-1 grid-cols-3 items-end mt-12 mx-auto p-9 pl-12 pt-64 max-w-[85rem] text-white bg-[url(assets/images/footer-bg.svg)] bg-no-repeat bg-left-bottom overflow-hidden before:content-[''] before:absolute before:w-full before:h-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:420px_420px] before:bg-no-repeat before:bg-[128px_-32px] before:opacity-60 before:-z-10">
-    <div class="justify-self-start flex flex-col gap-1">
-      <span>&copy; 2023-2024</span>
-      <span>MIT License</span>
-    </div>
-    <div class="flex flex-col justify-center items-center gap-7">
-      <p class="text-center text-lg whitespace-nowrap">
-        Want to get tips about improving Mental Health <br />
-        Join my Weekly Newsletter
-      </p>
-      <NewsletterBox />
-    </div>
-    <div class="justify-self-end flex gap-8">
-      <NuxtLink to="https://www.youtube.com/@mindful-healing-path" target="_blank">
-        <NuxtIcon name="youtube" class="text-[48px]" />
-      </NuxtLink>
-      <NuxtLink to="https://www.instagram.com/mindful.healing.path/" target="_blank">
-        <NuxtIcon name="instagram" class="text-[48px]" />
-      </NuxtLink>
-      <NuxtLink to="https://www.linkedin.com/in/monalisa-bairagi/" target="_blank">
-        <NuxtIcon name="linkedin" class="text-[48px]" />
-      </NuxtLink>
+    class="relative md:mt-12 p-4 md:p-9 md:pl-12 pt-48 md:pt-64 text-white bg-[url(assets/images/footer-bg.svg)] bg-no-repeat bg-center md:bg-left-bottom 2xl:bg-[length:1000%] overflow-hidden before:content-[''] before:absolute before:top-0 before:w-full before:h-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:320px_320px] md:before:bg-[length:420px_420px] before:bg-no-repeat before:bg-[24px_-24px] md:before:bg-[128px_-32px] before:opacity-60 before:-z-10">
+    <div
+      class="relative grid grid-rows-[repeat(2,min-content)] md:grid-rows-1 grid-cols-[auto_1fr_auto] gap-4 items-end mx-auto max-w-[85rem]">
+      <div class="row-start-2 md:row-start-1 justify-self-start flex flex-col gap-1 text-xs md:text-base">
+        <span>&copy; 2023-2024</span>
+        <span>MIT License</span>
+      </div>
+      <div class="col-span-full md:col-span-1 flex flex-col justify-center items-center gap-7">
+        <p class="text-center md:text-lg whitespace-nowrap">
+          Want to get tips of improving Mental Health <br />
+          Join my Weekly Newsletter
+        </p>
+        <NewsletterBox />
+      </div>
+      <div class="row-start-2 md:row-start-1 col-start-3 justify-self-end flex gap-4 md:gap-8 text-[32px] md:text-[48px]">
+        <NuxtLink to="https://www.youtube.com/@mindful-healing-path" target="_blank">
+          <NuxtIcon name="youtube" />
+        </NuxtLink>
+        <NuxtLink to="https://www.instagram.com/mindful.healing.path/" target="_blank">
+          <NuxtIcon name="instagram" />
+        </NuxtLink>
+        <NuxtLink to="https://www.linkedin.com/in/monalisa-bairagi/" target="_blank">
+          <NuxtIcon name="linkedin" />
+        </NuxtLink>
+      </div>
     </div>
   </footer>
 </template>

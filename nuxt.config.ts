@@ -22,6 +22,6 @@ export default defineNuxtConfig({
     url: 'https://monalisa-bairagi.com'
   },
   gtag: {
-    id: ''
+    id: 'G-SYMDMKBF8R'
   },
 })

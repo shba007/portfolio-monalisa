@@ -6,10 +6,16 @@ const splideOption: Options = {
   arrows: true,
   type: 'loop',
   autoplay: true,
-  padding: '16rem',
   autoWidth: true,
+  padding: '16rem',
+  gap: '16rem',
   focus: 'center',
-  gap: '16rem'
+  breakpoints: {
+    768: {
+      padding: '4rem',
+      gap: '4rem'
+    }
+  }
 };
 
 const testimonials = ref([{
@@ -33,24 +39,31 @@ const testimonials = ref([{
 <template>
   <section id="testimonials">
     <h2 class="text-center text-xl my-8">All Testimonials</h2>
-    <!-- class="flex justify-center items-center gap-40 my-24" -->
-    <Splide :options="splideOption" tag="div" :has-track="false">
+    <Splide :options="splideOption" tag="div" :has-track="false" class="carousal relative -left-4 w-screen md:w-full">
       <SplideTrack>
         <SplideSlide v-for="{ image, name, message } in testimonials">
           <TestimonalCard :image="image" :name="name" :message="message" />
         </SplideSlide>
       </SplideTrack>
       <div
-        class="splide__arrows absolute top-1/2 left-0 right-0 -translate-y-1/2 flex justify-between mx-[18%] text-primary-400">
+        class="splide__arrows absolute top-[40%] md:top-1/2 left-0 right-0 -translate-y-1/2 flex justify-between mx-[6%] md:mx-[18%] text-[20px] md:text-[28px] text-primary-400">
         <button class="splide__arrow splide__arrow--prev relative drop-shadow-md">
-          <div v-html="sliderBtn" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
-          <NuxtIcon name="chevron-bold" class="text-[28px]" />
+          <div v-html="sliderBtn"
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 md:w-[4.375rem] -z-10" />
+          <NuxtIcon name="chevron-bold" />
         </button>
         <button class="splide__arrow splide__arrow--next relative drop-shadow-md [rotate:y_180deg]">
-          <div v-html="sliderBtn" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 " />
-          <NuxtIcon name="chevron-bold" class="text-[28px]" />
+          <div v-html="sliderBtn"
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 md:w-[4.375rem] -z-10" />
+          <NuxtIcon name="chevron-bold" />
         </button>
       </div>
     </Splide>
   </section>
 </template>
+
+<style scoped>
+.carousal {
+  @apply [mask-image:url('assets/images/carousal-mask.png')] [mask-size:400%] md:[mask-size:125%] [mask-repeat:no-repeat] [mask-position:center]
+}
+</style>
