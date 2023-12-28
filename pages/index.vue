@@ -2,10 +2,12 @@
 </script>
 
 <template>
-  <header class="relative flex flex-col gap-8 mx-auto px-4 md:px-12 max-w-[85rem]">
+  <header
+    class="relative flex flex-col gap-8 mx-auto px-4 md:px-12 max-w-[85rem] after:content-[''] after:absolute after:-left-6 after:-right-6 after:bottom-0 after:w-screen after:h-[1px] after:bg-light-500 after:-z-50">
     <Navbar />
   </header>
-  <main class="relative flex flex-col gap-4 md:gap-24 mx-auto px-4 md:px-12 !pb-0 max-w-[85rem]">
+  <main
+    class="relative flex flex-col gap-4 md:gap-24 mx-auto px-4 md:px-12 !pb-0 max-w-[85rem] before:content-[''] before:fixed before:left-12 before:top-0 before:w-[1px] before:h-full before:bg-light-500 after:content-[''] after:fixed after:right-12 after:top-0 after:w-[1px] after:h-full after:bg-light-500">
     <SectionHero />
     <SectionTestimonials />
   </main>
@@ -15,7 +17,7 @@
       class="relative grid grid-rows-[repeat(2,min-content)] md:grid-rows-1 grid-cols-[auto_1fr_auto] gap-4 items-end mx-auto max-w-[85rem]">
       <div class="row-start-2 md:row-start-1 justify-self-start flex flex-col gap-1 text-xs md:text-base">
         <span>&copy; 2023-2024</span>
-        <span>MIT License</span>
+        <span>GPL-3.0 License</span>
       </div>
       <div class="col-span-full md:col-span-1 flex flex-col justify-center items-center gap-7">
         <p class="text-center md:text-lg whitespace-nowrap">
@@ -25,13 +27,16 @@
         <NewsletterBox />
       </div>
       <div class="row-start-2 md:row-start-1 col-start-3 justify-self-end flex gap-4 md:gap-8 text-[32px] md:text-[48px]">
-        <NuxtLink to="https://www.youtube.com/@mindful-healing-path" target="_blank">
+        <NuxtLink to="https://www.youtube.com/@mindful-healing-path" target="_blank"
+          class="drop-shadow hover:drop-shadow-md">
           <NuxtIcon name="youtube" />
         </NuxtLink>
-        <NuxtLink to="https://www.instagram.com/mindful.healing.path/" target="_blank">
+        <NuxtLink to="https://www.instagram.com/mindful.healing.path/" target="_blank"
+          class="drop-shadow hover:drop-shadow-md">
           <NuxtIcon name="instagram" />
         </NuxtLink>
-        <NuxtLink to="https://www.linkedin.com/in/monalisa-bairagi/" target="_blank">
+        <NuxtLink to="https://www.linkedin.com/in/monalisa-bairagi/" target="_blank"
+          class="drop-shadow hover:drop-shadow-md">
           <NuxtIcon name="linkedin" />
         </NuxtLink>
       </div>

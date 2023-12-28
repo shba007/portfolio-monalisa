@@ -13,8 +13,8 @@ const { image, name, message } = defineProps<{
     <div class="card left-0 -translate-x-2 md:-translate-x-4 w-[90%]" />
     <div class="card right-0 translate-x-2 md:translate-x-4 w-[90%]" />
     <div
-      class="flex flex-col justify-center items-center gap-6 rounded-[2rem] p-6 md:p-16 w-full aspect-[5/3] text-center bg-white drop-shadow-md">
-      <img :src="image" alt="aarushi kaur" class="absolute top-0 -translate-y-1/2 w-20 md:w-24">
+      class="flex flex-col justify-center items-center gap-6 rounded-3xl md:rounded-[2rem] p-6 md:p-16 w-full aspect-[5/3] text-center bg-white drop-shadow-md">
+      <NuxtImg :src="image" alt="aarushi kaur" class="absolute top-0 -translate-y-1/2 w-20 md:w-24" />
       <h4 class="text-xl text-primary-600 font-semi-bold">{{ name }}</h4>
       <p class="text-sm md:text-lg tracking-wide leading-[150%]">{{ message }}</p>
     </div>
@@ -23,17 +23,10 @@ const { image, name, message } = defineProps<{
 
 <style scoped>
 .card {
-  @apply absolute top-1/2 -translate-y-1/2 rounded-[2rem] aspect-[5/3] bg-white drop-shadow-lg opacity-40;
+  @apply absolute top-1/2 -translate-y-1/2 rounded-3xl md:rounded-[2rem] aspect-[5/3] bg-white drop-shadow-lg opacity-40;
 }
 
 img {
-  -webkit-mask-image: url('assets/images/testimonial-mask.png');
-  mask-image: url('assets/images/testimonial-mask.png');
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+  @apply [mask-image:url('assets/images/testimonial-mask.png')] [mask-size:100%] [mask-repeat:no-repeat] [mask-position:center]
 }
 </style>

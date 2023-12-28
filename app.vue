@@ -34,8 +34,8 @@ useSeoMeta({
   ogType: "profile",
   title: "Monalisa's Portfolio",
   ogTitle: "Monalisa's Portfolio",
-  description: "I am a Clinical Psychologist, this is my psychologist's portfolio showcasing her experience and contacts in a visually appealing manner",
-  ogDescription: "I am a clinical psychologist, this is my psychologist's portfolio showcasing her experience and contacts in a visually appealing manner",
+  description: "I am a Clinical Psychologist, this is my portfolio showcasing my experience and contacts in a visually appealing manner",
+  ogDescription: "I am a Clinical psychologist, this is my portfolio showcasing my experience and contacts in a visually appealing manner",
   ogImage: "https://monalisa-bairagi.com/previews/landing.jpg",
   ogImageWidth: 1280,
   ogImageHeight: 640,
@@ -48,7 +48,7 @@ useSchemaOrg([
   definePerson({
     name: "Monalisa Bairagi",
     description: "I am a Clinical Psychologist",
-    image: "https://monalisa-bairagi.com/logo.png",
+    image: "https://monalisa-bairagi.com/logo-512.png",
     sameAs: [
       // "https://x.com/monalis",
       "https://instagram.com/mindful.healing.path",
@@ -58,18 +58,19 @@ useSchemaOrg([
   }),
   defineWebSite({
     name: "Monalisa's Portfolio",
-    description: `I am a Clinical Psychologist, this is my psychologist's 
-    portfolio showcasing her experience and contacts in a visually appealing manner`,
+    description: "I am a Clinical Psychologist, this is my portfolio showcasing my experience and contacts in a visually appealing manner",
   }),
   defineWebPage({
     datePublished: new Date(2024, 0, 1).toISOString(),
-    dateModified: new Date(2023, 0, 1).toISOString(),
-    author: "Monalisa Bairagi",
+    dateModified: new Date(2024, 0, 1).toISOString(),
+    author: "Shirsendu Bairagi",
   }),
 ])
 </script>
 
 <template>
+  <NuxtPwaManifest />
+  <NuxtLoadingIndicator />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
@@ -137,6 +138,10 @@ useSchemaOrg([
 
 *::-webkit-scrollbar-thumb {
   @apply rounded-md bg-light-600;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
