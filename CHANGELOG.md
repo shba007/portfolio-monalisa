@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.0.0
+
+### Major Changes
+
+- f87afab: feat: testimonials added
+
 ## 0.2.1
 
 ### Patch Changes
