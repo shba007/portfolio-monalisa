@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 0.2.1
+
+### Patch Changes
+
+- c49230b: feat: pwa added
+
 ## 0.2.0
 
 ### Minor Changes
