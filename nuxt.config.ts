@@ -13,6 +13,11 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
+  runtimeConfig: {
+    private: {
+      rootDir: '',
+    },
+  },
   image: {
     format: ['avif', 'webp'],
     width: 1024,
@@ -24,10 +29,30 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Monalisa\'s Portfolio',
-      short_name: 'Portfolio',
+      name: 'Monalisa Bairagi\'s Portfolio',
+      short_name: 'Monalisa Bairagi',
       theme_color: '#66CD5B',
       icons: [
+        {
+          src: 'logo-48.png',
+          sizes: '48x48',
+          type: 'image/png',
+        },
+        {
+          src: 'logo-72.png',
+          sizes: '72x72',
+          type: 'image/png',
+        },
+        {
+          src: 'logo-96.png',
+          sizes: '96x96',
+          type: 'image/png',
+        },
+        {
+          src: 'logo-144.png',
+          sizes: '144x144',
+          type: 'image/png',
+        },
         {
           src: 'logo-192.png',
           sizes: '192x192',

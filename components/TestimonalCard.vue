@@ -14,7 +14,7 @@ const { image, name, message } = defineProps<{
     <div class="card right-0 translate-x-2 md:translate-x-4 w-[90%]" />
     <div
       class="flex flex-col justify-center items-center gap-6 rounded-3xl md:rounded-[2rem] p-6 md:p-16 w-full aspect-[5/3] text-center bg-white drop-shadow-md">
-      <NuxtImg :src="image" alt="aarushi kaur" class="absolute top-0 -translate-y-1/2 w-20 md:w-24" />
+      <NuxtImg :src="image" :alt="name" class="absolute top-0 -translate-y-1/2 w-20 md:w-24" />
       <h4 class="text-xl text-primary-600 font-semi-bold">{{ name }}</h4>
       <p class="text-sm md:text-lg tracking-wide leading-[150%]">{{ message }}</p>
     </div>
@@ -27,6 +27,6 @@ const { image, name, message } = defineProps<{
 }
 
 img {
-  @apply [mask-image:url('assets/images/testimonial-mask.png')] [mask-size:100%] [mask-repeat:no-repeat] [mask-position:center]
+  @apply [mask-image:url('assets/images/testimonial-mask.png')] [mask-size:85%] [mask-repeat:no-repeat] [mask-position:center]
 }
 </style>

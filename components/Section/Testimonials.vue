@@ -18,22 +18,7 @@ const splideOption: Options = {
   }
 };
 
-const testimonials = ref([{
-  image: '/images/testimonial-1.jpg',
-  name: 'Aarushi Kaur',
-  message: `You won't Regret it. Thank you. It helped
-        me in the longer run, for the better future`,
-}, {
-  image: '/images/testimonial-1.jpg',
-  name: 'Aarushi Kaur',
-  message: `You won't Regret it. Thank you. It helped
-        me in the longer run, for the better future`,
-}, {
-  image: '/images/testimonial-1.jpg',
-  name: 'Aarushi Kaur',
-  message: `You won't Regret it. Thank you. It helped
-        me in the longer run, for the better future`,
-}])
+const { data: testimonials, pending, error } = useFetch('/api/testimonials')
 </script>
 
 <template>
