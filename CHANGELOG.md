@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.1.0
+
+### Minor Changes
+
+- f3dd95b: feat: CTA button functionality added
+
 ## 1.0.0
 
 ### Major Changes
