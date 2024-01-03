@@ -70,7 +70,7 @@ useSchemaOrg([
 
 <template>
   <NuxtPwaManifest />
-  <NuxtLoadingIndicator />
+  <!-- <NuxtLoadingIndicator /> -->
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>

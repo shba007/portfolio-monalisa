@@ -10,6 +10,7 @@
     class="relative flex flex-col gap-4 md:gap-24 mx-auto px-4 md:px-12 !pb-0 max-w-[85rem] before:content-[''] before:fixed before:left-12 before:top-0 before:w-[1px] before:h-full before:bg-light-500 after:content-[''] after:fixed after:right-12 after:top-0 after:w-[1px] after:h-full after:bg-light-500">
     <SectionHero />
     <SectionTestimonials />
+    <ModelContact />
   </main>
   <footer
     class="relative md:mt-12 p-4 md:p-9 md:pl-12 pt-48 md:pt-64 text-white bg-[url(assets/images/footer-bg.svg)] bg-no-repeat bg-[center_bottom] md:bg-left-bottom 2xl:bg-[length:1000%] overflow-hidden before:content-[''] before:absolute before:top-0 before:w-full before:h-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:320px_320px] md:before:bg-[length:420px_420px] before:bg-no-repeat before:bg-[24px_-24px] md:before:bg-[128px_-32px] before:opacity-60 before:-z-10">
