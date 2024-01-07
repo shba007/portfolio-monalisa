@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const emit = defineEmits<{ (event: 'contact'): void }>()
 </script>
 
 <template>
@@ -28,14 +29,14 @@
         A clinical psychologist will help you <br>
         to regain the control of your life
       </p>
-      <CTAButton />
+      <CTAButton @click="emit('contact')" />
     </div>
     <div
       class="justify-self-center md:justify-self-end row-start-4 md:row-start-2 row-span-full col-start-1 md:col-start-4 col-span-full md:col-span-2 relative grid grid-rows-2 grid-cols-2 mt-8 sm:mt-16 md:m-0 md:pl-16 max-w-xs md:max-w-max">
       <!-- TODO: change to NuxtImg -->
-      <img src="/images/hero.png" alt="monalisa bairagi"
+      <img src="/images/hero.jpg" alt="monalisa bairagi"
         class="row-start-1 row-span-full col-start-1 col-span-full aspect-[3/4] object-cover mix-blend-luminosity" />
-      <img src="/images/hero.png" alt="monalisa bairagi"
+      <img src="/images/hero.jpg" alt="monalisa bairagi"
         class="row-start-1 row-span-full col-start-1 col-span-full aspect-[3/4] object-cover opacity-0 hover:opacity-100 transition-opacity duration-700 ease-out" />
       <NuxtLink to="https://www.youtube.com/@mindful-healing-path"
         class="relative row-start-2 col-start-2 justify-items-start self-end z-10" target="__blank">

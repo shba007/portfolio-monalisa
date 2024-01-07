@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxt/image',
+    '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     '@nuxtseo/module',
     '@vite-pwa/nuxt',
@@ -22,6 +23,11 @@ export default defineNuxtConfig({
     format: ['avif', 'webp'],
     width: 1024,
     quality: 80,
+  },
+  colorMode: {
+    preference: 'light',
+    fallback: 'light',
+    classSuffix: '',
   },
   site: {
     url: 'https://monalisa-bairagi.com'

@@ -1,39 +1,34 @@
 <script setup lang="ts">
 useHead({
-  title: "Monalisa's Portfolio",
+  title: "Monalisa Bairagi",
   link: [
-    /*   {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossorigin: 'anonymous',
-      },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.googleapis.com'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;1,400&display=swap',
-      }, */
+    {
+      rel: 'canonical',
+      href: 'https://monalisa-bairagi.com',
+    },
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com',
+      crossorigin: 'anonymous',
+    },
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.googleapis.com'
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap',
+    },
   ],
   htmlAttrs: {
     lang: 'en'
   }
 })
 
-useHead({
-  link: [
-    {
-      rel: 'canonical',
-      href: 'https://monalisa-bairagi.com',
-    },
-  ],
-})
-
 useSeoMeta({
   ogType: "profile",
-  title: "Monalisa's Portfolio",
-  ogTitle: "Monalisa's Portfolio",
+  title: "Monalisa Bairagi",
+  ogTitle: "Monalisa Bairagi",
   description: "I am a Clinical Psychologist, this is my portfolio showcasing my experience and contacts in a visually appealing manner",
   ogDescription: "I am a Clinical psychologist, this is my portfolio showcasing my experience and contacts in a visually appealing manner",
   ogImage: "https://monalisa-bairagi.com/previews/landing.jpg",
@@ -50,14 +45,13 @@ useSchemaOrg([
     description: "I am a Clinical Psychologist",
     image: "https://monalisa-bairagi.com/logo-512.png",
     sameAs: [
-      // "https://x.com/monalis",
-      "https://instagram.com/mindful.healing.path",
       "https://linkedin.com/in/monalisa-bairagi",
+      "https://instagram.com/mindful.healing.path",
       "https://youtube.com/@mindful-healing-path",
     ],
   }),
   defineWebSite({
-    name: "Monalisa's Portfolio",
+    name: "Monalisa Bairagi",
     description: "I am a Clinical Psychologist, this is my portfolio showcasing my experience and contacts in a visually appealing manner",
   }),
   defineWebPage({
