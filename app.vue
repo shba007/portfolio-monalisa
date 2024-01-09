@@ -135,7 +135,8 @@ useSchemaOrg([
 }
 
 html {
-  scroll-behavior: smooth;
+  @apply scroll-smooth;
+  /* snap-y snap-mandatory; */
 }
 
 body {

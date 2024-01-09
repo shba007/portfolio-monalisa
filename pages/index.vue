@@ -14,7 +14,7 @@ function onContact(action: boolean) {
 
 <template>
   <header
-    class="relative flex flex-col gap-8 mx-auto px-4 md:px-12 max-w-[85rem] after:content-[''] after:absolute after:-left-6 after:-right-6 after:bottom-0 after:w-screen after:h-[1px] after:bg-light-500 after:-z-50">
+    class="relative flex flex-col gap-8 mx-auto px-4 md:px-12 max-w-[85rem] after:content-[''] after:absolute after:-left-6 after:-right-6 after:bottom-0 after:w-screen after:h-[1px] after:bg-light-500 after:-z-50 snap-start">
     <Navbar />
   </header>
   <main
@@ -24,8 +24,8 @@ function onContact(action: boolean) {
     <ModelContact :is-open="isModelContactOpen" @close="onContact(false)" />
   </main>
   <footer
-    class="relative md:mt-12 p-4 md:p-9 md:pl-12 pt-48 md:pt-64 text-white bg-[url(assets/images/footer-bg.svg)] bg-no-repeat bg-[center_bottom] md:bg-left-bottom 2xl:bg-[length:1000%] overflow-hidden before:content-[''] before:absolute before:top-0 before:w-full before:h-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:320px_320px] md:before:bg-[length:420px_420px] before:bg-no-repeat before:bg-[24px_-24px] md:before:bg-[128px_-32px] before:opacity-60 before:-z-10">
-    <CTAButton @click="" :primary="false" class="mx-auto -translate-y-40 md:-translate-y-64" />
+    class="relative md:mt-12 p-4 md:p-9 md:pl-12 pt-48 md:pt-64 text-white bg-[url(assets/images/footer-bg.svg)] bg-no-repeat bg-[center_bottom] md:bg-left-bottom 2xl:bg-[length:1000%] overflow-hidden before:content-[''] before:absolute before:top-0 before:w-full before:h-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:320px_320px] md:before:bg-[length:420px_420px] before:bg-no-repeat before:bg-[24px_-24px] md:before:bg-[128px_-32px] before:opacity-60 before:-z-10 snap-end">
+    <CTAButton @click="onContact(true)" :primary="false" class="mx-auto -translate-y-40 md:-translate-y-64" />
     <div
       class="relative grid grid-rows-[repeat(2,min-content)] md:grid-rows-1 grid-cols-[auto_1fr_auto] gap-4 items-end mx-auto max-w-[85rem]">
       <div class="row-start-2 md:row-start-1 justify-self-start flex flex-col gap-1 text-xs md:text-base">

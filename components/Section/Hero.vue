@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const emit = defineEmits<{ (event: 'contact'): void }>()
+
+const counter = useInterval(4000)
+const person = computed(() => counter.value % 2 + 1)
 </script>
 
 <template>
@@ -12,14 +15,26 @@ const emit = defineEmits<{ (event: 'contact'): void }>()
     class="grid grid-flow-col grid-rows-[repeat(8,minmax(0,1fr))] md:grid-rows-[repeat(7,minmax(0,1fr))] grid-cols-5 md:gap-4">
     <div
       class="justify-self-start row-start-2 row-span-full col-start-1 col-span-2 relative hidden md:grid grid-rows-2 grid-cols-2 pr-16">
-      <NuxtImg src="/images/person-before.png" alt="person-before"
-        class="row-start-1 col-start-1 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 mix-blend-luminosity" />
-      <NuxtImg src="/images/person-before.png" alt="person-before"
-        class="row-start-1 col-start-1 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 opacity-0 hover:opacity-100 transition-opacity duration-700 ease-out" />
-      <NuxtImg src="/images/person-after.png" alt="person-after"
-        class="row-start-2 col-start-2 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 mix-blend-luminosity" />
-      <NuxtImg src="/images/person-after.png" alt="person-after"
-        class="row-start-2 col-start-2 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 opacity-0 hover:opacity-100 transition-opacity duration-700 ease-out" />
+      <Transition name="fade">
+        <NuxtImg :src="`/images/person-${person}-before.jpg`" :alt="`person-${person}-before`"
+          :key="`person-${person}-before`"
+          class="row-start-1 col-start-1 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 mix-blend-luminosity" />
+      </Transition>
+      <Transition name="fade">
+        <NuxtImg :src="`/images/person-${person}-before.jpg`" :alt="`person-${person}-before`"
+          :key="`person-${person}-before`"
+          class="row-start-1 col-start-1 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 opacity-0 hover:opacity-100 transition-opacity duration-700 ease-out" />
+      </Transition>
+      <Transition name="fade">
+        <NuxtImg :src="`/images/person-${person}-after.jpg`" :alt="`person-${person}-after`"
+          :key="`person-${person}-after`"
+          class="row-start-2 col-start-2 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 mix-blend-luminosity" />
+      </Transition>
+      <Transition name="fade">
+        <NuxtImg :src="`/images/person-${person}-after.jpg`" :alt="`person-${person}-after`"
+          :key="`person-${person}-after`"
+          class="row-start-2 col-start-2 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 opacity-0 hover:opacity-100 transition-opacity duration-700 ease-out" />
+      </Transition>
     </div>
     <div
       class="justify-self-center row-start-1 row-span-5 md:row-span-full col-start-1 md:col-start-2 col-span-full md:col-span-3 flex flex-col justify-center items-center gap-4 md:gap-5 text-center z-10 -translate-y-[15%]">
@@ -49,5 +64,15 @@ const emit = defineEmits<{ (event: 'contact'): void }>()
 <style scoped>
 img[alt="monalisa bairagi"] {
   @apply [mask-image:url('assets/images/hero-mask.png')] [mask-size:100%] [mask-repeat:no-repeat] [mask-position:center]
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  @apply transition-opacity duration-[2s];
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  @apply opacity-0;
 }
 </style>

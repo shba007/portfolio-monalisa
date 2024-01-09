@@ -22,7 +22,7 @@ const { data: testimonials, pending, error } = useFetch('/api/testimonials')
 </script>
 
 <template>
-  <section id="testimonials" class="relative z-10">
+  <section id="testimonials" class="relative z-10 snap-center">
     <h2 class="text-center text-xl my-8">All Testimonials</h2>
     <Splide :options="splideOption" tag="div" :has-track="false" class="carousal relative -left-4 md:-left-16 w-screen">
       <SplideTrack>
