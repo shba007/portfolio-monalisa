@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.1.1
+
+### Patch Changes
+
+- 1b31d54: feat: CTA Model handling changed
+
 ## 1.1.0
 
 ### Minor Changes
