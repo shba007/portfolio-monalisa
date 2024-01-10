@@ -20,17 +20,28 @@ function contact(method: string) {
 function close() {
   emit('close')
 }
+
+function flippedClass(method: string) {
+  return ({ 'flipped': method === 'whatsapp' });
+}
 </script>
 
 <template>
-  <ModelBase :is-open="isOpen" @close="close" innerClass="grid grid-rows-1 grid-cols-2 gap-4 p-4 pt-6 !max-w-[24.5rem]">
+  <ModelBase :is-open="isOpen" @close="close"
+    innerClass="grid grid-rows-1 grid-cols-2 gap-4 pt-6 !max-w-[24.5rem] overflow-hidden">
     <span class="col-span-2 mx-auto text-lg mb-2">Book an Appointment via</span>
     <NuxtLink v-for="{ method, icon, link } of methods" :key="method" :to="link" target="__blank" @click="contact(method)"
-      class="flex flex-col items-center justify-center gap-3 rounded-2xl px-9 text-white bg-primary-500 hover:bg-primary-400 aspect-square cursor-pointer transition-colors">
-      <ClientOnly>
-        <NuxtIcon :name="icon" class="text-[48px]" />
-      </ClientOnly>
-      <span class="capitalize">{{ method }}</span>
+      class="flex flex-col items-center justify-center gap-3 px-9 pt-6 text-white bg-[url('assets/images/contact-bg.svg')] bg-cover bg-no-repeat aspect-square cursor-pointer transition-colors"
+      :class="flippedClass(method)">
+      <NuxtIcon :name="icon" class="text-[56px]" :class="flippedClass(method)" />
+      <span class="font-semi-bold capitalize" :class="flippedClass(method)">{{ method }}</span>
     </NuxtLink>
   </ModelBase>
 </template>
+
+<style scoped>
+.flipped {
+  @apply -scale-x-[1] [filter:FlipH];
+  /* filter: FlipH; */
+}
+</style>

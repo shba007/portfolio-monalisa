@@ -14,7 +14,7 @@ function onContact(action: boolean) {
 
 <template>
   <header
-    class="relative flex flex-col gap-8 mx-auto px-4 md:px-12 max-w-[85rem] after:content-[''] after:absolute after:-left-6 after:-right-6 after:bottom-0 after:w-screen after:h-[1px] after:bg-light-500 after:-z-50 snap-start">
+    class="relative flex flex-col gap-8 mx-auto px-4 md:px-12 max-w-[85rem] after:content-[''] after:absolute after:-left-8 after:-right-8 after:bottom-0 after:w-[110vw] after:h-[1px] after:bg-light-500 after:-z-50 snap-start">
     <Navbar />
   </header>
   <main
