@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.1.2
+
+### Patch Changes
+
+- 9d6e01a: fix: secondary cta function action fixed and hero animation added
+
 ## 1.1.1
 
 ### Patch Changes
