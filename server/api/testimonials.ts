@@ -33,14 +33,14 @@ function shortenName(name: string) {
   return `${firstName[0]}. ${lastName}`
 }
 
+const config = useRuntimeConfig()
+
+const filePath = path.join(process.cwd(), config.private.rootDir, 'testimonials.yml')
+const fileContents = fs.readFileSync(filePath, "utf8");
+const testimonials: { name: string, gender: 'male' | 'female', message: string }[] = yaml.parse(fileContents);
+
 export default defineEventHandler<Promise<Testimonial[]>>(async () => {
-  const config = useRuntimeConfig()
-
   try {
-    const filePath = path.join(process.cwd(), config.private.rootDir, 'testimonials.yml')
-    const fileContents = fs.readFileSync(filePath, "utf8");
-    const testimonials: { name: string, gender: 'male' | 'female', message: string }[] = yaml.parse(fileContents);
-
     return await Promise.all(
       testimonials.map(async ({ name, gender, message }) => ({ image: await generateAvatar(name, gender), name: shortenName(name), message }))
     );

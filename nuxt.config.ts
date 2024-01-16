@@ -30,14 +30,18 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   site: {
+    name: 'Monalisa Bairagi',
     url: 'https://monalisa-bairagi.com'
   },
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Monalisa Bairagi\'s Portfolio',
+      name: 'Monalisa Bairagi',
       short_name: 'Monalisa Bairagi',
-      theme_color: '#66CD5B',
+      description: 'Monalisa Bairagi is a RCI Licensed Clinical Psychologist',
+      theme_color: '#98DA8B',
+      background_color: '#98DA8B',
+      orientation: 'portrait',
       icons: [
         {
           src: 'logo-48.png',
@@ -76,9 +80,53 @@ export default defineNuxtConfig({
           purpose: 'any maskable',
         },
       ],
+      screenshots: [
+        {
+          src: 'screenshot-desktop-1.webp',
+          sizes: '1024x576',
+          type: 'image/webp',
+          form_factor: 'wide',
+          label: 'Screenshot 1'
+        },
+        {
+          src: 'screenshot-desktop-2.webp',
+          sizes: '1024x576',
+          type: 'image/webp',
+          form_factor: 'wide',
+          label: 'Screenshot 2'
+        },
+        {
+          src: 'screenshot-desktop-3.webp',
+          sizes: '1024x576',
+          type: 'image/webp',
+          form_factor: 'wide',
+          label: 'Screenshot 3'
+        },
+        {
+          src: 'screenshot-mobile-1.webp',
+          sizes: '576x1024',
+          type: 'image/webp',
+          form_factor: 'narrow',
+          label: 'Screenshot 1'
+        },
+        {
+          src: 'screenshot-mobile-2.webp',
+          sizes: '576x1024',
+          type: 'image/webp',
+          form_factor: 'narrow',
+          label: 'Screenshot 2'
+        },
+        {
+          src: 'screenshot-mobile-3.webp',
+          sizes: '576x1024',
+          type: 'image/webp',
+          form_factor: 'narrow',
+          label: 'Screenshot 3'
+        },
+      ]
     },
     workbox: {
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+      globPatterns: ['**/*.{js,css,html,jpg,png,webp,svg,ico}'],
     },
     client: {
       installPrompt: true,

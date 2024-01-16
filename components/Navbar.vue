@@ -7,7 +7,8 @@ function onNavigate(section: string) {
 </script>
 
 <template>
-  <nav class="flex justify-between items-center py-3 md:py-6 z-20">
+  <nav class="flex justify-between items-center py-3 md:py-4 z-20">
+    <div class="flex-1 md:hidden"/>
     <NuxtLink to="/" class="flex-grow-[2] md:flex-1 text-center md:text-left text-xl md:text-2xl whitespace-nowrap">
       Monalisa Bairagi
     </NuxtLink>
@@ -16,9 +17,9 @@ function onNavigate(section: string) {
       <li><NuxtLink to="#about" @click="onNavigate('about')">About Me</NuxtLink></li>
     </ul>
     <span class="flex-1">
-      <NuxtLink to="#" class="block w-fit ml-auto">
-        <NuxtIcon name="hamburger" class="text-[40px]" />
-      </NuxtLink>
+      <button aria-label="menu" class="block w-fit ml-auto">
+        <NuxtIcon name="hamburger" class="text-[28px] md:text-[40px]" />
+      </button>
     </span>
   </nav>
 </template>

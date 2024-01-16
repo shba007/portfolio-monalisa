@@ -1,63 +1,73 @@
 <script setup lang="ts">
+const title = `RCI Licensed Clinical Psychologist in Kolkata`
+const description = `Monalisa Bairagi is a trusted RCI Licensed clinical psychologist based in Kolkata.
+She provides counseling sessions tailored to your unique needs near Rajpur, Sonarpur, Baruipur, Subhasgram, Harinavi & Narendrapur Area`
+const url = "https://monalisa-bairagi.com"
+
 useHead({
-  title: "Monalisa Bairagi",
   link: [
     {
-      rel: 'canonical',
-      href: 'https://monalisa-bairagi.com',
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossorigin: "anonymous",
     },
     {
-      rel: 'preconnect',
-      href: 'https://fonts.gstatic.com',
-      crossorigin: 'anonymous',
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com"
     },
     {
-      rel: 'preconnect',
-      href: 'https://fonts.googleapis.com'
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap",
     },
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap',
-    },
-  ],
-  htmlAttrs: {
-    lang: 'en'
-  }
+  ]
 })
 
 useSeoMeta({
   ogType: "profile",
-  title: "Monalisa Bairagi",
-  ogTitle: "Monalisa Bairagi",
-  description: "I am a Clinical Psychologist, this is my portfolio showcasing my experience and contacts in a visually appealing manner",
-  ogDescription: "I am a Clinical psychologist, this is my portfolio showcasing my experience and contacts in a visually appealing manner",
-  ogImage: "https://monalisa-bairagi.com/previews/landing.jpg",
+  title: title,
+  ogTitle: title,
+  description: description,
+  ogDescription: description,
+  ogImage: url + "/previews/landing.webp",
   ogImageWidth: 1280,
   ogImageHeight: 640,
-  ogUrl: 'https://monalisa-bairagi.com',
+  ogUrl: url,
   fbAppId: 966242223397117,
   twitterCard: "summary_large_image",
+  colorScheme: "light dark",
 })
 
 useSchemaOrg([
   definePerson({
     name: "Monalisa Bairagi",
-    description: "I am a Clinical Psychologist",
-    image: "https://monalisa-bairagi.com/logo-512.png",
+    description: "She is a RCI Licensed Clinical Psychologist",
+    image: url + "/logo.png",
     sameAs: [
       "https://linkedin.com/in/monalisa-bairagi",
       "https://instagram.com/mindful.healing.path",
       "https://youtube.com/@mindful-healing-path",
     ],
   }),
-  defineWebSite({
+  defineLocalBusiness({
     name: "Monalisa Bairagi",
-    description: "I am a Clinical Psychologist, this is my portfolio showcasing my experience and contacts in a visually appealing manner",
+    address: {
+      streetAddress: "RN Bhattacharya Road, Kumorpara 2nd Lane",
+      addressLocality: "Kolkata",
+      addressRegion: "WB",
+      postalCode: "700146",
+      addressCountry: "IN",
+    },
+    image: url + "/logo.png",
   }),
   defineWebPage({
     datePublished: new Date(2024, 0, 1).toISOString(),
     dateModified: new Date(2024, 0, 1).toISOString(),
     author: "Shirsendu Bairagi",
+  }),
+  defineWebSite({
+    url: url,
+    name: title,
+    description: description,
   }),
 ])
 </script>
@@ -72,7 +82,7 @@ useSchemaOrg([
 
 <style>
 @font-face {
-  font-family: 'Sansation';
+  font-family: "Sansation";
   font-style: italic;
   font-weight: 300;
   font-display: swap;
@@ -80,7 +90,7 @@ useSchemaOrg([
 }
 
 @font-face {
-  font-family: 'Sansation';
+  font-family: "Sansation";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
@@ -88,7 +98,7 @@ useSchemaOrg([
 }
 
 @font-face {
-  font-family: 'Sansation';
+  font-family: "Sansation";
   font-style: italic;
   font-weight: 500;
   font-display: swap;
@@ -96,7 +106,7 @@ useSchemaOrg([
 }
 
 @font-face {
-  font-family: 'Sansation';
+  font-family: "Sansation";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -104,7 +114,7 @@ useSchemaOrg([
 }
 
 @font-face {
-  font-family: 'Sansation';
+  font-family: "Sansation";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -112,7 +122,7 @@ useSchemaOrg([
 }
 
 @font-face {
-  font-family: 'Sansation';
+  font-family: "Sansation";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -135,12 +145,11 @@ useSchemaOrg([
 }
 
 html {
-  @apply scroll-smooth;
-  /* snap-y snap-mandatory; */
+  @apply relative scroll-smooth overflow-x-hidden;
 }
 
 body {
-  @apply min-h-screen font-body text-black bg-light-400 overflow-x-hidden;
+  @apply relative min-h-screen font-main text-black bg-light-400 overflow-x-hidden;
 }
 
 .nuxt-icon>svg {

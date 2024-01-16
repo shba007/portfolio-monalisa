@@ -26,8 +26,8 @@ module.exports = {
       '5xl': ['3.5rem', '4.1875rem'],
     },
     fontFamily: {
-      head: ['Sansation', 'sans-serif'],
-      body: ['Sansation', 'sans-serif'],
+      main: ['Sansation', 'sans-serif'],
+      sub: ['Dancing Script', 'sans-serif']
     },
     fontWeight: {
       light: 300,
@@ -45,14 +45,29 @@ module.exports = {
       },
       black: '#000000',
       dark: {
-        400: '#10121E',
-        500: '',
-        600: '',
+        400: '#0E0E11',
+        500: '#22252A',
+        600: '#2D2F34',
       },
       primary: {
-        400: '#98DA8B',
-        500: '#66CD5B',
-        600: '#56BE50',
+        400: '#ADE1A2',
+        500: '#98DA8B',
+        600: '#66CD5B',
+      },
+      success: {
+        400: '#89E774',
+        500: '#4AD42B',
+        600: '#66BE52',
+      },
+      warning: {
+        400: '#F0CD42',
+        500: '#ECC113',
+        600: '#D7B942',
+      },
+      alert: {
+        400: '#F24067',
+        500: '#E11D48',
+        600: '#C02650',
       }
     },
     extend: {
