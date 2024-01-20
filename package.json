@@ -2,7 +2,7 @@
   "name": "porfolio-monalisa",
   "description": "Monalisa's portfolio showcasing her experience and contacts in a visually appealing manner",
   "author": "Shirsendu Bairagi <shirsendu2001@gmail.com>",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "engines": {

@@ -1,5 +1,12 @@
 # porfolio-monalisa
 
+## 1.2.0
+
+### Minor Changes
+
+- 600d03e: feature: seo improved, screenshots added, some assets removed
+- 5cfb8b7: style: stylized contact model
+
 ## 1.1.2
 
 ### Patch Changes
