@@ -41,7 +41,7 @@ const person = computed(() => counter.value % 2 + 1)
       <NuxtIcon name="logo" class="text-[144px] lg:text-[184px] -mb-6 md:-mb-8" filled />
       <h1 class="text-xl md:text-3xl lg:text-4xl">Be Kind to Your Mind</h1>
       <p class="max-w-[35rem] text-sm md:text-base lg:text-lg tracking-wide !leading-[150%]">
-        A RCI approved clinical psychologist will help you by
+        A registered clinical psychologist will help you by
         providing counseling sessions with a range of therapeutic
         approaches tailored to your unique needs
       </p>

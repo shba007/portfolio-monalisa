@@ -38,10 +38,27 @@ export default defineNuxtConfig({
     manifest: {
       name: 'Monalisa Bairagi',
       short_name: 'Monalisa Bairagi',
-      description: 'Monalisa Bairagi is a RCI Licensed Clinical Psychologist',
+      description: 'Monalisa Bairagi is a RCI registered clinical psychologist',
       theme_color: '#98DA8B',
       background_color: '#98DA8B',
       orientation: 'portrait',
+      start_url: 'https://monalisa-bairagi.com',
+      shortcuts: [
+        {
+          'name': 'Book an Appointment by call',
+          'short_name': 'Book Appointment (Call)',
+          'description': 'Book a therapy session by call',
+          'url': 'tel:+91798-002-4961',
+          'icons': [{ 'src': '/icons/play-later.png', 'sizes': '192x192' }]
+        },
+        {
+          'name': 'Book an Appointment by whatsapp',
+          'short_name': 'Book Appointment (Whatsapp)',
+          'description': 'Book a therapy session by whatsapp',
+          'url': 'https://wa.me/917980024961',
+          'icons': [{ 'src': '/icons/play-later.png', 'sizes': '192x192' }]
+        }
+      ],
       icons: [
         {
           src: 'logo-48.png',

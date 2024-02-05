@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const title = `RCI Licensed Clinical Psychologist in Kolkata`
-const description = `Monalisa Bairagi is a trusted RCI Licensed clinical psychologist based in Kolkata.
+const title = `RCI Registered Clinical Psychologist in Kolkata`
+const description = `Monalisa Bairagi is a trusted RCI registered clinical psychologist based in Kolkata.
 She provides counseling sessions tailored to your unique needs near Rajpur, Sonarpur, Baruipur, Subhasgram, Harinavi & Narendrapur Area`
 const url = "https://monalisa-bairagi.com"
 
@@ -40,7 +40,7 @@ useSeoMeta({
 useSchemaOrg([
   definePerson({
     name: "Monalisa Bairagi",
-    description: "She is a RCI Licensed Clinical Psychologist",
+    description: "She is a RCI registered clinical psychologist",
     image: url + "/logo.png",
     sameAs: [
       "https://linkedin.com/in/monalisa-bairagi",

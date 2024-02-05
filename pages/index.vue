@@ -27,7 +27,7 @@ function onContact(action: boolean) {
     class="relative md:mx-8 lg:mx-12 2xl:mx-auto md:mt-12 pt-48 md:pt-64 pb-4 md:pb-9 px-4 md:pl-12 max-w-[85rem] text-white before:content-[''] before:absolute before:top-0 before:w-full before:h-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:320px_320px] md:before:bg-[length:420px_420px] before:bg-no-repeat before:bg-[24px_-24px] md:before:bg-[128px_-32px] before:opacity-60 before:-z-10">
     <div
       class="absolute left-0 bottom-0 w-screen h-full bg-[url(assets/images/footer-bg.svg)] bg-no-repeat bg-[center_bottom] md:bg-left-bottom" />
-    <CTAButton @click="onContact(true)" :primary="false" class="mx-auto -translate-y-40 md:-translate-y-64" />
+    <CTAButton :primary="false" class="mx-auto -translate-y-40 md:-translate-y-64" @click="onContact(true)" />
     <div
       class="relative grid grid-rows-[repeat(2,min-content)] md:grid-rows-1 grid-cols-[auto_1fr_auto] gap-4 items-end mx-auto max-w-[85rem]">
       <div class="row-start-2 md:row-start-1 justify-self-start flex flex-col gap-1 text-xs md:text-base">
