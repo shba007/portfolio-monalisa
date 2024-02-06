@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.2.1
+
+### Patch Changes
+
+- 33960a4: chore: testimonials.yml add to deploy.yml, Licensed renamed to Registered
+
 ## 1.2.0
 
 ### Minor Changes
