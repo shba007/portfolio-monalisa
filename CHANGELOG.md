@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.2.2
+
+### Patch Changes
+
+- c456d43: chore: pwa maskable icon added
+
 ## 1.2.1
 
 ### Patch Changes
