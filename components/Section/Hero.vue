@@ -17,24 +17,13 @@ const person = computed(() => counter.value % 2 + 1)
     class="grid grid-flow-col grid-rows-[repeat(8,minmax(0,1fr))] md:grid-rows-[repeat(7,minmax(0,1fr))] grid-cols-5 md:gap-4">
     <div
       class="justify-self-start row-start-2 row-span-full col-start-1 col-span-2 relative hidden md:grid grid-rows-2 grid-cols-2 pr-16">
-      <Transition name="fade">
+      <TransitionGroup name="fade">
         <img :src="`/images/person-${person}-before.jpg`" :alt="`person-${person}-before`"
           :key="`person-${person}-before`"
-          class="row-start-1 col-start-1 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 mix-blend-luminosity" />
-      </Transition>
-      <Transition name="fade">
-        <img :src="`/images/person-${person}-before.jpg`" :alt="`person-${person}-before`"
-          :key="`person-${person}-before`"
-          class="row-start-1 col-start-1 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 opacity-0 hover:opacity-100 transition-opacity duration-700 ease-out" />
-      </Transition>
-      <Transition name="fade">
+          class="row-start-1 col-start-1 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 grayscale hover:grayscale-0" />
         <img :src="`/images/person-${person}-after.jpg`" :alt="`person-${person}-after`" :key="`person-${person}-after`"
-          class="row-start-2 col-start-2 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 mix-blend-luminosity" />
-      </Transition>
-      <Transition name="fade">
-        <img :src="`/images/person-${person}-after.jpg`" :alt="`person-${person}-after`" :key="`person-${person}-after`"
-          class="row-start-2 col-start-2 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 opacity-0 hover:opacity-100 transition-opacity duration-700 ease-out" />
-      </Transition>
+          class="row-start-2 col-start-2 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 grayscale hover:grayscale-0" />
+      </TransitionGroup>
     </div>
     <div
       class="justify-self-center self-start row-start-1 row-span-5 md:row-span-full col-start-1 md:col-start-2 col-span-full md:col-span-3 flex flex-col justify-center items-center gap-4 md:gap-6 text-center z-10">
@@ -49,11 +38,8 @@ const person = computed(() => counter.value % 2 + 1)
     </div>
     <div
       class="justify-self-center md:justify-self-end row-start-4 md:row-start-2 row-span-full col-start-1 md:col-start-4 col-span-full md:col-span-2 relative grid grid-rows-2 grid-cols-2 mt-8 sm:mt-16 md:m-0 md:pl-16 max-w-xs md:max-w-max">
-      <!-- TODO: change to NuxtImg -->
       <img src="/images/hero.jpg" alt="monalisa bairagi"
-        class="row-start-1 row-span-full col-start-1 col-span-full aspect-[3/4] object-cover mix-blend-luminosity" />
-      <img src="/images/hero.jpg" alt="monalisa bairagi"
-        class="row-start-1 row-span-full col-start-1 col-span-full aspect-[3/4] object-cover opacity-0 hover:opacity-100 transition-opacity duration-700 ease-out" />
+        class="row-start-1 row-span-full col-start-1 col-span-full aspect-[3/4] object-cover grayscale hover:grayscale-0" />
       <h3
         class="relative row-start-2 col-start-2 justify-self-center self-start text-base md:text-xl font-semi-bold font-sub -rotate-[15deg] translate-y-[80%] md:translate-y-full">
         Stay healthy with<br />mental wellness
@@ -72,6 +58,15 @@ const person = computed(() => counter.value % 2 + 1)
 <style scoped>
 img[alt="monalisa bairagi"] {
   @apply [mask-image:url('assets/images/hero-mask.png')] [mask-size:100%] [mask-repeat:no-repeat] [mask-position:center]
+}
+
+img {
+  -webkit-transition: 1s -webkit-filter ease-out;
+  -moz-transition: 1s -moz-filter ease-out;
+  -moz-transition: 1s filter ease-out;
+  -ms-transition: 1s -ms-filter ease-out;
+  -o-transition: 1s -o-filter ease-out;
+  transition: 1s filter ease-out, 1s -webkit-filter ease-out, 2s opacity ease-in-out;
 }
 
 .fade-enter-active,

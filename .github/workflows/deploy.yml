@@ -35,5 +35,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           overwrite: true
-          source: '.output, testimonials.yml'
+          # testimonials.yml not added as it is confidencial
+          source: '.output'
           target: '~/portfolio-monalisa'
