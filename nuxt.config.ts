@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxtjs/color-mode',
+    '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
-    '@nuxtseo/module',
     '@vite-pwa/nuxt',
     '@vueuse/nuxt',
     'nuxt-gtag',
@@ -42,21 +42,20 @@ export default defineNuxtConfig({
       theme_color: '#98DA8B',
       background_color: '#98DA8B',
       orientation: 'portrait',
-      start_url: 'https://monalisa-bairagi.com',
       shortcuts: [
         {
           'name': 'Book an Appointment by call',
           'short_name': 'Book Appointment (Call)',
           'description': 'Book a therapy session by call',
           'url': 'tel:+91798-002-4961',
-          'icons': [{ 'src': '/phone.png', 'sizes': '192x192' }]
+          'icons': [{ 'src': '/pwa/phone.png', 'sizes': '512x512' }]
         },
         {
           'name': 'Book an Appointment by whatsapp',
           'short_name': 'Book Appointment (Whatsapp)',
           'description': 'Book a therapy session by whatsapp',
           'url': 'https://wa.me/917980024961',
-          'icons': [{ 'src': '/whatsapp.png', 'sizes': '192x192' }]
+          'icons': [{ 'src': '/pwa/whatsapp.png', 'sizes': '512x512' }]
         }
       ],
       icons: [
