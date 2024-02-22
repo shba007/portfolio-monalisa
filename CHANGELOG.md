@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.3.0
+
+### Minor Changes
+
+- 5137e61: refactor: minor layout refactor
+
 ## 1.2.2
 
 ### Patch Changes
