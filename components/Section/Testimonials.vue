@@ -26,7 +26,7 @@ const { data: testimonials, pending, error } = useFetch('/api/testimonials')
     <Splide :options="splideOption" tag="div" :has-track="false"
       class="carousal relative left-1/2 -translate-x-1/2 w-screen max-w-[85rem]">
       <SplideTrack>
-        <SplideSlide v-for=" { image, name, message } in testimonials">
+        <SplideSlide v-for=" { image, name, message } in testimonials" :key="name">
           <TestimonalCard :image="image" :name="name" :message="message" />
         </SplideSlide>
       </SplideTrack>

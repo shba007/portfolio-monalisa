@@ -4,8 +4,6 @@ module.exports = {
     'components/**/*.{vue,js,ts}',
     'layouts/**/*.vue',
     'pages/**/*.vue',
-    'composables/**/*.{js,ts}',
-    'plugins/**/*.{js,ts}',
     'App.{js,ts,vue}',
     'app.{js,ts,vue}',
     'Error.{js,ts,vue}',
@@ -45,9 +43,9 @@ module.exports = {
       },
       black: '#000000',
       dark: {
-        400: '#0E0E11',
-        500: '#22252A',
-        600: '#2D2F34',
+        400: '#10121E',
+        500: '',
+        600: '',
       },
       primary: {
         400: '#ADE1A2',

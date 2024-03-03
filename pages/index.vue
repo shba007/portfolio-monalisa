@@ -1,4 +1,7 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'footer'
+})
 const isModelContactOpen = ref<boolean>(false)
 
 function onContact(action: boolean) {
@@ -15,5 +18,5 @@ function onContact(action: boolean) {
 <template>
   <SectionHero @contact="onContact(true)" />
   <SectionTestimonials />
-  <ModelContact :is-open="isModelContactOpen" @close="onContact(false)" />->
+  <ModelContact :is-open="isModelContactOpen" @close="onContact(false)" />
 </template>

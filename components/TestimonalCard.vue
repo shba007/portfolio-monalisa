@@ -7,7 +7,7 @@ const { image, name, message } = defineProps<{
 </script>
 
 <template>
-  <div class="relative w-[calc(100vw-2rem)] max-w-[500px] aspect-[5/3] py-16 mx-8">
+  <div class="relative w-[calc(100vw-2rem)] max-w-[364px] md:max-w-[422px] lg:max-w-[480px] aspect-[5/3] py-16 mx-8">
     <div class="card left-0 -translate-x-4 md:-translate-x-8 w-[81%]" />
     <div class="card right-0 translate-x-4 md:translate-x-8 w-[81%]" />
     <div class="card left-0 -translate-x-2 md:-translate-x-4 w-[90%]" />
