@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.4.0
+
+### Minor Changes
+
+- 1191338: feat: about me page added
+
 ## 1.3.0
 
 ### Minor Changes
