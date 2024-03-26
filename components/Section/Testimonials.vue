@@ -6,13 +6,14 @@ const splideOption: Options = {
   type: 'loop',
   autoplay: true,
   autoWidth: true,
-  padding: '16rem',
-  gap: '16rem',
+  padding: '4rem',
+  gap: '4rem',
   focus: 'center',
+  mediaQuery: 'min',
   breakpoints: {
     768: {
-      padding: '4rem',
-      gap: '4rem'
+      padding: '16rem',
+      gap: '16rem',
     }
   }
 };
