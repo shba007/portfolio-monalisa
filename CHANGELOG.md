@@ -1,5 +1,12 @@
 # porfolio-monalisa
 
+## 1.4.1
+
+### Patch Changes
+
+- 0e2bcee: chore: updated pkgs
+- cb52b05: chore: deploy script updated
+
 ## 1.4.0
 
 ### Minor Changes
