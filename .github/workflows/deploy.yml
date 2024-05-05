@@ -33,7 +33,7 @@ jobs:
         with:
           name: artifact
           path: |
-            .output
+            .output/
           if-no-files-found: error
 
   deploy:
@@ -58,4 +58,4 @@ jobs:
           target: ~/portfolio-monalisa/
           rm: true
           overwrite: true
-          # strip_components: 1
+          strip_components: 1
