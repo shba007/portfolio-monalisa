@@ -4,24 +4,6 @@ const description = `Monalisa Bairagi is a trusted RCI registered clinical psych
 She provides counseling sessions tailored to your unique needs near Rajpur, Sonarpur, Baruipur, Subhasgram, Harinavi & Narendrapur Area`
 const url = "https://monalisa-bairagi.com"
 
-useHead({
-  link: [
-    {
-      rel: "preconnect",
-      href: "https://fonts.gstatic.com",
-      crossorigin: "anonymous",
-    },
-    {
-      rel: "preconnect",
-      href: "https://fonts.googleapis.com"
-    },
-    {
-      rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap",
-    },
-  ]
-})
-
 useSeoMeta({
   ogType: "profile",
   title: title,
@@ -81,54 +63,6 @@ useSchemaOrg([
 </template>
 
 <style>
-@font-face {
-  font-family: "Sansation";
-  font-style: italic;
-  font-weight: 300;
-  font-display: swap;
-  src: url("/fonts/Sansation_Light_Italic.ttf");
-}
-
-@font-face {
-  font-family: "Sansation";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/Sansation_Italic.ttf");
-}
-
-@font-face {
-  font-family: "Sansation";
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url("/fonts/Sansation_Bold_Italic.ttf");
-}
-
-@font-face {
-  font-family: "Sansation";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("/fonts/Sansation_Light.ttf");
-}
-
-@font-face {
-  font-family: "Sansation";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/Sansation_Regular.ttf");
-}
-
-@font-face {
-  font-family: "Sansation";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("/fonts/Sansation_Bold.ttf");
-}
-
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

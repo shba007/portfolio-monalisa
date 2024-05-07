@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
+    '@nuxt/fonts',
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/seo',
@@ -11,9 +12,6 @@ export default defineNuxtConfig({
     'nuxt-gtag',
     'nuxt-icons',
   ],
-  typescript: {
-    shim: false,
-  },
   runtimeConfig: {
     private: {
       rootDir: '',

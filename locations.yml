@@ -1,0 +1,29 @@
+---
+- id: '1'
+  image: location-1
+  name: National Institute of Behavioral Sciences
+  address: P-7, Dr Suresh Sarkar Rd, Sealdah, Entally, Kolkata, West Bengal 700014
+  avilableWeekdays:
+    - Thus
+    - Fri
+    - Sat
+    - Sun
+  email: ''
+  phone: '8100075411'
+  website: https://www.nibsindia.org/
+  location: UEaGm6HT5zmhPxwm7
+- id: '2'
+  image: location-2
+  name: Calcutta National Medical College & Hospital (Pavlov)
+  address: 32, Gorachand Rd, Beniapukur, Kolkata, West Bengal 700014
+  avilableWeekdays:
+    - Mon
+    - Tue
+    - Wed
+    - Thus
+    - Fri
+    - Sat
+  email: ''
+  phone: '03322844834'
+  website: https://www.cnmckolkata.com/
+  location: VUMfYVJvqXu6Esie6

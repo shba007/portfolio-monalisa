@@ -1,14 +1,7 @@
-import fs from "node:fs";
-import path from "node:path";
-import yaml from "yaml";
 import { createAvatar } from '@dicebear/core';
 import { micah } from '@dicebear/collection';
-
-interface Testimonial {
-  image: string;
-  name: string;
-  message: string;
-}
+import { Testimonial } from "~/utils/types";
+import { readFile } from "./locations";
 
 function generateAvatar(name: string, gender: 'male' | 'female') {
   const avatar = createAvatar(micah, {
@@ -33,17 +26,10 @@ function shortenName(name: string) {
   return `${firstName[0]}. ${lastName}`
 }
 
-const config = useRuntimeConfig()
-
-const filePath = path.join(process.cwd(), config.private.rootDir, 'testimonials.yml')
-const fileContents = fs.readFileSync(filePath, "utf8");
-const testimonials: { name: string, gender: 'male' | 'female', message: string }[] = yaml.parse(fileContents);
-
+const testimonials = await Promise.all(readFile<{ name: string, gender: 'male' | 'female', message: string }>('testimonnials').map(async ({ name, gender, message }) => ({ image: await generateAvatar(name, gender), name: shortenName(name), message })));
 export default defineEventHandler<Promise<Testimonial[]>>(async () => {
   try {
-    return await Promise.all(
-      testimonials.map(async ({ name, gender, message }) => ({ image: await generateAvatar(name, gender), name: shortenName(name), message }))
-    );
+    return testimonials
   } catch (error: any) {
     console.error("API testimonials GET", error)
 
