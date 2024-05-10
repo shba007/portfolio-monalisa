@@ -14,7 +14,7 @@
   location: UEaGm6HT5zmhPxwm7
 - id: '2'
   image: location-2
-  name: Calcutta National Medical College & Hospital (Pavlov)
+  name: (Pavlov) Calcutta National Medical College & Hospital
   address: 32, Gorachand Rd, Beniapukur, Kolkata, West Bengal 700014
   avilableWeekdays:
     - Mon
@@ -27,3 +27,18 @@
   phone: '03322844834'
   website: https://www.cnmckolkata.com/
   location: VUMfYVJvqXu6Esie6
+- id: '3'
+  image: location-3
+  name: Healing Minds Cenite for Counselling and Education
+  address: 27B, Baishnabghata Bye lane, Kolkata 700047
+  avilableWeekdays:
+    - Mon
+    - Tue
+    - Wed
+    - Thus
+    - Fri
+    - Sat
+  email: 'healingmindscce@gmail.com'
+  phone: '6289965247'
+  website: ''
+  location: 8BfhZEgDwo74WauT9

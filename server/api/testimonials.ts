@@ -26,10 +26,11 @@ function shortenName(name: string) {
   return `${firstName[0]}. ${lastName}`
 }
 
-const testimonials = await Promise.all(readFile<{ name: string, gender: 'male' | 'female', message: string }>('testimonnials').map(async ({ name, gender, message }) => ({ image: await generateAvatar(name, gender), name: shortenName(name), message })));
+const testimonials = Promise.all(readFile<{ name: string, gender: 'male' | 'female', message: string }>('testimonials').map(async ({ name, gender, message }) => ({ image: await generateAvatar(name, gender), name: shortenName(name), message })));
+
 export default defineEventHandler<Promise<Testimonial[]>>(async () => {
   try {
-    return testimonials
+    return await testimonials
   } catch (error: any) {
     console.error("API testimonials GET", error)
 

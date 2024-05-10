@@ -17,11 +17,11 @@ const weekdays = ["Mon", "Tue", "Wed", "Thus", "Fri", "Sat", "Sun"]
 </script>
 
 <template>
-  <div class="rounded-2xl md:rounded-3xl w-fit max-w-[25.5rem] bg-white overflow-hidden shadow-md">
-    <img :src="`/images/${image}.jpg`" :alt="name" class="rounded-b-2xl md:rounded-b-3xl aspect-video" />
-    <div class="flex flex-col p-2.5 md:p-3 gap-3">
-      <h2 class="md:text-lg font-semi-bold">{{ name }}</h2>
-      <p class="text-xs md:text-base">{{ address }}</p>
+  <div class="flex flex-col rounded-2xl md:rounded-3xl w-fit max-w-[25.5rem] bg-white overflow-hidden shadow-md">
+    <NuxtImg :src="`/images/${image}.jpg`" :alt="name" class="rounded-b-2xl md:rounded-b-3xl aspect-video" />
+    <div class="flex-1 flex flex-col p-2.5 md:p-3 gap-3">
+      <h2 class="md:text-lg font-semi-bold line-clamp-1">{{ name }}</h2>
+      <p class="flex-1 text-xs md:text-base">{{ address }}</p>
       <ul class="flex justify-between gap-1.5 md:gap-2 text-xs md:text-base">
         <li v-for="weekday in weekdays" :key="weekday"
           class="flex-1 flex items-center justify-center rounded-md border border-dashed p-1.5 md:p-2 aspect-[6/7]"
