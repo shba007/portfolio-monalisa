@@ -24,7 +24,7 @@ function onNavigate(section: string) {
         <NuxtLink to="/about" @click="onNavigate('about')">About Me</NuxtLink>
       </li>
     </ul>
-    <span class="flex-1">
+    <span class="flex-1 md:invisible">
       <button aria-label="menu" class="block w-fit ml-auto">
         <NuxtIcon name="hamburger" class="text-[28px] md:text-[40px]" />
       </button>

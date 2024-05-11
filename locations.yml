@@ -32,12 +32,7 @@
   name: Healing Minds Cenite for Counselling and Education
   address: 27B, Baishnabghata Bye lane, Kolkata 700047
   avilableWeekdays:
-    - Mon
     - Tue
-    - Wed
-    - Thus
-    - Fri
-    - Sat
   email: 'healingmindscce@gmail.com'
   phone: '6289965247'
   website: ''

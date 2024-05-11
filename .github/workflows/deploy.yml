@@ -28,15 +28,14 @@ jobs:
       - name: Bulid Artifacts
         run: npm run build
 
-      - name: Wrap Inside a artifact folder
-        run: mkdir artifact && mv .output artifact/.output
-
+        # testimonials.yml not added as it is confidencial
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: artifact
           path: |
-            artifact
+            .output
+            locations.yml
           if-no-files-found: error
 
   deploy:
@@ -46,9 +45,6 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
 
-      - name: Display structure of downloaded files
-        run: ls -R -a
-
       - name: Upload artifact to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -56,7 +52,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          # testimonials.yml not added as it is confidencial
           source: artifact/*
           target: ~/portfolio-monalisa/
           rm: true

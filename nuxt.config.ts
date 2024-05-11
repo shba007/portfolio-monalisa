@@ -12,6 +12,11 @@ export default defineNuxtConfig({
     'nuxt-gtag',
     'nuxt-icons',
   ],
+  routeRules: {
+    '/': { prerender: true },
+    '/locations': { prerender: true },
+    '/about': { prerender: true },
+  },
   runtimeConfig: {
     private: {
       rootDir: '',
