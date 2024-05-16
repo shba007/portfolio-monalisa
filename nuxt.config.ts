@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     'nuxt-icons',
   ],
   routeRules: {
-    '/': { prerender: true },
+    '/': { swr: true },
     '/locations': { prerender: true },
     '/about': { prerender: true },
   },

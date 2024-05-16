@@ -44,7 +44,7 @@ import arrow from "@/assets/images/arrow-2.svg?raw";
     </div>
     <div class="relative -left-4 md:left-5 flex items-end justify-start w-screen md:max-w-[36rem] bg-dark-400 z-10">
       <NuxtImg src="/images/grid.svg" class="absolute top-0  left-0 right-0  h-3/4 -z-50  opacity-20 object-cover" />
-      <img src="/images/hero-transparent.png" alt="hero-transparent" class="sm:w-3/4 md:w-full object-contain" />
+      <NuxtImg src="/images/hero-transparent.png" alt="hero-transparent" class="sm:w-3/4 md:w-full object-contain" />
     </div>
   </section>
 </template>

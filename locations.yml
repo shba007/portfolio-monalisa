@@ -8,14 +8,14 @@
     - Fri
     - Sat
     - Sun
-  email: ''
+  email: 'nibskolkata@gmail.com'
   phone: '8100075411'
   website: https://www.nibsindia.org/
   location: UEaGm6HT5zmhPxwm7
 - id: '2'
   image: location-2
-  name: (Pavlov) Calcutta National Medical College & Hospital
-  address: 32, Gorachand Rd, Beniapukur, Kolkata, West Bengal 700014
+  name: Calcutta Pavlov Hospital
+  address: 18, Gobra Rd, Seal Lane, Beniapukur, Kolkata, West Bengal 700046
   avilableWeekdays:
     - Mon
     - Tue
@@ -29,7 +29,7 @@
   location: VUMfYVJvqXu6Esie6
 - id: '3'
   image: location-3
-  name: Healing Minds Cenite for Counselling and Education
+  name: Healing Minds Centre for Counselling and Education
   address: 27B, Baishnabghata Bye lane, Kolkata 700047
   avilableWeekdays:
     - Tue

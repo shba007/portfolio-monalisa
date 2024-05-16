@@ -18,10 +18,11 @@ const person = computed(() => counter.value % 2 + 1)
     <div
       class="justify-self-start row-start-2 row-span-full col-start-1 col-span-2 relative hidden md:grid grid-rows-2 grid-cols-2 pr-16">
       <TransitionGroup name="fade">
-        <img :src="`/images/person-${person}-before.jpg`" :alt="`person-${person}-before`"
+        <NuxtImg :src="`/images/person-${person}-before.jpg`" :alt="`person-${person}-before`"
           :key="`person-${person}-before`"
           class="row-start-1 col-start-1 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 grayscale hover:grayscale-0" />
-        <img :src="`/images/person-${person}-after.jpg`" :alt="`person-${person}-after`" :key="`person-${person}-after`"
+        <NuxtImg :src="`/images/person-${person}-after.jpg`" :alt="`person-${person}-after`"
+          :key="`person-${person}-after`"
           class="row-start-2 col-start-2 rounded-2xl w-[250px] aspect-[3/4] object-cover bg-light-500 grayscale hover:grayscale-0" />
       </TransitionGroup>
     </div>
@@ -38,7 +39,7 @@ const person = computed(() => counter.value % 2 + 1)
     </div>
     <div
       class="justify-self-center md:justify-self-end row-start-4 md:row-start-2 row-span-full col-start-1 md:col-start-4 col-span-full md:col-span-2 relative grid grid-rows-2 grid-cols-2 mt-8 sm:mt-16 md:m-0 md:pl-16 max-w-xs md:max-w-max">
-      <img src="/images/hero.jpg" alt="monalisa bairagi"
+      <NuxtImg src="/images/hero.jpg" alt="monalisa bairagi"
         class="row-start-1 row-span-full col-start-1 col-span-full aspect-[3/4] object-cover grayscale hover:grayscale-0" />
       <h3
         class="relative row-start-2 col-start-2 justify-self-center self-start text-base md:text-xl font-semi-bold font-sub -rotate-[15deg] translate-y-[80%] md:translate-y-full">

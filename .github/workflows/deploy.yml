@@ -54,6 +54,6 @@ jobs:
           port: 22
           source: artifact/*
           target: ~/portfolio-monalisa/
-          rm: true
           overwrite: true
+          # rm: true
           strip_components: 1
