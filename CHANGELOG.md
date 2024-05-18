@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.5.1
+
+### Patch Changes
+
+- 16017e1: style: location style fixed and nuxt validation added
+
 ## 1.5.0
 
 ### Minor Changes
