@@ -1,5 +1,12 @@
 # porfolio-monalisa
 
+## 1.5.0
+
+### Minor Changes
+
+- afb025b: feat: new location added, locationCard style fixed
+- 297f52f: feat: locations page added
+
 ## 1.4.1
 
 ### Patch Changes
