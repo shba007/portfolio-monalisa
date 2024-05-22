@@ -1,35 +1,32 @@
 <script setup lang="ts">
+const props = defineProps<{
+  type: "mobile" | "desktop"
+}>()
+const emit = defineEmits<{
+  (event: 'navigate'): void;
+}>()
+
 function onNavigate(section: string) {
   useTrackEvent('navigate', {
     section
   })
+  emit('navigate')
 }
 </script>
 
 <template>
-  <nav class="flex justify-between items-center py-3 md:py-4 z-20">
-    <div class="flex-1 md:hidden" />
-    <NuxtLink to="/"
-      class="flex-grow-[2] md:flex-1 text-center md:text-left !text-black text-xl md:text-2xl whitespace-nowrap">
-      Monalisa Bairagi
-    </NuxtLink>
-    <ul class="hidden md:flex flex-1 justify-center items-center gap-6">
-      <li>
-        <NuxtLink to="/#testimonials" @click="onNavigate('testimonials')">Testimonials</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/locations" @click="onNavigate('locations')">Locations</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/about" @click="onNavigate('about')">About Me</NuxtLink>
-      </li>
-    </ul>
-    <span class="flex-1 md:invisible">
-      <button aria-label="menu" class="block w-fit ml-auto">
-        <NuxtIcon name="hamburger" class="text-[28px] md:text-[40px]" />
-      </button>
-    </span>
-  </nav>
+  <ul class="flex-1 justify-center"
+    :class="type === 'mobile' ? 'fixed top-1/2 -translate-y-1/2 right-6 flex flex-col gap-6 text-lg items-end text-white mobile' : 'hidden md:flex items-center gap-6 desktop'">
+    <li>
+      <NuxtLink to="/#testimonials" @click="onNavigate('testimonials')">Testimonials</NuxtLink>
+    </li>
+    <li>
+      <NuxtLink to="/locations" @click="onNavigate('locations')">Locations</NuxtLink>
+    </li>
+    <li>
+      <NuxtLink to="/about" @click="onNavigate('about')">About Me</NuxtLink>
+    </li>
+  </ul>
 </template>
 
 <style scoped>
@@ -37,7 +34,7 @@ a {
   @apply whitespace-nowrap;
 }
 
-a.router-link-active {
+.desktop a.router-link-active {
   @apply text-primary-500;
 }
 </style>
