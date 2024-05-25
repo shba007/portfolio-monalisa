@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.6.0
+
+### Minor Changes
+
+- 9b2e04e: feat: pwa install prompt added, hamburger menu added
+
 ## 1.5.2
 
 ### Patch Changes
