@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.6.1
+
+### Patch Changes
+
+- a16ea59: style: appInstallPrompt z index fixed
+
 ## 1.6.0
 
 ### Minor Changes
