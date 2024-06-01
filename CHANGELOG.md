@@ -1,5 +1,12 @@
 # porfolio-monalisa
 
+## 1.6.2
+
+### Patch Changes
+
+- 9ff0537: seo: aspect-ratio fixed, grid.svg ignored, h tag sequence fixed
+- b082424: chore: pkgs updated and distro upgrade
+
 ## 1.6.1
 
 ### Patch Changes
