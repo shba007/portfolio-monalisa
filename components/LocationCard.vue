@@ -18,7 +18,8 @@ const weekdays = ["Mon", "Tue", "Wed", "Thus", "Fri", "Sat", "Sun"]
 
 <template>
   <div class="flex flex-col rounded-2xl md:rounded-3xl w-fit max-w-[25.5rem] bg-white overflow-hidden shadow-md">
-    <NuxtImg :src="`/images/${image}.jpg`" :alt="name" class="rounded-b-2xl md:rounded-b-3xl aspect-video" />
+    <NuxtImg :src="`/images/${image}.jpg`" :alt="name" :width="416" :height="234"
+      class="rounded-b-2xl md:rounded-b-3xl w-full object-cover" />
     <div class="flex-1 flex flex-col p-2.5 md:p-3 gap-3">
       <h2 class="md:text-lg font-semi-bold line-clamp-1">{{ name }}</h2>
       <p class="flex-1 text-xs md:text-base">{{ address }}</p>

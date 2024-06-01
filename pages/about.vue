@@ -6,8 +6,8 @@ import arrow from "@/assets/images/arrow-2.svg?raw";
   <section class="relative flex flex-col md:flex-row justify-between">
     <div class="flex flex-col gap-4 justify-center my-4 md:my-12 px-4 md:px-5 lg:px-6 xl:px-0">
       <NuxtIcon name="logo" class="self-center md:-translate-x-4 -mb-4 text-[96px] md:text-[112px]" filled />
-      <h2 class="text-xl md:text-2xl font-semi-bold">Hello,</h2>
-      <h1 class="text-2xl md:text-4xl">I'm Monalisa Bairagi</h1>
+      <h1 class="text-xl md:text-2xl font-semi-bold">Hello,</h1>
+      <h2 class="text-2xl md:text-4xl">I'm Monalisa Bairagi</h2>
       <h3 class="text-md md:text-xl">A Passionate Clinical Psychologist</h3>
       <p class="mt-2 md:mt-8 max-w-[36.25rem]">
         I completed M.Phil. in Clinical Psychology. With a 3+ year of experience, I have worked in clinical settings
@@ -16,10 +16,12 @@ import arrow from "@/assets/images/arrow-2.svg?raw";
         <br /><br />
         My expertise includes dealing with anxiety, depression, obsessions and behavioral and emotional problems of
         child and adolescence. I believe in creating a safe and non-judgmental space where clients can explore their
-        thoughts and feelings. I am committed to fostering positive change, resilience, and empowering individuals to
+        thoughts and feelings. I am committed to fostering positive change, resilience, and empowering individuals
+        to
         lead fulfilling lives.
         <br /><br />
-        Outside of my practice, I am working with NGOs for community based intervention and spreading awareness about
+        Outside of my practice, I am working with NGOs for community based intervention and spreading awareness
+        about
         mental health
       </p>
       <div class="relative mt-2 md:mt-12 w-fit">
@@ -43,7 +45,8 @@ import arrow from "@/assets/images/arrow-2.svg?raw";
       </div>
     </div>
     <div class="relative -left-4 md:left-5 flex items-end justify-start w-screen md:max-w-[36rem] bg-dark-400 z-10">
-      <NuxtImg src="/images/grid.svg" class="absolute top-0  left-0 right-0  h-3/4 -z-50  opacity-20 object-cover" />
+      <NuxtImg src="/images/grid.svg" class="absolute top-0 left-0 right-0 h-3/4 -z-50 opacity-20 object-cover"
+        aria-hidden="true" />
       <NuxtImg src="/images/hero-transparent.png" alt="hero-transparent" class="sm:w-3/4 md:w-full object-contain" />
     </div>
   </section>

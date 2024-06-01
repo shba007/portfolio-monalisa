@@ -16,7 +16,7 @@ const { image, name, message } = defineProps<{
       class="flex flex-col justify-start items-center gap-2 md:gap-6 rounded-3xl md:rounded-[2rem] p-6 md:p-16 w-full aspect-[5/3] text-center bg-white drop-shadow-md">
       <NuxtImg :src="image" :alt="name" loading="lazy"
         class="absolute top-0 -translate-y-1/2 w-20 md:w-24 aspect-[0.86] object-cover" />
-      <h4 class="mt-10 text-xl text-primary-600 font-semi-bold">{{ name }}</h4>
+      <h3 class="mt-10 text-xl text-primary-600 font-semi-bold">{{ name }}</h3>
       <p class="text-sm md:text-lg tracking-wide leading-[150%]">{{ message }}</p>
     </div>
   </div>

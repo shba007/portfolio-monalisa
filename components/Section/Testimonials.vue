@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-ignore
 import { type Options, Splide, SplideSlide, SplideTrack } from '@splidejs/vue-splide';
 
 const splideOption: Options = {

@@ -8,11 +8,7 @@ const person = computed(() => counter.value % 2 + 1)
 </script>
 
 <template>
-  <NuxtPicture src="/images/grid.svg" class="absolute top-[5%] right-0 -z-50 object-cover">
-    <source media="(min-width: 1024px)" src="/images/grid.svg" />
-    <source media="(min-width: 768px)" src="/images/grid.svg" />
-    <source media="(min-width: 100px)" src="/images/grid.svg" />
-  </NuxtPicture>
+  <NuxtImg src="/images/grid.svg" class="absolute top-[5%] right-0 -z-50 object-cover" aria-hidden="true" />
   <section id="hero"
     class="grid grid-flow-col grid-rows-[repeat(8,minmax(0,1fr))] md:grid-rows-[repeat(7,minmax(0,1fr))] grid-cols-5 md:gap-4">
     <div
@@ -41,10 +37,10 @@ const person = computed(() => counter.value % 2 + 1)
       class="justify-self-center md:justify-self-end row-start-4 md:row-start-2 row-span-full col-start-1 md:col-start-4 col-span-full md:col-span-2 relative grid grid-rows-2 grid-cols-2 mt-8 sm:mt-16 md:m-0 md:pl-16 max-w-xs md:max-w-max">
       <NuxtImg src="/images/hero.jpg" alt="monalisa bairagi" :width="512"
         class="row-start-1 row-span-full col-start-1 col-span-full aspect-[3/4] object-cover grayscale hover:grayscale-0" />
-      <h3
+      <h2
         class="relative row-start-2 col-start-2 justify-self-center self-start text-base md:text-xl font-semi-bold font-sub -rotate-[15deg] translate-y-[80%] md:translate-y-full">
         Stay healthy with<br />mental wellness
-      </h3>
+      </h2>
       <div v-html="arrow"
         class="relative row-start-2 col-start-2 justify-self-center self-center w-14 md:w-20 translate-y-1/3 opacity-50" />
       <NuxtLink to="https://www.youtube.com/@mindful-healing-path"
