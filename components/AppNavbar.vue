@@ -1,22 +1,23 @@
 <script setup lang="ts">
-const props = defineProps<{
-  type: "mobile" | "desktop"
+defineProps<{
+  type: 'mobile' | 'desktop'
 }>()
 const emit = defineEmits<{
-  (event: 'navigate'): void;
+  (event: 'navigate'): void
 }>()
 
 function onNavigate(section: string) {
   useTrackEvent('navigate', {
-    section
+    section,
   })
   emit('navigate')
 }
 </script>
 
 <template>
-  <ul class="flex-1 justify-center"
-    :class="type === 'mobile' ? 'fixed top-1/2 -translate-y-1/2 right-6 flex flex-col gap-6 text-lg items-end text-white mobile' : 'hidden md:flex items-center gap-6 desktop'">
+  <ul
+    class="flex-1 justify-center"
+    :class="type === 'mobile' ? 'mobile fixed right-6 top-1/2 flex -translate-y-1/2 flex-col items-end gap-6 text-lg text-white' : 'desktop hidden items-center gap-6 lg:flex'">
     <li>
       <NuxtLink to="/#testimonials" @click="onNavigate('testimonials')">Testimonials</NuxtLink>
     </li>

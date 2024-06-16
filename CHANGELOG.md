@@ -1,11 +1,16 @@
 # porfolio-monalisa
 
-## 1.6.2
+## 1.7.0
+
+### Minor Changes
+
+- 3cc553a: refactor: used confbox instead of yaml
 
 ### Patch Changes
 
 - 9ff0537: seo: aspect-ratio fixed, grid.svg ignored, h tag sequence fixed
 - b082424: chore: pkgs updated and distro upgrade
+- 3cc553a: refactor: nuxt-splide added instead of using vue-splide as plugin
 
 ## 1.6.1
 
