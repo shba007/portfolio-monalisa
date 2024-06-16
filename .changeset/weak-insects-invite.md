@@ -1,5 +1,5 @@
 ---
-"porfolio-monalisa": patch
+'porfolio-monalisa': patch
 ---
 
 chore: pkgs updated and distro upgrade

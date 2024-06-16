@@ -2,49 +2,40 @@
 const title = `RCI Registered Clinical Psychologist in Kolkata`
 const description = `Monalisa Bairagi is a trusted RCI registered clinical psychologist based in Kolkata.
 She provides counseling sessions tailored to your unique needs near Rajpur, Sonarpur, Baruipur, Subhasgram, Harinavi & Narendrapur Area`
-const url = "https://monalisa-bairagi.com"
+const url = 'https://monalisa-bairagi.com'
 
 useSeoMeta({
-  ogType: "profile",
-  title: title,
-  ogTitle: title,
-  description: description,
-  ogDescription: description,
-  ogImage: url + "/previews/landing.webp",
-  ogImageWidth: 1280,
-  ogImageHeight: 640,
+  ogType: 'profile',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   ogUrl: url,
   fbAppId: 966242223397117,
-  twitterCard: "summary_large_image",
-  colorScheme: "light dark",
+  twitterCard: 'summary_large_image',
+  colorScheme: 'light dark',
 })
 
 useSchemaOrg([
   definePerson({
-    name: "Monalisa Bairagi",
-    description: "She is a RCI registered clinical psychologist",
-    image: url + "/logo.png",
-    sameAs: [
-      "https://linkedin.com/in/monalisa-bairagi",
-      "https://instagram.com/mindful.healing.path",
-      "https://youtube.com/@mindful-healing-path",
-    ],
+    name: 'Monalisa Bairagi',
+    description: 'She is a RCI registered clinical psychologist',
+    image: url + '/logo.png',
+    sameAs: ['https://linkedin.com/in/monalisa-bairagi', 'https://instagram.com/mindful.healing.path', 'https://youtube.com/@mindful-healing-path'],
   }),
   defineLocalBusiness({
-    name: "Monalisa Bairagi",
+    name: 'Monalisa Bairagi',
     address: {
-      streetAddress: "RN Bhattacharya Road, Kumorpara 2nd Lane",
-      addressLocality: "Kolkata",
-      addressRegion: "WB",
-      postalCode: "700146",
-      addressCountry: "IN",
+      streetAddress: 'RN Bhattacharya Road, Kumorpara 2nd Lane',
+      addressLocality: 'Kolkata',
+      addressRegion: 'WB',
+      postalCode: '700146',
+      addressCountry: 'IN',
     },
-    image: url + "/logo.png",
+    image: url + '/logo.png',
   }),
   defineWebPage({
     datePublished: new Date(2024, 0, 1).toISOString(),
     dateModified: new Date(2024, 0, 1).toISOString(),
-    author: "Shirsendu Bairagi",
+    author: 'Shirsendu Bairagi',
   }),
   defineWebSite({
     url: url,
@@ -68,7 +59,7 @@ useSchemaOrg([
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
-  scrollbar-width: 6px
+  scrollbar-width: 6px;
 }
 
 *::-webkit-scrollbar {
@@ -80,11 +71,11 @@ useSchemaOrg([
 }
 
 html {
-  @apply relative scroll-smooth overflow-x-hidden;
+  @apply relative overflow-x-hidden scroll-smooth;
 }
 
 body {
-  @apply relative min-h-screen font-main text-black bg-primary-500 overflow-x-hidden;
+  @apply relative min-h-screen overflow-x-hidden bg-primary-500 font-main text-black;
 }
 
 .nuxt-icon>svg {

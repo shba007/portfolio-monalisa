@@ -1,30 +1,47 @@
 <script setup lang="ts">
+const route = useRoute()
+const showFooter = computed(() => route.name === 'index')
+
 const isMenuOpen = useState('menu', () => false)
-const animateClass = useState('menu- animate', () => '')
+const animateClass = useState('menu-animate', () => '')
 
 const { start } = useTimeoutFn(() => {
   animateClass.value = ''
 }, 300)
 
 watch(isMenuOpen, (value) => {
-  if (value)
-    animateClass.value = 'overflow-hidden h-screen'
-  else
-    start()
+  if (value) animateClass.value = 'overflow-hidden h-screen'
+  else start()
 })
+
+const isModelContactOpen = useState<boolean>('model-contact', () => false)
+
+function onContact(action: boolean) {
+  if (action) {
+    isModelContactOpen.value = true
+    useTrackEvent('contact_open')
+  } else {
+    isModelContactOpen.value = false
+    useTrackEvent('contact_close')
+  }
+}
 </script>
 
 <template>
-  <!-- Links -->
-  <Navbar type="mobile" @navigate="isMenuOpen = false" />
-  <!-- Links -->
-  <div class="relative bg-light-400 duration-300 z-10"
-    :class="[isMenuOpen && 'rounded-2xl scale-[80%] -translate-x-[40%]', animateClass]">
-    <AppHeader @toggle-menu="isMenuOpen = !isMenuOpen" />
-    <main
-      class="relative flex flex-col gap-4 md:gap-24 mx-auto px-4 md:px-12 !pb-0 max-w-[85rem] min-h-full before:content-[''] before:fixed before:left-4 md:before:left-8 lg:before:left-12 before:top-1/2 before:-translate-y-1/2 before:w-[1px] before:h-screen before:bg-light-500 after:content-[''] after:fixed after:right-4 md:after:right-8 lg:after:right-12 after:top-1/2 after:-translate-y-1/2 after:w-[1px] after:h-screen after:bg-light-500 overflow-hidden">
-      <slot />
-    </main>
-    <!-- <AppFooter /> -->
+  <div>
+    <!-- Links -->
+    <AppNavbar type="mobile" @navigate="isMenuOpen = false" />
+    <!-- Links -->
+    <div class="relative z-10 bg-light-400 duration-300" :class="[isMenuOpen && '-translate-x-[40%] scale-[80%] rounded-2xl', animateClass]">
+      <AppHeader @toggle-menu="isMenuOpen = !isMenuOpen" />
+      <main
+        class="relative mx-auto flex min-h-full max-w-[85rem] flex-col gap-4 overflow-hidden px-4 !pb-0 before:fixed before:left-4 before:top-1/2 before:h-screen before:w-[1px] before:-translate-y-1/2 before:bg-light-500 before:content-[''] after:fixed after:right-4 after:top-1/2 after:h-screen after:w-[1px] after:-translate-y-1/2 after:bg-light-500 after:content-[''] lg:gap-24 lg:px-12 lg:before:left-12 lg:before:left-8 lg:after:right-12 lg:after:right-8">
+        <slot />
+      </main>
+      <!-- <ClientOnly>
+        <div id="footer-placeholder" />
+      </ClientOnly> -->
+      <AppFooter v-if="showFooter" @contact="onContact" />
+    </div>
   </div>
 </template>
