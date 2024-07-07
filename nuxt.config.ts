@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
@@ -15,9 +16,11 @@ export default defineNuxtConfig({
     'nuxt-icons',
     'nuxt-splide',
   ],
+
   nitro: {
     compressPublicAssets: true,
   },
+
   routeRules: {
     '/': { swr: true },
     '/locations': { prerender: true },
@@ -26,26 +29,37 @@ export default defineNuxtConfig({
     '/images/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/fonts/**': { headers: { 'cache-control': 'max-age=31536000' } },
   },
+
   runtimeConfig: {
     private: {
       rootDir: '',
+      youtubeBaseUrl: '',
+      youtubeApiKey: '',
+      youtubeChannelId: '',
     },
   },
+
   image: {
     format: ['avif', 'webp'],
     width: 1920,
     quality: 80,
   },
+
   colorMode: {
     preference: 'light',
     fallback: 'light',
     classSuffix: '',
   },
+
   site: {
     name: 'Monalisa Bairagi',
     url: 'https://monalisa-bairagi.com',
   },
+
   pwa: {
+    scope: '/',
+    base: '/',
+    injectRegister: 'auto',
     registerType: 'autoUpdate',
     manifest: {
       name: 'Monalisa Bairagi',
@@ -202,23 +216,34 @@ export default defineNuxtConfig({
       ],
     },
     workbox: {
-      globPatterns: ['**/*.{js,css,html,jpg,png,webp,svg,ico}'],
+      globPatterns: ['**/*.{html,css,js,jpg,png,svg,webp,ico}'],
+      runtimeCaching: [
+        {
+          urlPattern: '/',
+          handler: 'NetworkFirst',
+        },
+      ],
+      navigateFallback: undefined,
     },
     client: {
       installPrompt: true,
       periodicSyncForUpdates: 3600,
     },
     devOptions: {
-      enabled: false,
-      suppressWarnings: true,
-      navigateFallbackAllowlist: [/^\/$/],
       type: 'module',
+      enabled: false,
+      suppressWarnings: false,
+      navigateFallback: undefined,
     },
   },
+
   gtag: {
     id: 'G-SYMDMKBF8R',
   },
+
   splide: {
     theme: 'core',
   },
+
+  compatibilityDate: '2024-07-07',
 })

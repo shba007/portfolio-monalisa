@@ -19,7 +19,7 @@ function onNavigate(section: string) {
     class="flex-1 justify-center"
     :class="type === 'mobile' ? 'mobile fixed right-6 top-1/2 flex -translate-y-1/2 flex-col items-end gap-6 text-lg text-white' : 'desktop hidden items-center gap-6 lg:flex'">
     <li>
-      <NuxtLink to="/#testimonials" @click="onNavigate('testimonials')">Testimonials</NuxtLink>
+      <NuxtLink to="/#testimonial" @click="onNavigate('testimonial')">Testimonials</NuxtLink>
     </li>
     <li>
       <NuxtLink to="/locations" @click="onNavigate('locations')">Locations</NuxtLink>

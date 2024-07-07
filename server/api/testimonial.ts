@@ -1,7 +1,6 @@
 import { createAvatar } from '@dicebear/core'
 import { micah } from '@dicebear/collection'
 import type { Testimonial } from '~/utils/types'
-import { readFile } from './locations'
 
 function generateAvatar(name: string, gender: 'male' | 'female') {
   const avatar = createAvatar(micah, {
@@ -26,17 +25,15 @@ function shortenName(name: string) {
   return `${firstName[0]}. ${lastName}`
 }
 
-const testimonials = Promise.all(
-  readFile<{ name: string; gender: 'male' | 'female'; message: string }>('testimonials').map(async ({ name, gender, message }) => ({
-    image: await generateAvatar(name, gender),
-    name: shortenName(name),
-    message,
-  }))
-)
+const testimonials = readYamlFile<{ name: string; gender: 'male' | 'female'; message: string }>('testimonials.yml').map(({ name, gender, message }) => ({
+  image: generateAvatar(name, gender),
+  name: shortenName(name),
+  message,
+}))
 
 export default defineEventHandler<Promise<Testimonial[]>>(async () => {
   try {
-    return await testimonials
+    return testimonials
   } catch (error: any) {
     console.error('API testimonials GET', error)
 

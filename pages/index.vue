@@ -29,7 +29,8 @@ function onContact(action: boolean) {
 <template>
   <div>
     <SectionHero @contact="onContact(true)" />
-    <SectionTestimonials />
+    <SectionVideo />
+    <SectionTestimonial />
     <ModelContact :is-open="isModelContactOpen" @close="onContact(false)" />
     <!-- <AppFooter @contact="onContact" /> -->
   </div>

@@ -15,3 +15,11 @@ export interface Location {
   website: string
   location: string
 }
+
+export interface Video {
+  title: string
+  publishedAt: Date
+  thumbnail: string
+  views: number
+  link: string
+}

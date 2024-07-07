@@ -47,6 +47,7 @@ useSchemaOrg([
 
 <template>
   <NuxtPwaManifest />
+  <NuxtPwaAssets />
   <NuxtLoadingIndicator color="#98DA8B" />
   <NuxtLayout>
     <NuxtPage />
@@ -63,7 +64,7 @@ useSchemaOrg([
 }
 
 *::-webkit-scrollbar {
-  @apply block w-[6px] bg-light-400;
+  @apply block size-[6px] bg-light-400;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -78,7 +79,7 @@ body {
   @apply relative min-h-screen overflow-x-hidden bg-primary-500 font-main text-black;
 }
 
-.nuxt-icon>svg {
+.nuxt-icon > svg {
   @apply !m-0;
 }
 

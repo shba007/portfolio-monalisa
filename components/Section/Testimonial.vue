@@ -16,12 +16,12 @@ const splideOption = {
   },
 }
 
-const { data: testimonials } = useFetch('/api/testimonials')
+const { data: testimonials } = useFetch('/api/testimonial')
 </script>
 
 <template>
-  <section id="testimonials" class="relative z-10">
-    <h2 class="my-8 text-center lg:text-lg lg:text-xl">All Testimonials</h2>
+  <section id="testimonial" class="relative z-10">
+    <h2 class="my-8 text-center lg:text-xl">All Testimonials</h2>
     <Splide :options="splideOption" tag="div" :has-track="false" class="carousal relative left-1/2 w-screen max-w-[85rem] -translate-x-1/2">
       <SplideTrack>
         <SplideSlide v-for="{ image, name, message } in testimonials" :key="name">
