@@ -1,5 +1,15 @@
 # porfolio-monalisa
 
+## 1.8.0
+
+### Minor Changes
+
+- 8acf2a8: feat: video section added
+
+### Patch Changes
+
+- eeda513: fix: docker volume added
+
 ## 1.7.0
 
 ### Minor Changes

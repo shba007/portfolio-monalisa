@@ -9,15 +9,17 @@ const person = computed(() => (counter.value % 2) + 1)
 
 <template>
   <NuxtImg src="/images/grid.svg" class="absolute right-0 top-[5%] -z-50 object-cover" aria-hidden="true" />
-  <section id="hero"
-    class="grid grid-flow-col grid-cols-5 grid-rows-[repeat(8,minmax(0,1fr))] lg:grid-rows-[repeat(7,minmax(0,1fr))] lg:gap-4">
-    <div
-      class="relative col-span-2 col-start-1 row-span-full row-start-2 hidden grid-cols-2 grid-rows-2 justify-self-start pr-16 lg:grid">
+  <section id="hero" class="grid grid-flow-col grid-cols-5 grid-rows-[repeat(8,minmax(0,1fr))] lg:grid-rows-[repeat(7,minmax(0,1fr))] lg:gap-4">
+    <div class="relative col-span-2 col-start-1 row-span-full row-start-2 hidden grid-cols-2 grid-rows-2 justify-self-start pr-16 lg:grid">
       <TransitionGroup name="fade">
-        <NuxtImg :key="`person-${person}-before`" :src="`/images/person-${person}-before.jpg`"
+        <NuxtImg
+          :key="`person-${person}-before`"
+          :src="`/images/person-${person}-before.jpg`"
           :alt="`person-${person}-before`"
           class="col-start-1 row-start-1 aspect-[3/4] w-[250px] rounded-2xl bg-light-500 object-cover grayscale hover:grayscale-0" />
-        <NuxtImg :key="`person-${person}-after`" :src="`/images/person-${person}-after.jpg`"
+        <NuxtImg
+          :key="`person-${person}-after`"
+          :src="`/images/person-${person}-after.jpg`"
           :alt="`person-${person}-after`"
           class="col-start-2 row-start-2 aspect-[3/4] w-[250px] rounded-2xl bg-light-500 object-cover grayscale hover:grayscale-0" />
       </TransitionGroup>
@@ -27,26 +29,19 @@ const person = computed(() => (counter.value % 2) + 1)
       <NuxtIcon name="logo" class="-mb-6 text-[144px] lg:-mb-8 lg:text-[160px]" filled />
       <h1 class="text-xl lg:text-3xl xl:text-4xl">Be Kind to Your Mind</h1>
       <p class="max-w-[35rem] text-sm !leading-[150%] tracking-wide lg:text-base">
-        A RCI registered clinical psychologist will help you by providing counseling sessions with a range of
-        therapeutic approaches tailored to your unique needs
+        A RCI registered clinical psychologist will help you by providing counseling sessions with a range of therapeutic approaches tailored to your unique needs
       </p>
       <CTAButton @click="emit('contact')" />
     </div>
     <div
       class="relative col-span-full col-start-1 row-span-full row-start-4 mt-8 grid max-w-xs grid-cols-2 grid-rows-2 justify-self-center sm:mt-16 lg:col-span-2 lg:col-start-4 lg:row-start-2 lg:m-0 lg:max-w-max lg:justify-self-end lg:pl-16">
-      <NuxtImg src="/images/hero.jpg" alt="monalisa bairagi" :width="512"
-        class="col-span-full col-start-1 row-span-full row-start-1 aspect-[3/4] object-cover grayscale hover:grayscale-0" />
-      <h2
-        class="relative col-start-2 row-start-2 translate-y-[80%] -rotate-[15deg] self-start justify-self-center font-sub text-base font-semi-bold lg:translate-y-full lg:text-xl">
+      <NuxtImg src="/images/hero.jpg" alt="monalisa bairagi" :width="512" class="col-span-full col-start-1 row-span-full row-start-1 aspect-[3/4] object-cover grayscale hover:grayscale-0" />
+      <h2 class="relative col-start-2 row-start-2 translate-y-[80%] -rotate-[15deg] self-start justify-self-center font-sub text-base font-semi-bold lg:translate-y-full lg:text-xl">
         Stay healthy with<br />mental wellness
       </h2>
-      <div
-        class="relative col-start-2 row-start-2 w-14 translate-y-1/3 self-center justify-self-center opacity-50 lg:w-20"
-        v-html="arrow" />
-      <NuxtLink to="https://www.youtube.com/@mindful-healing-path"
-        class="relative z-10 col-start-2 row-start-2 self-end justify-self-start" target="__blank" aria-label="youtube">
-        <NuxtIcon name="youtube"
-          class="text-[40px] text-light-600 hover:text-dark-600 hover:transition-colors lg:text-[48px]" />
+      <div class="relative col-start-2 row-start-2 w-14 translate-y-1/3 self-center justify-self-center opacity-50 lg:w-20" v-html="arrow" />
+      <NuxtLink to="https://www.youtube.com/@mindful-healing-path" class="relative z-10 col-start-2 row-start-2 self-end justify-self-start" target="__blank" aria-label="youtube">
+        <NuxtIcon name="youtube" class="text-[40px] text-light-600 hover:text-dark-600 hover:transition-colors lg:text-[48px]" />
       </NuxtLink>
     </div>
   </section>
