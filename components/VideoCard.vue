@@ -8,7 +8,7 @@ const props = defineProps<{
 }>()
 
 const timeAgo = useTimeAgo(props.publishedAt)
-const formatedViewCount = computed(() => props.views + 'K')
+// const formatedViewCount = computed(() => props.views + 'K')
 </script>
 
 <template>

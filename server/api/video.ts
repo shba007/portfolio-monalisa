@@ -62,34 +62,37 @@ interface PageInfo {
   resultsPerPage: number
 }
 
-export default defineEventHandler<Promise<Video[]>>(async () => {
-  try {
-    const { youtubeBaseUrl, youtubeApiKey, youtubeChannelId } = useRuntimeConfig().private
+export default defineCachedEventHandler<Promise<Video[]>>(
+  async () => {
+    try {
+      const { youtubeBaseUrl, youtubeApiKey, youtubeChannelId } = useRuntimeConfig().private
 
-    const videos = await $fetch<YoutubeVideo>('/search', {
-      baseURL: youtubeBaseUrl,
-      query: {
-        key: youtubeApiKey,
-        channelId: youtubeChannelId,
-        part: 'snippet,id',
-        order: 'date',
-        maxResults: 6,
-      },
-    })
+      const videos = await $fetch<YoutubeVideo>('/search', {
+        baseURL: youtubeBaseUrl,
+        query: {
+          key: youtubeApiKey,
+          channelId: youtubeChannelId,
+          part: 'snippet,id',
+          order: 'date',
+          maxResults: 6,
+        },
+      })
 
-    return videos.items.map<Video>(({ snippet, id }) => ({
-      title: snippet.title,
-      publishedAt: snippet.publishedAt,
-      thumbnail: snippet.thumbnails.high.url,
-      views: 1000,
-      link: `https://www.youtube.com/watch?v=${id.videoId}`,
-    }))
-  } catch (error: any) {
-    console.error('API locations GET', error)
+      return videos.items.map<Video>(({ snippet, id }) => ({
+        title: snippet.title,
+        publishedAt: snippet.publishedAt,
+        thumbnail: snippet.thumbnails.high.url,
+        views: 1000,
+        link: `https://www.youtube.com/watch?v=${id.videoId}`,
+      }))
+    } catch (error: any) {
+      console.error('API locations GET', error)
 
-    throw createError({
-      statusCode: 500,
-      statusMessage: 'Some Unknown Error Found',
-    })
-  }
-})
+      throw createError({
+        statusCode: 500,
+        statusMessage: 'Some Unknown Error Found',
+      })
+    }
+  },
+  { maxAge: 60 * 60 * 24 * 3 }
+)
