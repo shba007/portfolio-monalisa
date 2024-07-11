@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.8.1
+
+### Patch Changes
+
+- c8964cb: refactor: moved gtag from config to env
+
 ## 1.8.0
 
 ### Minor Changes
