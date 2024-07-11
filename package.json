@@ -22,7 +22,7 @@
     "tunnel": "npx untun tunnel --port 3001 http://localhost:3001",
     "clean": "nuxt cleanup",
     "docker:build": "docker build --build-arg TAG=latest -t portfolio-monalisa:latest .",
-    "docker:start": "docker run --detach --name portfolio-monalisa --mount type=bind,source=$(pwd)/testimonials.yml,target=/app/testimonials.yml,readonly --env-file .env.prod -p 1001:3000 portfolio-monalisa:latest"
+    "docker:start": "docker run --detach --name portfolio-monalisa --mount type=bind,source=$(pwd)/testimonials.yml,target=/app/testimonials.yml,readonly --env-file .env.prod -p 1001:3000 ghcr.io/algostract/portfolio-monalisa:latest"
   },
   "dependencies": {
     "@dicebear/collection": "^9.0.1",
