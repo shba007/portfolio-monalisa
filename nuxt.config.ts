@@ -31,6 +31,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
+    app: {
+      version: '',
+    },
     private: {
       rootDir: '',
       youtubeBaseUrl: '',
@@ -238,7 +241,6 @@ export default defineNuxtConfig({
   },
 
   gtag: {
-    id: 'G-SYMDMKBF8R',
   },
 
   splide: {
