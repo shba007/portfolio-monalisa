@@ -240,8 +240,7 @@ export default defineNuxtConfig({
     },
   },
 
-  gtag: {
-  },
+  gtag: {},
 
   splide: {
     theme: 'core',

@@ -46,6 +46,7 @@ useSchemaOrg([
 </script>
 
 <template>
+  <NuxtRouteAnnouncer />
   <NuxtPwaManifest />
   <NuxtPwaAssets />
   <NuxtLoadingIndicator color="#98DA8B" />
