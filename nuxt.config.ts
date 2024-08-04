@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2024-07-07',
   devtools: { enabled: true },
-
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
@@ -16,11 +16,9 @@ export default defineNuxtConfig({
     'nuxt-icons',
     'nuxt-splide',
   ],
-
   nitro: {
     compressPublicAssets: true,
   },
-
   routeRules: {
     '/': { swr: true },
     '/locations': { prerender: true },
@@ -29,7 +27,6 @@ export default defineNuxtConfig({
     '/images/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/fonts/**': { headers: { 'cache-control': 'max-age=31536000' } },
   },
-
   runtimeConfig: {
     app: {
       version: '',
@@ -41,24 +38,29 @@ export default defineNuxtConfig({
       youtubeChannelId: '',
     },
   },
-
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+    },
+  },
   image: {
     format: ['avif', 'webp'],
-    width: 1920,
     quality: 80,
   },
-
   colorMode: {
     preference: 'light',
     fallback: 'light',
     classSuffix: '',
   },
-
   site: {
     name: 'Monalisa Bairagi',
     url: 'https://monalisa-bairagi.com',
   },
-
+  robots: {
+    disallow: ['/_nuxt/'],
+  },
   pwa: {
     scope: '/',
     base: '/',
@@ -239,12 +241,10 @@ export default defineNuxtConfig({
       navigateFallback: undefined,
     },
   },
-
-  gtag: {},
-
+  gtag: {
+    loadingStrategy: 'async',
+  },
   splide: {
     theme: 'core',
   },
-
-  compatibilityDate: '2024-07-07',
 })

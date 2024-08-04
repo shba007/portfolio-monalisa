@@ -25,21 +25,24 @@ function shortenName(name: string) {
   return `${firstName[0]}. ${lastName}`
 }
 
-const testimonials = readYamlFile<{ name: string; gender: 'male' | 'female'; message: string }>('testimonials.yml').map(({ name, gender, message }) => ({
-  image: generateAvatar(name, gender),
-  name: shortenName(name),
-  message,
-}))
+export default defineCachedEventHandler<Promise<Testimonial[]>>(
+  async () => {
+    try {
+      const testimonials = readYamlFile<{ name: string; gender: 'male' | 'female'; message: string }>('testimonials.yml').map(({ name, gender, message }) => ({
+        image: generateAvatar(name, gender),
+        name: shortenName(name),
+        message,
+      }))
 
-export default defineEventHandler<Promise<Testimonial[]>>(async () => {
-  try {
-    return testimonials
-  } catch (error: any) {
-    console.error('API testimonials GET', error)
+      return testimonials
+    } catch (error: any) {
+      console.error('API testimonials GET', error)
 
-    throw createError({
-      statusCode: 500,
-      statusMessage: 'Some Unknown Error Found',
-    })
-  }
-})
+      throw createError({
+        statusCode: 500,
+        statusMessage: 'Some Unknown Error Found',
+      })
+    }
+  },
+  { maxAge: 60 * 60 }
+)

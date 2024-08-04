@@ -12,7 +12,8 @@ ENV NODE_ENV=production
 
 RUN npm run build
 
-FROM node:lts-alpine AS deployer
+# FROM node:lts-alpine AS deployer
+FROM gcr.io/distroless/nodejs20-debian12 AS deployer
 
 ARG VERSION
 
@@ -26,4 +27,5 @@ ENV NUXT_APP_VERSION=$VERSION
 
 EXPOSE 3000
 
-ENTRYPOINT ["node", ".output/server/index.mjs"]
+# ENTRYPOINT ["node", ".output/server/index.mjs"]
+CMD [".output/server/index.mjs"]

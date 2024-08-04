@@ -4,21 +4,33 @@ interface YoutubeVideo {
   kind: string
   etag: string
   regionCode: string
-  pageInfo: PageInfo
-  items: Item[]
-}
-
-interface Item {
-  kind: ItemKind
-  etag: string
-  id: ID
-  snippet: Snippet
-}
-
-interface ID {
-  kind: IDKind
-  videoId?: string
-  channelId?: string
+  pageInfo: {
+    totalResults: number
+    resultsPerPage: number
+  }
+  items: {
+    kind: ItemKind
+    etag: string
+    id: {
+      kind: IDKind
+      videoId?: string
+      channelId?: string
+    }
+    snippet: {
+      publishedAt: Date
+      channelId: string
+      title: string
+      description: string
+      thumbnails: {
+        default: Thumbnail
+        medium: Thumbnail
+        high: Thumbnail
+      }
+      channelTitle: string
+      liveBroadcastContent: LiveBroadcastContent
+      publishTime: Date
+    }
+  }[]
 }
 
 enum IDKind {
@@ -30,36 +42,14 @@ enum ItemKind {
   YoutubeSearchResult = 'youtube#searchResult',
 }
 
-interface Snippet {
-  publishedAt: Date
-  channelId: string
-  title: string
-  description: string
-  thumbnails: Thumbnails
-  channelTitle: string
-  liveBroadcastContent: LiveBroadcastContent
-  publishTime: Date
-}
-
 enum LiveBroadcastContent {
   None = 'none',
 }
 
-interface Thumbnails {
-  default: Default
-  medium: Default
-  high: Default
-}
-
-interface Default {
+interface Thumbnail {
   url: string
   width?: number
   height?: number
-}
-
-interface PageInfo {
-  totalResults: number
-  resultsPerPage: number
 }
 
 export default defineCachedEventHandler<Promise<Video[]>>(
@@ -94,5 +84,5 @@ export default defineCachedEventHandler<Promise<Video[]>>(
       })
     }
   },
-  { maxAge: 60 * 60 * 24 * 3 }
+  { maxAge: 60 * 60 }
 )

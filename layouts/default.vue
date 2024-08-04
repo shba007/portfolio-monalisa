@@ -38,9 +38,6 @@ function onContact(action: boolean) {
         class="relative mx-auto flex min-h-full max-w-[85rem] flex-col gap-4 overflow-hidden px-4 !pb-0 before:fixed before:left-4 before:top-1/2 before:h-screen before:w-[1px] before:-translate-y-1/2 before:bg-light-500 before:content-[''] after:fixed after:right-4 after:top-1/2 after:h-screen after:w-[1px] after:-translate-y-1/2 after:bg-light-500 after:content-[''] lg:gap-24 lg:px-12 lg:before:left-12 lg:before:left-8 lg:after:right-12 lg:after:right-8">
         <slot />
       </main>
-      <!-- <ClientOnly>
-        <div id="footer-placeholder" />
-      </ClientOnly> -->
       <AppFooter v-if="showFooter" @contact="onContact" />
     </div>
   </div>
