@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.8.3
+
+### Patch Changes
+
+- 6635732: feat: api called cached
+
 ## 1.8.2
 
 ### Patch Changes
