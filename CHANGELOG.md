@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.8.2
+
+### Patch Changes
+
+- 6119b63: chore: pkgs updated and housekeeping
+
 ## 1.8.1
 
 ### Patch Changes
