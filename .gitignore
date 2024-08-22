@@ -23,5 +23,8 @@ logs
 .env.*
 !.env.example
 
-# Database
-testimonials.yml
+# Static files
+static/**/*.*
+!static/**/*.gitkeep
+!static/data/*
+static/data/testimonials.yml

@@ -13,7 +13,7 @@ const { image, name, message } = defineProps<{
     <div class="card left-0 w-[90%] -translate-x-2 lg:-translate-x-4" />
     <div class="card right-0 w-[90%] translate-x-2 lg:translate-x-4" />
     <div class="flex aspect-[5/3] w-full flex-col items-center justify-start gap-2 rounded-3xl bg-white p-6 text-center drop-shadow-md lg:gap-6 lg:rounded-[2rem] lg:p-16">
-      <NuxtImg :src="image" :alt="name" loading="lazy" class="absolute top-0 aspect-[0.86] w-20 -translate-y-1/2 object-cover lg:w-24" />
+      <NuxtImg :src="image" :alt="name" :width="80" :height="93" loading="lazy" class="absolute top-0 aspect-[0.86] w-20 -translate-y-1/2 object-cover lg:w-24" />
       <h3 class="mt-10 text-xl font-semi-bold text-primary-600">{{ name }}</h3>
       <p class="text-sm leading-[150%] tracking-wide lg:text-lg">{{ message }}</p>
     </div>

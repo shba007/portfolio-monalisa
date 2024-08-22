@@ -13,7 +13,7 @@ const timeAgo = useTimeAgo(props.publishedAt)
 
 <template>
   <NuxtLink :to="link" target="__blank" class="relative w-full max-w-[384px] overflow-hidden rounded-[1.25rem] duration-200 hover:shadow-lg">
-    <NuxtImg :src="thumbnail" :alt="title" :width="384" class="col-span-2 aspect-video rounded-[1.25rem] object-cover" />
+    <NuxtImg :src="thumbnail" :alt="title" :width="384" loading="lazy" class="col-span-2 aspect-video rounded-[1.25rem] object-cover" />
     <div class="grid-row-[auto_auto] relative grid w-full grid-cols-[auto_auto] gap-2 p-4 pt-2">
       <span class="col-span-2 inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-base lg:text-[18px]">
         {{ title }}

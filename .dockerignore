@@ -31,5 +31,6 @@ logs
 .dockerignore
 Dockerfile
 
-# Database
-testimonials.yml
+# Static files
+static/**/*.*
+!static/**/*.gitkeep

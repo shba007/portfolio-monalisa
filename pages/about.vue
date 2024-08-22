@@ -48,8 +48,8 @@ useSeoMeta({
       </div>
     </div>
     <div class="relative -left-4 z-10 flex w-screen items-end justify-start bg-dark-400 lg:left-9 lg:max-w-[36rem]">
-      <NuxtImg src="/images/grid.svg" class="absolute left-0 right-0 top-0 -z-50 h-3/4 object-cover opacity-20" aria-hidden="true" />
-      <NuxtImg src="/images/hero-transparent.png" alt="hero-transparent" class="object-contain sm:w-3/4 lg:w-full" />
+      <NuxtImg src="/images/grid.svg" loading="lazy" class="absolute left-0 right-0 top-0 -z-50 h-3/4 object-cover opacity-20" aria-hidden="true" />
+      <NuxtImg src="/images/hero-transparent.png" alt="hero-transparent" loading="lazy" class="object-contain sm:w-3/4 lg:w-full" />
     </div>
   </section>
 </template>

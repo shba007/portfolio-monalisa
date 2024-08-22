@@ -16,12 +16,16 @@ const person = computed(() => (counter.value % 2) + 1)
           :key="`person-${person}-before`"
           :src="`/images/person-${person}-before.jpg`"
           :alt="`person-${person}-before`"
-          class="col-start-1 row-start-1 aspect-[3/4] w-[250px] rounded-2xl bg-light-500 object-cover grayscale hover:grayscale-0" />
+          :width="250"
+          loading="lazy"
+          class="col-start-1 row-start-1 aspect-[3/4] rounded-2xl bg-light-500 object-cover grayscale hover:grayscale-0" />
         <NuxtImg
           :key="`person-${person}-after`"
           :src="`/images/person-${person}-after.jpg`"
           :alt="`person-${person}-after`"
-          class="col-start-2 row-start-2 aspect-[3/4] w-[250px] rounded-2xl bg-light-500 object-cover grayscale hover:grayscale-0" />
+          :width="250"
+          loading="lazy"
+          class="col-start-2 row-start-2 aspect-[3/4] rounded-2xl bg-light-500 object-cover grayscale hover:grayscale-0" />
       </TransitionGroup>
     </div>
     <div
@@ -35,7 +39,12 @@ const person = computed(() => (counter.value % 2) + 1)
     </div>
     <div
       class="relative col-span-full col-start-1 row-span-full row-start-4 mt-8 grid max-w-xs grid-cols-2 grid-rows-2 justify-self-center sm:mt-16 lg:col-span-2 lg:col-start-4 lg:row-start-2 lg:m-0 lg:max-w-max lg:justify-self-end lg:pl-16">
-      <NuxtImg src="/images/hero.jpg" alt="monalisa bairagi" :width="512" class="col-span-full col-start-1 row-span-full row-start-1 aspect-[3/4] object-cover grayscale hover:grayscale-0" />
+      <NuxtImg
+        src="/images/hero.jpg"
+        alt="monalisa bairagi"
+        :width="512"
+        loading="lazy"
+        class="col-span-full col-start-1 row-span-full row-start-1 aspect-[3/4] object-cover grayscale hover:grayscale-0" />
       <h2 class="relative col-start-2 row-start-2 translate-y-[80%] -rotate-[15deg] self-start justify-self-center font-sub text-base font-semi-bold lg:translate-y-full lg:text-xl">
         Stay healthy with<br />mental wellness
       </h2>

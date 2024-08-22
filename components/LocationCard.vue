@@ -19,7 +19,7 @@ const weekdays = ['Mon', 'Tue', 'Wed', 'Thus', 'Fri', 'Sat', 'Sun']
 
 <template>
   <div class="flex w-fit max-w-[25.5rem] flex-col overflow-hidden rounded-2xl bg-white shadow-md md:scale-90 lg:scale-75 lg:rounded-3xl xl:scale-100">
-    <NuxtImg :src="`/images/${image}.jpg`" :alt="name" :width="416" :height="234" class="w-full rounded-b-2xl object-cover lg:rounded-b-3xl" />
+    <NuxtImg :src="`/images/${image}.jpg`" :alt="name" :width="416" :height="234" loading="lazy" class="w-full rounded-b-2xl object-cover lg:rounded-b-3xl" />
     <div class="flex flex-1 flex-col gap-3 p-2.5 lg:p-3">
       <h2 class="line-clamp-1 font-semi-bold lg:text-lg">{{ name }}</h2>
       <p class="flex-1 text-xs lg:text-base">{{ address }}</p>
