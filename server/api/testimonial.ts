@@ -28,13 +28,15 @@ function shortenName(name: string) {
 export default defineCachedEventHandler<Promise<Testimonial[]>>(
   async () => {
     try {
-      const testimonials = readYamlFile<{ name: string; gender: 'male' | 'female'; message: string }>('testimonials.yml').map(({ name, gender, message }) => ({
+      const testimonials = await readYamlFile<{ name: string; gender: 'male' | 'female'; message: string }>('testimonials.yml')
+
+      if (!testimonials) throw createError({ statusCode: 500, statusMessage: 'testimonials is undefined' })
+
+      return testimonials.map(({ name, gender, message }) => ({
         image: generateAvatar(name, gender),
         name: shortenName(name),
         message,
       }))
-
-      return testimonials
     } catch (error: any) {
       console.error('API testimonials GET', error)
 

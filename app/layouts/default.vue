@@ -19,10 +19,10 @@ const isModelContactOpen = useState<boolean>('model-contact', () => false)
 function onContact(action: boolean) {
   if (action) {
     isModelContactOpen.value = true
-    useTrackEvent('contact_open')
+    gaProxy.gtag('event', 'contact_open')
   } else {
     isModelContactOpen.value = false
-    useTrackEvent('contact_close')
+    gaProxy.gtag('event', 'contact_close')
   }
 }
 </script>

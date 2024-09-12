@@ -1,12 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-07-07',
+  compatibilityDate: '2024-07-04',
+  future: {
+    compatibilityVersion: 4,
+  },
   devtools: { enabled: true },
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
-    "@nuxt/scripts",
+    '@nuxt/scripts',
     '@nuxt/test-utils',
     '@nuxtjs/color-mode',
     '@nuxtjs/seo',
@@ -21,9 +24,9 @@ export default defineNuxtConfig({
     storage: {
       fs: {
         driver: 'fs',
-        base: './static'
-      }
-    }
+        base: './static',
+      },
+    },
   },
   routeRules: {
     '/': { isr: 3600 },
@@ -40,6 +43,9 @@ export default defineNuxtConfig({
     public: {
       scripts: {
         googleAnalytics: {
+          id: '',
+        },
+        googleTagManager: {
           id: '',
         },
       },
@@ -61,6 +67,12 @@ export default defineNuxtConfig({
   image: {
     format: ['avif', 'webp'],
     quality: 80,
+  },
+  scripts: {
+    registry: {
+      googleAnalytics: true,
+      googleTagManager: true,
+    },
   },
   colorMode: {
     preference: 'light',

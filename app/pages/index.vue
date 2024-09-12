@@ -4,6 +4,8 @@ const description = `Monalisa Bairagi is a trusted RCI registered clinical psych
 She provides counseling sessions tailored to your unique needs near Rajpur, Sonarpur, Baruipur, Subhasgram, Harinavi & Narendrapur Area`
 const url = 'https://monalisa-bairagi.com'
 
+const { proxy: gaProxy } = useScriptGoogleAnalytics()
+
 useSeoMeta({
   title: title,
   ogTitle: title,
@@ -18,10 +20,10 @@ const isModelContactOpen = useState<boolean>('model-contact', () => false)
 function onContact(action: boolean) {
   if (action) {
     isModelContactOpen.value = true
-    useTrackEvent('contact_open')
+    gaProxy.gtag('event', 'contact_open')
   } else {
     isModelContactOpen.value = false
-    useTrackEvent('contact_close')
+    gaProxy.gtag('event', 'contact_close')
   }
 }
 </script>
