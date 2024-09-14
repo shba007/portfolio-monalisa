@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { image, name, message } = defineProps<{
+defineProps<{
   image: string
   name: string
   message: string

@@ -2,8 +2,9 @@
 defineProps<{
   isOpen: boolean
 }>()
+
 const emit = defineEmits<{
-  (event: 'close'): void
+  close: []
 }>()
 
 const { proxy: gaProxy } = useScriptGoogleAnalytics()
@@ -29,7 +30,7 @@ function flippedClass(method: string) {
 </script>
 
 <template>
-  <ModelBase :is-open="isOpen" inner-class="grid grid-rows-1 grid-cols-2 gap-4 pt-6 w-full !max-w-[24.5rem] overflow-hidden" @close="close">
+  <ModalBase :is-open="isOpen" inner-class="grid grid-rows-1 grid-cols-2 gap-4 pt-6 w-full !max-w-[24.5rem] overflow-hidden" @close="close">
     <span class="col-span-2 mx-auto mb-2 text-lg">Book an Appointment via</span>
     <NuxtLink
       v-for="{ method, icon, link } of methods"
@@ -43,7 +44,7 @@ function flippedClass(method: string) {
       <NuxtIcon :name="icon" class="text-[56px]" :class="flippedClass(method)" />
       <span class="font-semi-bold capitalize" :class="flippedClass(method)">{{ method }}</span>
     </NuxtLink>
-  </ModelBase>
+  </ModalBase>
 </template>
 
 <style scoped>

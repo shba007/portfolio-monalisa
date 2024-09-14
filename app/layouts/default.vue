@@ -14,14 +14,14 @@ watch(isMenuOpen, (value) => {
   else start()
 })
 
-const isModelContactOpen = useState<boolean>('model-contact', () => false)
+const isModalContactOpen = useState<boolean>('Modal-contact', () => false)
 
 function onContact(action: boolean) {
   if (action) {
-    isModelContactOpen.value = true
+    isModalContactOpen.value = true
     gaProxy.gtag('event', 'contact_open')
   } else {
-    isModelContactOpen.value = false
+    isModalContactOpen.value = false
     gaProxy.gtag('event', 'contact_close')
   }
 }

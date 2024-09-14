@@ -1,12 +1,13 @@
 <script setup lang="ts">
-const { proxy: gaProxy } = useScriptGoogleAnalytics()
-
 defineProps<{
   type: 'mobile' | 'desktop'
 }>()
+
 const emit = defineEmits<{
-  (event: 'navigate'): void
+  navigate: []
 }>()
+
+const { proxy: gaProxy } = useScriptGoogleAnalytics()
 
 function onNavigate(section: string) {
   gaProxy.gtag('event', 'navigate', { section })

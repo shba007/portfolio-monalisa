@@ -1,7 +1,8 @@
 <script setup lang="ts">
 defineProps<{ isOpen: boolean; innerClass: string }>()
+
 const emit = defineEmits<{
-  (event: 'close'): void
+  close: []
 }>()
 </script>
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import arrow from '@/assets/images/arrow-1.svg?raw'
 
-const emit = defineEmits<{ (event: 'contact'): void }>()
+const emit = defineEmits<{ contact: [] }>()
 
 const counter = useInterval(4000)
 const person = computed(() => (counter.value % 2) + 1)

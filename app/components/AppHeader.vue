@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const emit = defineEmits<{
-  (event: 'toggleMenu'): void
+  toggleMenu: []
 }>()
 </script>
 

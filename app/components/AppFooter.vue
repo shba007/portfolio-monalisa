@@ -2,7 +2,7 @@
 import arrow from '@/assets/images/arrow-2.svg?raw'
 
 const emit = defineEmits<{
-  (event: 'contact', action: boolean): void
+  contact: [action: boolean]
 }>()
 </script>
 

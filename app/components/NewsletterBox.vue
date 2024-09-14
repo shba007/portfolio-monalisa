@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const emit = defineEmits<{ (event: 'subscribe', email: string): void }>()
+const emit = defineEmits<{
+  subscribe: [email: string]
+}>()
 
 const email = ref<string>()
 </script>

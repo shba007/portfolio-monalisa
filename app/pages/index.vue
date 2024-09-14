@@ -15,14 +15,14 @@ useSeoMeta({
   ogUrl: url,
 })
 
-const isModelContactOpen = useState<boolean>('model-contact', () => false)
+const isModalContactOpen = useState<boolean>('Modal-contact', () => false)
 
 function onContact(action: boolean) {
   if (action) {
-    isModelContactOpen.value = true
+    isModalContactOpen.value = true
     gaProxy.gtag('event', 'contact_open')
   } else {
-    isModelContactOpen.value = false
+    isModalContactOpen.value = false
     gaProxy.gtag('event', 'contact_close')
   }
 }
@@ -33,7 +33,7 @@ function onContact(action: boolean) {
     <SectionHero @contact="onContact(true)" />
     <SectionVideo />
     <SectionTestimonial />
-    <ModelContact :is-open="isModelContactOpen" @close="onContact(false)" />
+    <ModalContact :is-open="isModalContactOpen" @close="onContact(false)" />
     <!-- <AppFooter @contact="onContact" /> -->
   </div>
 </template>

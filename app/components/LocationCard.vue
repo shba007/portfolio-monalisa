@@ -1,12 +1,13 @@
 <script setup lang="ts">
-// import { type Location } from "~/utils/types";
+// TODO: Refactor props type when supported
+// import type { Location } from "~/utils/types";
 
 interface Location {
   id: string
   image: string
   name: string
   address: string
-  avilableWeekdays: string[]
+  availableWeekdays: string[]
   email: string
   phone: string
   website: string
@@ -14,6 +15,7 @@ interface Location {
 }
 
 defineProps<Location>()
+
 const weekdays = ['Mon', 'Tue', 'Wed', 'Thus', 'Fri', 'Sat', 'Sun']
 </script>
 
@@ -28,7 +30,7 @@ const weekdays = ['Mon', 'Tue', 'Wed', 'Thus', 'Fri', 'Sat', 'Sun']
           v-for="weekday in weekdays"
           :key="weekday"
           class="flex aspect-[6/7] flex-1 items-center justify-center rounded-md border border-dashed p-1.5 lg:p-2"
-          :class="avilableWeekdays.includes(weekday) ? 'bg-primary-500' : 'bg-light-500'">
+          :class="availableWeekdays.includes(weekday) ? 'bg-primary-500' : 'bg-light-500'">
           {{ weekday }}
         </li>
       </ul>

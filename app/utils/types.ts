@@ -9,7 +9,7 @@ export interface Location {
   image: string
   name: string
   address: string
-  avilableWeekdays: string[]
+  availableWeekdays: string[]
   email: string
   phone: string
   website: string
