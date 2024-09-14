@@ -1,5 +1,16 @@
 # porfolio-monalisa
 
+## 1.9.0
+
+### Minor Changes
+
+- 588c730: refactor: file structure migrated to nuxt 4
+- 69eb202: feat: dynamic file loading added
+
+### Patch Changes
+
+- 38f1849: refactor: defineEmits
+
 ## 1.8.3
 
 ### Patch Changes
