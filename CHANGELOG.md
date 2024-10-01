@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.9.1
+
+### Patch Changes
+
+- 653eeb1: chore: packages updated
+
 ## 1.9.0
 
 ### Minor Changes
