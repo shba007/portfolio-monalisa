@@ -28,6 +28,9 @@ function onNavigate(section: string) {
     <li>
       <NuxtLink to="/about" @click="onNavigate('about')">About Me</NuxtLink>
     </li>
+    <li>
+      <NuxtLink to="/workshop" @click="onNavigate('workshop')">Workshop</NuxtLink>
+    </li>
   </ul>
 </template>
 
