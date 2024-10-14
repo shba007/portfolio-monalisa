@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.9.2
+
+### Patch Changes
+
+- 1991eb4: chore: pkgs updated new workshop link added
+
 ## 1.9.1
 
 ### Patch Changes
