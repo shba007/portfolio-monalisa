@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.9.4
+
+### Patch Changes
+
+- b684de7: style: iphone testimonial card overflow fix
+
 ## 1.9.3
 
 ### Patch Changes
