@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.9.3
+
+### Patch Changes
+
+- 15c4d93: chore: pkgs updated, gtag removed, sitemap removed
+
 ## 1.9.2
 
 ### Patch Changes
