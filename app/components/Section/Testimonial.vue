@@ -22,19 +22,19 @@ const { data: testimonials } = useFetch('/api/testimonial')
 <template>
   <section id="testimonial" class="relative z-10">
     <h2 class="my-8 text-center lg:text-xl">All Testimonials</h2>
-    <Splide :options="splideOption" tag="div" :has-track="false" class="carousal relative left-1/2 w-screen max-w-[85rem] -translate-x-1/2">
+    <Splide :options="splideOption" tag="div" :has-track="false" class="relative left-1/2 w-screen max-w-[85rem] -translate-x-1/2">
       <SplideTrack>
         <SplideSlide v-for="{ image, name, message } in testimonials" :key="name">
           <TestimonalCard :image="image" :name="name" :message="message" />
         </SplideSlide>
       </SplideTrack>
-      <div class="splide__arrows absolute left-0 right-0 top-[40%] mx-[6%] flex -translate-y-1/2 justify-between text-[20px] text-primary-400 lg:top-1/2 lg:mx-[18%] lg:text-[28px]">
+      <div class="splide__arrows absolute left-0 right-0 top-1/2 mx-[6%] flex -translate-y-1/2 justify-between text-[16px] text-primary-400 lg:top-1/2 lg:mx-[18%] lg:text-[28px]">
         <button class="splide__arrow splide__arrow--prev relative drop-shadow-md transition-all hover:text-primary-500 hover:drop-shadow-lg">
-          <div class="absolute left-1/2 top-1/2 -z-10 aspect-square w-14 -translate-x-1/2 -translate-y-1/2 bg-white lg:w-[4.375rem]" />
+          <div class="absolute left-1/2 top-1/2 -z-10 aspect-square w-12 -translate-x-1/2 -translate-y-1/2 bg-white lg:w-[4.375rem]" />
           <NuxtIcon name="chevron-bold" />
         </button>
         <button class="splide__arrow splide__arrow--next relative drop-shadow-md transition-all [rotate:y_180deg] hover:text-primary-500 hover:drop-shadow-lg">
-          <div class="absolute left-1/2 top-1/2 -z-10 aspect-square w-14 -translate-x-1/2 -translate-y-1/2 bg-white lg:w-[4.375rem]" />
+          <div class="absolute left-1/2 top-1/2 -z-10 aspect-square w-12 -translate-x-1/2 -translate-y-1/2 bg-white lg:w-[4.375rem]" />
           <NuxtIcon name="chevron-bold" />
         </button>
       </div>

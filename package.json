@@ -21,7 +21,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "start": "node .output/server/index.mjs",
-    "tunnel": "untun tunnel --port 1001 http://localhost:1001",
+    "tunnel": "untun tunnel --port 3001 http://localhost:3001",
     "clean": "nuxt cleanup",
     "docker:build": "docker build --build-arg TAG=dev -t portfolio-monalisa:dev .",
     "docker:start": "docker run --detach --name portfolio-monalisa-dev --mount type=bind,source=$(pwd)/static,target=/app/static,readonly --env-file .env.prod -p 1001:3000 portfolio-monalisa:dev"
