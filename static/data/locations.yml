@@ -12,6 +12,7 @@
   phone: '8100075411'
   website: https://www.nibsindia.org/
   location: UEaGm6HT5zmhPxwm7
+
 - id: '2'
   image: location-2
   name: Calcutta Pavlov Hospital
@@ -27,6 +28,7 @@
   phone: '03322844834'
   website: https://www.cnmckolkata.com/
   location: VUMfYVJvqXu6Esie6
+
 - id: '3'
   image: location-3
   name: Healing Minds Centre for Counselling and Education

@@ -28,23 +28,18 @@ export default defineNuxtConfig({
       },
     },
     experimental: {
-      openAPI: {
-        ui: {
-          scalar: {
-            theme: 'blue',
-          },
-        },
-      },
+      openAPI: true,
     },
   },
   routeRules: {
+    '/': { isr: 3600 },
     '/_ipx/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/images/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/fonts/**': { headers: { 'cache-control': 'max-age=31536000' } },
-    '/': { isr: 3600 },
+    '/api/**': { cors: true },
     '/locations': { prerender: true },
     '/about': { prerender: true },
-    '/workshop': { redirect: 'https://forms.gle/Pa1kUxGENFC75KBx5' }
+    '/workshop': { redirect: 'https://forms.gle/Pa1kUxGENFC75KBx5' },
   },
   runtimeConfig: {
     app: {
@@ -53,9 +48,6 @@ export default defineNuxtConfig({
     public: {
       scripts: {
         googleAnalytics: {
-          id: '',
-        },
-        googleTagManager: {
           id: '',
         },
       },
@@ -81,7 +73,6 @@ export default defineNuxtConfig({
   scripts: {
     registry: {
       googleAnalytics: true,
-      googleTagManager: true,
     },
   },
   colorMode: {

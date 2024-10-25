@@ -59,6 +59,5 @@ module.exports = {
         600: '#C02650',
       },
     },
-    extend: {},
   },
 }
