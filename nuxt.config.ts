@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     '/api/**': { cors: true },
     '/locations': { prerender: true },
     '/about': { prerender: true },
-    '/workshop': { redirect: 'https://forms.gle/Pa1kUxGENFC75KBx5' },
+    '/workshops': { prerender: true },
   },
   runtimeConfig: {
     app: {

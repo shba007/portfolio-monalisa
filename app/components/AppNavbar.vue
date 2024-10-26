@@ -20,16 +20,16 @@ function onNavigate(section: string) {
     class="flex-1 justify-center"
     :class="type === 'mobile' ? 'mobile fixed right-6 top-1/2 flex -translate-y-1/2 flex-col items-end gap-6 text-lg text-white' : 'desktop hidden items-center gap-6 lg:flex'">
     <li>
-      <NuxtLink to="/#testimonial" @click="onNavigate('testimonial')">Testimonials</NuxtLink>
+      <NuxtLink to="/#testimonial" active-class="active-link" @click="onNavigate('testimonial')">Testimonials</NuxtLink>
     </li>
     <li>
-      <NuxtLink to="/locations" @click="onNavigate('locations')">Locations</NuxtLink>
+      <NuxtLink to="/locations" active-class="active-link" @click="onNavigate('locations')">Locations</NuxtLink>
     </li>
     <li>
-      <NuxtLink to="/about" @click="onNavigate('about')">About Me</NuxtLink>
+      <NuxtLink to="/workshops" active-class="active-link" @click="onNavigate('workshops')">Workshops</NuxtLink>
     </li>
     <li>
-      <NuxtLink to="/workshop" @click="onNavigate('workshop')">Workshop</NuxtLink>
+      <NuxtLink to="/about" active-class="active-link" @click="onNavigate('about')">About Me</NuxtLink>
     </li>
   </ul>
 </template>
@@ -39,7 +39,7 @@ a {
   @apply whitespace-nowrap;
 }
 
-.desktop a.router-link-active {
+.desktop .active-link {
   @apply text-primary-500;
 }
 </style>

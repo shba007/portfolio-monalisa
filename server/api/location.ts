@@ -1,9 +1,11 @@
 import type { Location } from '~/utils/types'
 
-export default defineCachedEventHandler<Location[]>(
-  () => {
+export default defineCachedEventHandler<Promise<Location[]>>(
+  async () => {
     try {
-      const locations = readYamlFile<Location>('locations.yml')
+      const locations = await readYamlFile<Location>('locations.yml')
+
+      if (!locations) throw createError({ statusCode: 500, statusMessage: 'locations is undefined' })
 
       return locations
     } catch (error: any) {

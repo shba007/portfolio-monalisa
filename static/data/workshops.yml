@@ -1,0 +1,23 @@
+---
+- name: Hands on Training on IQ Assessment with Live Demo
+  image: workshop-1
+  place: 'Healing Minds: Centre for Counseling and Education'
+  address: '27B, Baishnabghata Bye lane, Kolkata 700047'
+  location: 8BfhZEgDwo74WauT9
+  registrationDates:
+    open: ''
+    close: ''
+  workshopDates:
+    - date: ''
+      time: ''
+    - date: ''
+      time: ''
+  seats:
+    total: 20
+    available: 10
+  eligibility:
+  cost: 2000
+  formLink: https://shirsendu-bairagi.notion.site/12be43a798998079b4c2fa9ba30916fe
+  paymentDetails:
+    vpa: monalisabairagi1994@okicici
+    amount: 2000

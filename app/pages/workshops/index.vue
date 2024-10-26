@@ -1,0 +1,31 @@
+<script setup lang="ts">
+const title = `Workshops`
+const description = `Workshops`
+const url = 'https://monalisa-bairagi.com'
+
+useSeoMeta({
+  title: title,
+  ogTitle: title,
+  description: description,
+  ogDescription: description,
+  ogImage: url + '/previews/workshops.webp',
+  ogUrl: url + '/workshops',
+})
+
+const { data } = useFetch('/api/workshop')
+</script>
+
+<template>
+  <section class="mx-auto my-2.5 grid min-h-screen grid-cols-1 content-start justify-between justify-items-center gap-4 md:grid-cols-2 lg:my-4 xl:grid-cols-3">
+    <CardWorkshop
+      v-for="{ image, name, place, address, location, formLink, paymentLink } in data"
+      :key="name"
+      :image="image"
+      :name="name"
+      :place="place"
+      :address="address"
+      :location="location"
+      :form-link="formLink"
+      :payment-link="paymentLink" />
+  </section>
+</template>
