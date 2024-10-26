@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.10.0
+
+### Minor Changes
+
+- d9b89e1: feat: workshops added
+
 ## 1.9.4
 
 ### Patch Changes
