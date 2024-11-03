@@ -1,5 +1,13 @@
 # porfolio-monalisa
 
+## 1.10.1
+
+### Patch Changes
+
+- 8aaf0f0: chore: pkgs updated
+- 8aaf0f0: style: AppHeader & AppFooter zoom out fixed
+- 8aaf0f0: fix: Feedback link added in workshop
+
 ## 1.10.0
 
 ### Minor Changes
