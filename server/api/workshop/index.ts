@@ -11,7 +11,12 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
 
       if (!workshops) throw createError({ statusCode: 500, statusMessage: 'workshop is undefined' })
 
-      return workshops?.map(({ name, place, paymentDetails, ...rest }) => ({ name, place, ...rest, paymentLink: generateUpiDeepLink(paymentDetails.vpa, place, paymentDetails.amount, name) }))
+      return workshops.map(({ name, place, paymentDetails, ...rest }) => ({
+        name,
+        place,
+        ...rest,
+        paymentLink: generateUpiDeepLink(paymentDetails.accountId, paymentDetails.vpa, place, paymentDetails.amount, name),
+      }))
     } catch (error: any) {
       console.error('API workshops GET', error)
 

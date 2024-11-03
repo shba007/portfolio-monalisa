@@ -18,16 +18,16 @@ const { data } = useFetch('/api/location')
 <template>
   <section class="mx-auto my-2.5 grid min-h-screen w-fit grid-cols-1 content-start justify-between justify-items-center gap-4 md:grid-cols-2 lg:my-4 xl:grid-cols-3">
     <CardLocation
-      v-for="{ id, image, name, address, availableWeekdays, email, phone, website, location } in data"
+      v-for="{ id, image, name, address, mapLink, availableWeekdays, email, phone, website } in data"
       :id="id"
       :key="id"
       :image="image"
       :name="name"
       :address="address"
+      :map-link="mapLink"
       :available-weekdays="availableWeekdays"
       :email="email"
       :phone="phone"
-      :website="website"
-      :location="location" />
+      :website="website" />
   </section>
 </template>

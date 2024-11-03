@@ -7,11 +7,12 @@
   "type": "module",
   "private": true,
   "volta": {
-    "node": "20.17.0"
+    "node": "22.11.0"
   },
   "engines": {
     "node": "^20.17.0"
   },
+  "packageManager": "npm@10.9.0",
   "scripts": {
     "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
@@ -29,16 +30,16 @@
   "dependencies": {
     "@dicebear/collection": "^9.2.2",
     "@dicebear/core": "^9.2.2",
-    "@nuxt/eslint": "^0.6.0",
-    "@nuxt/fonts": "^0.10.1",
+    "@nuxt/eslint": "^0.6.1",
+    "@nuxt/fonts": "^0.10.2",
     "@nuxt/image": "^1.8.1",
     "@nuxt/scripts": "^0.9.5",
     "@nuxt/test-utils": "^3.14.4",
-    "@nuxtjs/color-mode": "^3.5.1",
+    "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/seo": "^2.0.0-rc.23",
     "@nuxtjs/tailwindcss": "^6.12.2",
-    "@vite-pwa/nuxt": "^0.10.5",
-    "@vueuse/nuxt": "^11.1.0",
+    "@vite-pwa/nuxt": "^0.10.6",
+    "@vueuse/nuxt": "^11.2.0",
     "confbox": "^0.1.8",
     "nuxt": "^3.13.2",
     "nuxt-icons": "^3.2.1",

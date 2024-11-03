@@ -7,9 +7,10 @@ interface Workshop {
   name: string
   place: string
   address: string
-  location: string
-  formLink: string
+  mapLink: string
+  registerLink: string
   paymentLink: string
+  feedbackLink: string
 }
 
 defineProps<Workshop>()
@@ -24,11 +25,12 @@ defineProps<Workshop>()
       <h2 class="line-clamp-1 text-sm font-semi-bold lg:text-lg">{{ name }}</h2>
       <p class="flex-1 text-xs lg:text-base">{{ address }}</p>
       <div class="flex justify-between gap-3">
-        <NuxtLink :href="`https://maps.app.goo.gl/${location}`" target="_blank">
+        <NuxtLink :href="`https://maps.app.goo.gl/${mapLink}`" target="_blank">
           <NuxtIcon name="map" class="text-[24px] transition-colors hover:text-primary-500 lg:text-[32px]" />
         </NuxtLink>
-        <NuxtLink :href="formLink" target="_blank" class="ml-auto rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400"> Register </NuxtLink>
-        <NuxtLink :href="paymentLink" target="_blank" class="rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400"> Pay</NuxtLink>
+        <NuxtLink :href="registerLink" target="_blank" class="ml-auto rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Register</NuxtLink>
+        <NuxtLink :href="paymentLink" target="_blank" class="rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Pay</NuxtLink>
+        <NuxtLink :href="feedbackLink" target="_blank" class="rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Feedback</NuxtLink>
       </div>
     </div>
   </div>

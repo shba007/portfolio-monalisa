@@ -1,6 +1,6 @@
-export default function (vpa: string, name: string, amount: number, note: string = '', currency: 'INR' = 'INR'): string {
-  const linkTemplate = 'upi://pay?pa=<VPA>&pn=<NAME>&am=<AMOUNT>&tn=<NOTE>&cu=<CURRENCY>'
-  const keys = { vpa, name, amount, note, currency }
+export default function (accountId: string, vpa: string, name: string, amount: number, note: string = '', currency: 'INR' = 'INR'): string {
+  const linkTemplate = 'upi://pay?pa=<VPA>&pn=<NAME>&am=<AMOUNT>&tn=<NOTE>&cu=<CURRENCY>&aid=<ACCOUNTID>'
+  const keys = { accountId, vpa, name, amount, note, currency }
 
   let finalLink = linkTemplate
 

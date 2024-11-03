@@ -17,11 +17,11 @@ export interface Location {
   image: string
   name: string
   address: string
+  mapLink: string
   availableWeekdays: string[]
   email: string
   phone: string
   website: string
-  location: string
 }
 
 export interface Workshop {
@@ -29,12 +29,14 @@ export interface Workshop {
   name: string
   place: string
   address: string
-  location: string
-  formLink: string
+  mapLink: string
+  registerLink: string
   paymentLink: string
+  feedbackLink: string
 }
 
 export interface PaymentDetails {
+  accountId: string
   vpa: string
   amount: number
 }

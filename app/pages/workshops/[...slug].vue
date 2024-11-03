@@ -13,7 +13,7 @@ useSeoMeta({
   ogTitle: title,
   description: description,
   ogDescription: description,
-  ogImage: `${url}/${data.value.id}`,
+  ogImage: `${url}${data.value.id}`,
   ogUrl: `${url}/workshops/${workshopSlug}`,
 })
 </script>

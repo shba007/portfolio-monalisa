@@ -9,7 +9,7 @@ const emit = defineEmits<{
 <template>
   <!-- <Teleport to="#footer-placeholder"> -->
   <footer
-    class="relative max-w-[85rem] px-4 pb-4 pt-48 text-white before:absolute before:top-0 before:-z-10 before:h-full before:w-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:320px_320px] before:bg-[24px_-24px] before:bg-no-repeat before:opacity-60 before:content-[''] lg:mx-12 lg:mx-8 lg:mt-12 lg:pb-9 lg:pl-12 lg:pt-64 lg:before:bg-[length:420px_420px] lg:before:bg-[128px_-32px] 2xl:mx-auto">
+    class="relative w-full max-w-[85rem] px-4 pb-4 pt-48 text-white before:absolute before:top-0 before:-z-10 before:h-full before:w-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:320px_320px] before:bg-[24px_-24px] before:bg-no-repeat before:opacity-60 before:content-[''] md:mx-12 lg:mx-8 lg:mt-12 lg:pb-9 lg:pl-12 lg:pt-64 lg:before:bg-[length:420px_420px] lg:before:bg-[128px_-32px] 2xl:mx-auto">
     <div class="absolute bottom-0 left-0 h-full w-screen bg-[url(assets/images/footer-bg.svg)] bg-[length:1024px_512px] bg-[center_bottom] bg-no-repeat lg:bg-[length:initial] lg:bg-left-bottom" />
     <CTAButton :primary="false" class="mx-auto -translate-y-40 lg:-translate-y-64" @click="emit('contact', true)" />
     <div class="relative mx-auto grid max-w-[85rem] grid-cols-[auto_1fr_auto] grid-rows-[repeat(2,min-content)] items-end gap-4 lg:grid-rows-1">

@@ -3,7 +3,7 @@
   image: workshop-1
   place: 'Healing Minds: Centre for Counseling and Education'
   address: '27B, Baishnabghata Bye lane, Kolkata 700047'
-  location: 8BfhZEgDwo74WauT9
+  mapLink: 8BfhZEgDwo74WauT9
   registrationDates:
     open: ''
     close: ''
@@ -17,7 +17,9 @@
     available: 10
   eligibility:
   cost: 2000
-  formLink: https://shirsendu-bairagi.notion.site/12be43a798998079b4c2fa9ba30916fe
+  registerLink: https://shirsendu-bairagi.notion.site/12be43a798998079b4c2fa9ba30916fe
+  feedbackLink: https://shirsendu-bairagi.notion.site/133e43a79899810c9c44f0b600902421
   paymentDetails:
+    accountId: uGICAgICYivKrcA
     vpa: monalisabairagi1994@okicici
     amount: 2000
