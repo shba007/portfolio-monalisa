@@ -1,6 +1,5 @@
 import { createAvatar } from '@dicebear/core'
 import { micah } from '@dicebear/collection'
-import type { Testimonial } from '~/utils/types'
 
 function generateAvatar(name: string, gender: 'male' | 'female') {
   const avatar = createAvatar(micah, {

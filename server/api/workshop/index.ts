@@ -1,9 +1,3 @@
-import type { PaymentDetails, Workshop } from '~/utils/types'
-
-interface WorkshopFile extends Omit<Workshop, 'paymentLink'> {
-  paymentDetails: PaymentDetails
-}
-
 export default defineCachedEventHandler<Promise<Workshop[]>>(
   async () => {
     try {

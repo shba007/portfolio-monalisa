@@ -1,5 +1,3 @@
-import type { Location } from '~/utils/types'
-
 export default defineCachedEventHandler<Promise<Location[]>>(
   async () => {
     try {

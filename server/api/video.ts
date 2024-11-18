@@ -1,5 +1,3 @@
-import type { Video } from '~/utils/types'
-
 interface YoutubeVideo {
   kind: string
   etag: string

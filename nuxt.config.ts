@@ -27,9 +27,6 @@ export default defineNuxtConfig({
         base: './static',
       },
     },
-    experimental: {
-      openAPI: true,
-    },
   },
   routeRules: {
     '/': { isr: 3600 },

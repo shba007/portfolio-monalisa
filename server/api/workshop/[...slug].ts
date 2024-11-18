@@ -1,11 +1,4 @@
-import slugify from '~/utils/slugify'
-import type { PaymentDetails, Workshop } from '~/utils/types'
-
-interface WorkshopFile extends Omit<Workshop, 'paymentLink'> {
-  paymentDetails: PaymentDetails
-}
-
-export default defineCachedEventHandler<Promise<any>>(
+export default defineCachedEventHandler<Promise<{ id: string, title: string }>>(
   async (event) => {
     try {
       const slug = getRouterParam(event, 'slug')
