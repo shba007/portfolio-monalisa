@@ -36,7 +36,7 @@ export default defineCachedEventHandler<Promise<Testimonial[]>>(
         name: shortenName(name),
         message,
       }))
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('API testimonials GET', error)
 
       throw createError({

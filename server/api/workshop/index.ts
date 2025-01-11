@@ -11,7 +11,7 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
         ...rest,
         paymentLink: generateUpiDeepLink(paymentDetails.accountId, paymentDetails.vpa, place, paymentDetails.amount, name),
       }))
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('API workshops GET', error)
 
       throw createError({

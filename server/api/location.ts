@@ -6,7 +6,7 @@ export default defineCachedEventHandler<Promise<Location[]>>(
       if (!locations) throw createError({ statusCode: 500, statusMessage: 'locations is undefined' })
 
       return locations
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('API locations GET', error)
 
       throw createError({

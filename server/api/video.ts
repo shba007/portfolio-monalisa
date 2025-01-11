@@ -73,7 +73,7 @@ export default defineCachedEventHandler<Promise<Video[]>>(
         views: 1000,
         link: `https://www.youtube.com/watch?v=${id.videoId}`,
       }))
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('API locations GET', error)
 
       throw createError({

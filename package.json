@@ -11,54 +11,59 @@
   "type": "module",
   "private": true,
   "volta": {
-    "node": "22.11.0"
+    "node": "22.13.0"
   },
   "engines": {
     "node": "^20.15.0 || ^22.11.0",
-    "npm": "10.9.0"
+    "pnpm": "^9.15.0"
   },
-  "packageManager": "npm@10.9.0",
+  "packageManager": "pnpm@9.15.3",
   "scripts": {
+    "prepare": "husky || true",
     "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
+    "detect": "gitleaks git --verbose",
     "lint": "eslint . --fix",
-    "format": "prettier .  --write",
+    "format": "prettier . --write",
     "build": "nuxt build && cp -r static .output/static",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "start": "node .output/server/index.mjs",
-    "tunnel": "untun tunnel --port 3001 http://localhost:3001",
+    "start": "node --env-file=.env.prod .output/server/index.mjs",
     "clean": "nuxt cleanup",
     "docker:build": "docker build --build-arg TAG=dev -t portfolio-monalisa:dev .",
-    "docker:start": "docker run --detach --name portfolio-monalisa-dev --mount type=bind,source=$(pwd)/static,target=/app/static,readonly --env-file .env.prod -p 1001:3000 portfolio-monalisa:dev"
+    "docker:start": "docker run --detach --name portfolio-monalisa-dev --mount type=bind,source=$(pwd)/static,target=/app/static,readonly --env-file .env.prod -p 4200:3000 portfolio-monalisa:dev",
+    "tunnel": "untun tunnel --port 4200 http://localhost:4200"
   },
   "dependencies": {
     "@dicebear/collection": "^9.2.2",
     "@dicebear/core": "^9.2.2",
-    "@nuxt/eslint": "^0.7.0",
-    "@nuxt/fonts": "^0.10.2",
-    "@nuxt/image": "^1.8.1",
+    "@nuxt/eslint": "^0.7.4",
+    "@nuxt/fonts": "^0.10.3",
+    "@nuxt/image": "^1.9.0",
     "@nuxt/scripts": "^0.9.5",
-    "@nuxt/test-utils": "^3.14.4",
+    "@nuxt/test-utils": "^3.15.1",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/seo": "^2.0.0-rc.23",
+    "@nuxtjs/seo": "^2.0.2",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@vite-pwa/nuxt": "^0.10.6",
-    "@vueuse/nuxt": "^11.2.0",
+    "@vueuse/core": "^12.3.0",
+    "@vueuse/nuxt": "^12.3.0",
     "confbox": "^0.1.8",
-    "nuxt": "^3.14.159",
+    "nuxt": "^3.15.1",
     "nuxt-icons": "^3.2.1",
     "nuxt-splide": "^1.1.1",
     "vue": "latest",
     "vue-router": "latest",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.9",
-    "@types/eslint-config-prettier": "^6.11.3",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8",
+    "@changesets/cli": "^2.27.11",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "typescript": "^5.7.3",
     "untun": "^0.1.3"
   }
 }

@@ -1,4 +1,4 @@
-export default defineCachedEventHandler<Promise<{ id: string, title: string }>>(
+export default defineCachedEventHandler<Promise<{ id: string; title: string }>>(
   async (event) => {
     try {
       const slug = getRouterParam(event, 'slug')
@@ -15,7 +15,7 @@ export default defineCachedEventHandler<Promise<{ id: string, title: string }>>(
         id: `/images/${workshop.image}.jpg`,
         title: workshop.name,
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('API workshops GET', error)
 
       throw createError({
