@@ -31,8 +31,8 @@
     "start": "node --env-file=.env.prod .output/server/index.mjs",
     "clean": "nuxt cleanup",
     "docker:build": "docker build --build-arg TAG=dev -t portfolio-monalisa:dev .",
-    "docker:start": "docker run --detach --name portfolio-monalisa-dev --mount type=bind,source=$(pwd)/static,target=/app/static,readonly --env-file .env.prod -p 4200:3000 portfolio-monalisa:dev",
-    "tunnel": "untun tunnel --port 4200 http://localhost:4200"
+    "docker:start": "docker run --detach --name portfolio-monalisa-dev --mount type=bind,source=$(pwd)/static,target=/app/static,readonly --env-file .env.prod -p 4101:3000 portfolio-monalisa:dev",
+    "tunnel": "untun tunnel --port 4101 http://localhost:4101"
   },
   "dependencies": {
     "@dicebear/collection": "^9.2.2",

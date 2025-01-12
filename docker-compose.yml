@@ -10,4 +10,4 @@ services:
     env_file:
       - .env.prod
     ports:
-      - 4200:3000
+      - 4101:3000
