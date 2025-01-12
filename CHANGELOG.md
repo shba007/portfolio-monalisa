@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.10.2
+
+### Patch Changes
+
+- 54b0bb6: chore: add husky hooks for commit linting and pre-commit checks
+
 ## 1.10.1
 
 ### Patch Changes
