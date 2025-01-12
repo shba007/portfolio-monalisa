@@ -1,7 +1,7 @@
 name: 'portfolio-monalisa'
 services:
   app:
-    image: 'ghcr.io/Algostract/portfolio-monalisa:latest'
+    image: 'ghcr.io/algostract/portfolio-monalisa:latest'
     restart: on-failure:3
     volumes:
       - type: bind
