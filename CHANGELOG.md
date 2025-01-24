@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.10.4
+
+### Patch Changes
+
+- 0ab7b15: fix: remove prerendering for locations and workshops, update phone number in locations data
+
 ## 1.10.3
 
 ### Patch Changes
