@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.10.3
+
+### Patch Changes
+
+- bfaeae1: chore: update config and dependencies, improve prettier ignore rules, and add new location data
+
 ## 1.10.2
 
 ### Patch Changes
