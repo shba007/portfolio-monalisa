@@ -13,21 +13,21 @@
   phone: '8100075411'
   website: https://www.nibsindia.org/
 
-- id: '2'
-  image: location-2
-  name: Calcutta Pavlov Hospital
-  address: 18, Gobra Rd, Seal Lane, Beniapukur, Kolkata, West Bengal 700046
-  mapLink: VUMfYVJvqXu6Esie6
-  availableWeekdays:
-    - Mon
-    - Tue
-    - Wed
-    - Thus
-    - Fri
-    - Sat
-  email: ''
-  phone: '03322844834'
-  website: https://www.cnmckolkata.com/
+# - id: '2'
+#   image: location-2
+#   name: Calcutta Pavlov Hospital
+#   address: 18, Gobra Rd, Seal Lane, Beniapukur, Kolkata, West Bengal 700046
+#   mapLink: VUMfYVJvqXu6Esie6
+#   availableWeekdays:
+#     - Mon
+#     - Tue
+#     - Wed
+#     - Thus
+#     - Fri
+#     - Sat
+#   email: ''
+#   phone: '03322844834'
+#   website: https://www.cnmckolkata.com/
 
 - id: '3'
   image: location-3
@@ -38,4 +38,15 @@
     - Tue
   email: 'healingmindscce@gmail.com'
   phone: '6289965247'
+  website: ''
+
+- id: '4'
+  image: location-4
+  name: Matri Medical Hub
+  address: NSC Bose Road, Malancha Phari, Kolkata 7002145
+  mapLink: qwiDNnCLKarMp1Tz7
+  availableWeekdays:
+    - Wed
+  email: ''
+  phone: ''
   website: ''
