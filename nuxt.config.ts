@@ -34,9 +34,7 @@ export default defineNuxtConfig({
     '/images/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/fonts/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/api/**': { cors: true },
-    '/locations': { prerender: true },
     '/about': { prerender: true },
-    '/workshops': { prerender: true },
   },
   runtimeConfig: {
     app: {
