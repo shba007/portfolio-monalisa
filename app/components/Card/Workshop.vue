@@ -1,24 +1,12 @@
 <script setup lang="ts">
-// TODO: Refactor props type when supported
-// import type { Workshop } from "~/utils/types";
-
-interface Workshop {
-  image: string
-  name: string
-  place: string
-  address: string
-  mapLink: string
-  registerLink: string
-  paymentLink: string
-  feedbackLink: string
-}
+import type { Workshop } from '~~/shared/types'
 
 defineProps<Workshop>()
 </script>
 
 <template>
   <div class="flex w-full max-w-[25.5rem] flex-col overflow-hidden rounded-2xl bg-white shadow-md lg:rounded-3xl">
-    <NuxtLink :to="`/workshops/${slugify(name)}`">
+    <NuxtLink :to="url">
       <NuxtImg :src="`/images/${image}.jpg`" :alt="name" :width="416" :height="234" loading="lazy" class="w-full rounded-b-2xl object-cover lg:rounded-b-3xl" />
     </NuxtLink>
     <div class="flex flex-1 flex-col gap-3 p-2.5 lg:p-3">

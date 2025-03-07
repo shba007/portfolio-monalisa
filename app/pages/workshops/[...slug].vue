@@ -1,8 +1,12 @@
 <script setup lang="ts">
 const route = useRoute()
-const workshopSlug = route.params.slug?.toString()
+const slug = route.params.slug?.toString()
 
-const { data } = await useFetch(`/api/workshop/${workshopSlug}`)
+const { data } = await useFetch(`/api/workshop/${slug}`)
+
+if (!data.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+}
 
 const title = `Workshop - ${data.value.title}`
 const description = `${data.value.title}`
@@ -14,7 +18,7 @@ useSeoMeta({
   description: description,
   ogDescription: description,
   ogImage: `${url}${data.value.id}`,
-  ogUrl: `${url}/workshops/${workshopSlug}`,
+  ogUrl: `${url}/workshops/${slug}`,
 })
 </script>
 

@@ -33,7 +33,6 @@ export default defineNuxtConfig({
     '/_ipx/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/images/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/fonts/**': { headers: { 'cache-control': 'max-age=31536000' } },
-    '/api/**': { cors: true },
     '/about': { prerender: true },
   },
   runtimeConfig: {
@@ -49,6 +48,8 @@ export default defineNuxtConfig({
     },
     private: {
       rootDir: '',
+      notionApiKey: '',
+      notionDbId: '',
       youtubeBaseUrl: '',
       youtubeApiKey: '',
       youtubeChannelId: '',

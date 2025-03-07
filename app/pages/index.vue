@@ -34,6 +34,5 @@ function onContact(action: boolean) {
     <SectionVideo />
     <SectionTestimonial />
     <ModalContact :is-open="isModalContactOpen" @close="onContact(false)" />
-    <!-- <AppFooter @contact="onContact" /> -->
   </div>
 </template>

@@ -27,12 +27,17 @@ export interface Location {
 export interface Workshop {
   image: string
   name: string
+  url: string
   place: string
   address: string
   mapLink: string
   registerLink: string
   paymentLink: string
   feedbackLink: string
+}
+
+export interface WorkshopFile extends Omit<Workshop, 'paymentLink'> {
+  paymentDetails: PaymentDetails
 }
 
 export interface PaymentDetails {

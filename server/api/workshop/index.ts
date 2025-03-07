@@ -1,3 +1,5 @@
+import type { WorkshopFile } from '~~/shared/types'
+
 export default defineCachedEventHandler<Promise<Workshop[]>>(
   async () => {
     try {
@@ -10,6 +12,7 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
         place,
         ...rest,
         paymentLink: generateUpiDeepLink(paymentDetails.accountId, paymentDetails.vpa, place, paymentDetails.amount, name),
+        url: `/workshops/${slugify(name)}`,
       }))
     } catch (error: unknown) {
       console.error('API workshops GET', error)

@@ -18,10 +18,11 @@ const { data } = useFetch('/api/workshop')
 <template>
   <section class="mx-auto my-2.5 grid min-h-screen grid-cols-1 content-start justify-between justify-items-center gap-4 md:grid-cols-2 lg:my-4 xl:grid-cols-3">
     <CardWorkshop
-      v-for="{ image, name, place, address, mapLink, registerLink, paymentLink, feedbackLink } in data"
+      v-for="{ image, name, url, place, address, mapLink, registerLink, paymentLink, feedbackLink } in data"
       :key="name"
       :image="image"
       :name="name"
+      :url="url"
       :place="place"
       :address="address"
       :map-link="mapLink"
