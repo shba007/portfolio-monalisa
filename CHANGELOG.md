@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.11.1
+
+### Patch Changes
+
+- 51410c4: style: improve layout and formatting of Card components and default layout
+
 ## 1.11.0
 
 ### Minor Changes
