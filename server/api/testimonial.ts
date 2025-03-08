@@ -106,5 +106,5 @@ export default defineCachedEventHandler<Promise<Testimonial[]>>(
       })
     }
   },
-  { maxAge: 1 }
+  { maxAge: 60 * 60 }
 )
