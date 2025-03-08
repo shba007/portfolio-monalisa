@@ -16,7 +16,7 @@ const { data } = useFetch('/api/location')
 </script>
 
 <template>
-  <section class="mx-auto my-2.5 grid min-h-screen w-fit grid-cols-1 content-start justify-between justify-items-center gap-4 md:grid-cols-2 lg:my-4 xl:grid-cols-3">
+  <section class="mx-auto my-2.5 grid min-h-screen w-fit grid-cols-1 content-start justify-between justify-items-center gap-4 md:grid-cols-2 lg:my-4 lg:grid-cols-3">
     <CardLocation
       v-for="{ id, image, name, address, mapLink, availableWeekdays, email, phone, website } in data"
       :id="id"

@@ -5,7 +5,7 @@ defineProps<Workshop>()
 </script>
 
 <template>
-  <div class="flex w-full max-w-[25.5rem] flex-col overflow-hidden rounded-2xl bg-white shadow-md lg:rounded-3xl">
+  <div class="flex aspect-[1.14] w-full max-w-[25.5rem] flex-col overflow-hidden rounded-2xl bg-white shadow-md lg:rounded-3xl">
     <NuxtLink :to="url">
       <NuxtImg :src="`/images/${image}.jpg`" :alt="name" :width="416" :height="234" loading="lazy" class="w-full rounded-b-2xl object-cover lg:rounded-b-3xl" />
     </NuxtLink>
