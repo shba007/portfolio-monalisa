@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.11.0
+
+### Minor Changes
+
+- 1026ae8: feat: add new workshop image, update Dockerfile for pnpm, and refactor testimonial API to notion
+
 ## 1.10.4
 
 ### Patch Changes
