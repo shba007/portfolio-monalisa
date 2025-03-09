@@ -1,7 +1,7 @@
 export default defineCachedEventHandler<Promise<{ id: string; title: string }>>(
   async (event) => {
     try {
-      const slug = getRouterParam(event, 'slug')
+      const slug = getRouterParam(event, 'slug')!.toString().replace(/,$/, '')
 
       const workshops = await readYamlFile<WorkshopFile>('workshops.yml')
 

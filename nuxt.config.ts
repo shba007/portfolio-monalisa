@@ -33,7 +33,11 @@ export default defineNuxtConfig({
     '/_ipx/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/images/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/fonts/**': { headers: { 'cache-control': 'max-age=31536000' } },
-    '/about': { prerender: true },
+    '/location/**': { headers: { 'cache-control': 'max-age=31536000' } },
+    '/locations/**': { redirect: '/location/**' },
+    '/workshop/**': { headers: { 'cache-control': 'max-age=31536000' } },
+    '/workshops/**': { redirect: '/workshop/**' },
+    '/about': { ssr: true },
   },
   runtimeConfig: {
     app: {

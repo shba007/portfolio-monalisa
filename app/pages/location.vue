@@ -9,7 +9,7 @@ useSeoMeta({
   description: description,
   ogDescription: description,
   ogImage: url + '/previews/locations.webp',
-  ogUrl: url + '/locations',
+  ogUrl: url + '/location',
 })
 
 const { data } = useFetch('/api/location')

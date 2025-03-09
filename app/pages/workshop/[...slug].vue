@@ -18,7 +18,7 @@ useSeoMeta({
   description: description,
   ogDescription: description,
   ogImage: `${url}${data.value.id}`,
-  ogUrl: `${url}/workshops/${slug}`,
+  ogUrl: `${url}/workshop/${slug}`,
 })
 </script>
 

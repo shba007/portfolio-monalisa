@@ -16,7 +16,7 @@ const { data } = useFetch('/api/workshop')
 </script>
 
 <template>
-  <section class="mx-auto my-2.5 grid min-h-screen grid-cols-1 content-start justify-between justify-items-center gap-4 md:grid-cols-2 lg:my-4 xl:grid-cols-3">
+  <section class="mx-auto my-2.5 grid grid-cols-1 content-start justify-between justify-items-center gap-4 md:grid-cols-2 lg:my-4 xl:grid-cols-3">
     <CardWorkshop
       v-for="{ image, name, url, place, address, mapLink, registerLink, paymentLink, feedbackLink } in data"
       :key="name"

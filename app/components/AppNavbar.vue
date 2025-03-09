@@ -23,10 +23,10 @@ function onNavigate(section: string) {
       <NuxtLink to="/#testimonial" active-class="active-link" @click="onNavigate('testimonial')">Testimonials</NuxtLink>
     </li>
     <li>
-      <NuxtLink to="/locations" active-class="active-link" @click="onNavigate('locations')">Locations</NuxtLink>
+      <NuxtLink to="/location" active-class="active-link" @click="onNavigate('location')">Locations</NuxtLink>
     </li>
     <li>
-      <NuxtLink to="/workshops" active-class="active-link" @click="onNavigate('workshops')">Workshops</NuxtLink>
+      <NuxtLink to="/workshop" active-class="active-link" @click="onNavigate('workshop')">Workshops</NuxtLink>
     </li>
     <li>
       <NuxtLink to="/about" active-class="active-link" @click="onNavigate('about')">About Me</NuxtLink>

@@ -37,7 +37,7 @@ function onContact(action: boolean) {
       :class="[isMenuOpen ? '-translate-x-[40%] scale-[80%] rounded-2xl' : 'h-full', animateClass]">
       <AppHeader @toggle-menu="isMenuOpen = !isMenuOpen" />
       <main
-        class="grow-1 relative mx-auto flex h-full w-full max-w-[85rem] flex-col gap-4 px-4 !pb-0 pt-4 before:fixed before:left-4 before:top-1/2 before:h-screen before:w-[1px] before:-translate-y-1/2 before:bg-light-500 before:content-[''] after:fixed after:right-4 after:top-1/2 after:h-screen after:w-[1px] after:-translate-y-1/2 after:bg-light-500 after:content-[''] md:px-10 md:before:left-8 md:after:right-8 lg:gap-24 lg:px-12 lg:before:left-12 lg:after:right-12">
+        class="grow-1 relative mx-auto flex h-full min-h-screen w-full max-w-[85rem] flex-col gap-4 px-4 !pb-0 pt-4 before:fixed before:left-4 before:top-1/2 before:h-screen before:w-[1px] before:-translate-y-1/2 before:bg-light-500 before:content-[''] after:fixed after:right-4 after:top-1/2 after:h-screen after:w-[1px] after:-translate-y-1/2 after:bg-light-500 after:content-[''] md:px-10 md:before:left-8 md:after:right-8 lg:gap-24 lg:px-12 lg:before:left-12 lg:after:right-12">
         <slot />
       </main>
       <AppFooter v-if="showFooter" @contact="onContact" />

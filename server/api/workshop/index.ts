@@ -12,7 +12,7 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
         place,
         ...rest,
         paymentLink: generateUpiDeepLink(paymentDetails.accountId, paymentDetails.vpa, place, paymentDetails.amount, name),
-        url: `/workshops/${slugify(name)}`,
+        url: `/workshop/${slugify(name)}`,
       }))
     } catch (error: unknown) {
       console.error('API workshops GET', error)

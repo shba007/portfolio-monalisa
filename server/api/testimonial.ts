@@ -73,10 +73,10 @@ export default defineCachedEventHandler<Promise<Testimonial[]>>(
         throw new Error('Notion API Key Not Found')
       }
 
-      const notionDbId = JSON.parse(config.private.notionDbId).testimonials
+      const notionDbId = config.private.notionDbId as unknown as { testimonial: string }
 
       notion = notion ?? new Client({ auth: config.private.notionApiKey })
-      const data = await notion.databases.query({ database_id: notionDbId })
+      const data = await notion.databases.query({ database_id: notionDbId.testimonial })
 
       const testimonials = data.results as unknown as NotionTestimonial[]
 
