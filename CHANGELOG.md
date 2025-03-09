@@ -1,5 +1,11 @@
 # porfolio-monalisa
 
+## 1.11.2
+
+### Patch Changes
+
+- 80fafe3: feat: update workshop and location routes, add new pages, and enhance SEO metadata
+
 ## 1.11.1
 
 ### Patch Changes
