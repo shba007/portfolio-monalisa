@@ -13,7 +13,7 @@ const email = ref<string>()
       <input v-model="email" type="email" placeholder="Email address" class="mr-2 w-full bg-transparent outline-none" />
     </ClientOnly>
     <button type="submit" aria-label="subscribe" class="hover:bg-primary-300 justify-self-end rounded-full bg-primary-400 p-2 transition-colors" @click="email && emit('subscribe', email)">
-      <NuxtIcon name="paper-plane" class="text-[24px] text-white" />
+      <NuxtIcon name="local:paper-plane" class="text-[24px] text-white" />
     </button>
   </div>
 </template>

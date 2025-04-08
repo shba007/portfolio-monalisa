@@ -30,7 +30,7 @@ const person = computed(() => (counter.value % 2) + 1)
     </div>
     <div
       class="z-10 col-span-full col-start-1 row-span-5 row-start-1 flex flex-col items-center justify-center gap-4 self-start justify-self-center text-center lg:col-span-3 lg:col-start-2 lg:row-span-full lg:gap-6">
-      <NuxtIcon name="logo" class="-mb-6 text-[144px] lg:-mb-8 lg:text-[160px]" filled />
+      <NuxtIcon name="local:logo" class="-mb-6 text-[144px] lg:-mb-8 lg:text-[160px]" filled />
       <h1 class="text-xl lg:text-3xl xl:text-4xl">Be Kind to Your Mind</h1>
       <p class="max-w-[35rem] text-sm !leading-[150%] tracking-wide lg:text-base">
         A RCI registered clinical psychologist will help you by providing counseling sessions with a range of therapeutic approaches tailored to your unique needs
@@ -50,7 +50,7 @@ const person = computed(() => (counter.value % 2) + 1)
       </h2>
       <div class="relative col-start-2 row-start-2 w-14 translate-y-1/3 self-center justify-self-center opacity-50 lg:w-20" v-html="arrow" />
       <NuxtLink to="https://www.youtube.com/@mindful-healing-path" class="relative z-10 col-start-2 row-start-2 self-end justify-self-start" target="__blank" aria-label="youtube">
-        <NuxtIcon name="youtube" class="text-[40px] text-light-600 hover:text-dark-600 hover:transition-colors lg:text-[48px]" />
+        <NuxtIcon name="local:youtube" class="text-[40px] text-light-600 hover:text-dark-600 hover:transition-colors lg:text-[48px]" />
       </NuxtLink>
     </div>
   </section>

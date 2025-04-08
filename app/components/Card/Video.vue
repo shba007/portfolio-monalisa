@@ -20,7 +20,7 @@ const timeAgo = useTimeAgo(props.publishedAt)
       </span>
       <time :datetime="timeAgo" class="text-sm md:text-base">{{ timeAgo }}</time>
       <!-- <div class="flex items-center justify-center gap-1 justify-self-end">
-        <NuxtIcon name="eye" class="text-[20px] lg:text-[24px]" />
+        <NuxtIcon name="local:eye" class="text-[20px] lg:text-[24px]" />
         <span class="text-sm lg:text-base">{{ formatedViewCount }}</span>
       </div> -->
     </div>

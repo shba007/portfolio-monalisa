@@ -17,7 +17,7 @@ const emit = defineEmits<{
         <span>&copy; 2023-2024</span>
         <NuxtLink to="https://shirsendu-bairagi.dev" target="__blank" class="flex items-center gap-1">
           <span>Made by</span>
-          <NuxtIcon name="shba007" filled class="text-[20px]" />
+          <NuxtIcon name="local:shba007" filled class="text-[20px]" />
         </NuxtLink>
       </div>
       <div class="col-span-full flex flex-col items-center justify-center gap-7 lg:col-span-1">
@@ -32,13 +32,13 @@ const emit = defineEmits<{
         <span class="absolute -left-12 top-1/2 w-10 -translate-y-1/2 scale-x-[-1] stroke-white lg:-left-16 lg:w-12" v-html="arrow" />
         <div class="col-start-3 row-start-2 flex gap-4 justify-self-end text-[28px] lg:row-start-1 lg:gap-6 lg:text-[42px]">
           <NuxtLink to="https://www.youtube.com/@mindful-healing-path" target="_blank" aria-label="youtube" class="drop-shadow hover:drop-shadow-md">
-            <NuxtIcon name="youtube" />
+            <NuxtIcon name="local:youtube" />
           </NuxtLink>
           <NuxtLink to="https://www.instagram.com/mindful.healing.path/" target="_blank" aria-label="instagram" class="drop-shadow hover:drop-shadow-md">
-            <NuxtIcon name="instagram" />
+            <NuxtIcon name="local:instagram" />
           </NuxtLink>
           <NuxtLink to="https://www.linkedin.com/in/monalisa-bairagi/" target="_blank" aria-label="linkedin" class="drop-shadow hover:drop-shadow-md">
-            <NuxtIcon name="linkedin" />
+            <NuxtIcon name="local:linkedin" />
           </NuxtLink>
         </div>
       </div>

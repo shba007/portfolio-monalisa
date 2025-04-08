@@ -18,7 +18,7 @@ useSeoMeta({
 <template>
   <section class="relative flex flex-col justify-between lg:flex-row">
     <div class="my-4 flex flex-col justify-center gap-4 px-4 lg:my-12 lg:pl-6 xl:px-0">
-      <NuxtIcon name="logo" class="-mb-4 self-center text-[96px] lg:-translate-x-4 lg:text-[112px]" filled />
+      <NuxtIcon name="local:logo" class="-mb-4 self-center text-[96px] lg:-translate-x-4 lg:text-[112px]" filled />
       <h1 class="text-xl font-semi-bold lg:text-2xl">Hello,</h1>
       <h2 class="text-2xl lg:text-4xl">I'm Monalisa Bairagi</h2>
       <h3 class="text-md lg:text-xl">A Passionate Clinical Psychologist</h3>
@@ -36,13 +36,13 @@ useSeoMeta({
         <span class="absolute -right-16 top-1/2 w-10 -translate-y-1/2 stroke-black lg:w-12" v-html="arrow" />
         <div class="col-start-3 row-start-2 flex gap-4 justify-self-end text-[28px] lg:row-start-1 lg:gap-6 lg:text-[42px]">
           <NuxtLink to="https://www.youtube.com/@mindful-healing-path" target="_blank" aria-label="youtube" class="drop-shadow hover:drop-shadow-md">
-            <NuxtIcon name="youtube" />
+            <NuxtIcon name="local:youtube" />
           </NuxtLink>
           <NuxtLink to="https://www.instagram.com/mindful.healing.path/" target="_blank" aria-label="instagram" class="drop-shadow hover:drop-shadow-md">
-            <NuxtIcon name="instagram" />
+            <NuxtIcon name="local:instagram" />
           </NuxtLink>
           <NuxtLink to="https://www.linkedin.com/in/monalisa-bairagi/" target="_blank" aria-label="linkedin" class="drop-shadow hover:drop-shadow-md">
-            <NuxtIcon name="linkedin" />
+            <NuxtIcon name="local:linkedin" />
           </NuxtLink>
         </div>
       </div>

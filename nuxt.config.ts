@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
+    '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils/module',
@@ -16,7 +17,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vite-pwa/nuxt',
     '@vueuse/nuxt',
-    'nuxt-icons',
     'nuxt-splide',
   ],
   nitro: {
@@ -33,10 +33,10 @@ export default defineNuxtConfig({
     '/_ipx/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/images/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/fonts/**': { headers: { 'cache-control': 'max-age=31536000' } },
+    '/locations/**': { redirect: { to: '/location/**', statusCode: 301 } },
     '/location/**': { headers: { 'cache-control': 'max-age=31536000' } },
-    '/locations/**': { redirect: '/location/**' },
+    '/workshops/**': { redirect: { to: '/workshop/**', statusCode: 301 } },
     '/workshop/**': { headers: { 'cache-control': 'max-age=31536000' } },
-    '/workshops/**': { redirect: '/workshop/**' },
     '/about': { ssr: true },
   },
   runtimeConfig: {
@@ -65,6 +65,17 @@ export default defineNuxtConfig({
         lang: 'en',
       },
     },
+  },
+  icon: {
+    componentName: 'NuxtIcon',
+    provider: 'server',
+    mode: 'svg',
+    customCollections: [
+      {
+        prefix: 'local',
+        dir: './app/assets/icons',
+      },
+    ],
   },
   image: {
     format: ['avif', 'webp'],

@@ -10,7 +10,7 @@ withDefaults(defineProps<{ primary?: boolean }>(), {
     :class="primary ? 'bg-primary-500 text-white' : 'border-[2.5px] border-primary-500 text-black'">
     <span>Book an Appointment</span>
     <span class="rotate-180 rounded-full p-2 lg:p-3" :class="primary ? 'bg-white' : 'bg-primary-500'">
-      <NuxtIcon name="chevron-bold" class="text[20px] lg:text-[24px]" :class="primary ? 'text-primary-500' : 'text-white'" />
+      <NuxtIcon name="local:chevron-bold" class="text[20px] lg:text-[24px]" :class="primary ? 'text-primary-500' : 'text-white'" />
     </span>
   </button>
 </template>

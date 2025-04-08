@@ -77,11 +77,11 @@ html {
 }
 
 body {
-  @apply relative min-h-screen overflow-x-hidden bg-primary-500 font-main text-black;
+  @apply relative min-h-screen overflow-x-hidden bg-primary-500 fill-black font-main text-black dark:fill-white;
 }
 
-.nuxt-icon > svg {
-  @apply !m-0;
+svg.iconify--local {
+  @apply !m-0 !box-content;
 }
 
 .scrollbar-hidden {

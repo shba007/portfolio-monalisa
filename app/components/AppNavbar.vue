@@ -13,23 +13,37 @@ function onNavigate(section: string) {
   gaProxy.gtag('event', 'navigate', { section })
   emit('navigate')
 }
+
+const urls = ref([
+  {
+    url: '/#testimonial',
+    id: 'testimonial',
+    title: 'Testimonials',
+  },
+  {
+    url: '/location',
+    id: 'location',
+    title: 'Locations',
+  },
+  {
+    url: '/workshop',
+    id: 'workshop',
+    title: 'Workshops',
+  },
+  {
+    url: '/about',
+    id: 'about',
+    title: 'About Me',
+  },
+])
 </script>
 
 <template>
   <ul
     class="flex-1 justify-center"
     :class="type === 'mobile' ? 'mobile fixed right-6 top-1/2 flex -translate-y-1/2 flex-col items-end gap-6 text-lg text-white' : 'desktop hidden items-center gap-6 lg:flex'">
-    <li>
-      <NuxtLink to="/#testimonial" active-class="active-link" @click="onNavigate('testimonial')">Testimonials</NuxtLink>
-    </li>
-    <li>
-      <NuxtLink to="/location" active-class="active-link" @click="onNavigate('location')">Locations</NuxtLink>
-    </li>
-    <li>
-      <NuxtLink to="/workshop" active-class="active-link" @click="onNavigate('workshop')">Workshops</NuxtLink>
-    </li>
-    <li>
-      <NuxtLink to="/about" active-class="active-link" @click="onNavigate('about')">About Me</NuxtLink>
+    <li v-for="{ id, url, title } of urls" :key="id">
+      <NuxtLink :to="url" active-class="active-link" @click="onNavigate(id)">{{ title }}</NuxtLink>
     </li>
   </ul>
 </template>

@@ -13,7 +13,7 @@ const emit = defineEmits<{
       <AppNavbar type="desktop" />
       <span class="flex-1 lg:invisible">
         <button aria-label="menu" class="ml-auto block w-fit" @click="emit('toggleMenu')">
-          <NuxtIcon name="hamburger" class="text-[28px] lg:text-[40px]" />
+          <NuxtIcon name="local:hamburger" class="text-[28px] lg:text-[40px]" />
         </button>
       </span>
     </nav>
