@@ -29,11 +29,11 @@ const { data: testimonials } = useFetch('/api/testimonial')
         </SplideSlide>
       </SplideTrack>
       <div class="splide__arrows absolute left-0 right-0 top-1/2 mx-[6%] flex -translate-y-1/2 justify-between text-[16px] text-primary-400 lg:top-1/2 lg:mx-[18%] lg:text-[28px]">
-        <button class="splide__arrow splide__arrow--prev relative drop-shadow-md transition-all hover:text-primary-500 hover:drop-shadow-lg">
+        <button class="splide__arrow splide__arrow--prev relative drop-shadow-md transition-all hover:fill-primary-500 hover:drop-shadow-lg">
           <div class="absolute left-1/2 top-1/2 -z-10 aspect-square w-12 -translate-x-1/2 -translate-y-1/2 bg-white lg:w-[4.375rem]" />
           <NuxtIcon name="local:chevron-bold" />
         </button>
-        <button class="splide__arrow splide__arrow--next relative drop-shadow-md transition-all [rotate:y_180deg] hover:text-primary-500 hover:drop-shadow-lg">
+        <button class="splide__arrow splide__arrow--next relative drop-shadow-md transition-all [rotate:y_180deg] hover:fill-primary-500 hover:drop-shadow-lg">
           <div class="absolute left-1/2 top-1/2 -z-10 aspect-square w-12 -translate-x-1/2 -translate-y-1/2 bg-white lg:w-[4.375rem]" />
           <NuxtIcon name="local:chevron-bold" />
         </button>

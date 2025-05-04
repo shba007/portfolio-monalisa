@@ -1,9 +1,14 @@
+export interface ViewItem {
+  month: string
+  view: number
+}
+
 export interface Video {
   title: string
-  publishedAt: Date
+  publishedAt: string
   thumbnail: string
-  views: number
-  link: string
+  viewData: ViewItem[]
+  url: string
 }
 
 export interface Testimonial {

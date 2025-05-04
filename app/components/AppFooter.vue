@@ -9,7 +9,7 @@ const emit = defineEmits<{
 <template>
   <!-- <Teleport to="#footer-placeholder"> -->
   <footer
-    class="relative w-full max-w-[85rem] px-4 pb-4 pt-48 text-white before:absolute before:top-0 before:-z-10 before:h-full before:w-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:320px_320px] before:bg-[24px_-24px] before:bg-no-repeat before:opacity-60 before:content-[''] md:mx-12 lg:mx-8 lg:mt-12 lg:pb-9 lg:pl-12 lg:pt-64 lg:before:bg-[length:420px_420px] lg:before:bg-[128px_-32px] 2xl:mx-auto">
+    class="relative w-full max-w-[85rem] fill-white px-4 pb-4 pt-48 text-white before:absolute before:top-0 before:-z-10 before:h-full before:w-full before:bg-[url(assets/images/neuron.png)] before:bg-[length:320px_320px] before:bg-[24px_-24px] before:bg-no-repeat before:opacity-60 before:content-[''] md:mx-12 lg:mx-8 lg:mt-12 lg:pb-9 lg:pl-12 lg:pt-64 lg:before:bg-[length:420px_420px] lg:before:bg-[128px_-32px] 2xl:mx-auto">
     <div class="absolute bottom-0 left-0 h-full w-screen bg-[url(assets/images/footer-bg.svg)] bg-[length:1024px_512px] bg-[center_bottom] bg-no-repeat lg:bg-[length:initial] lg:bg-left-bottom" />
     <CTAButton :primary="false" class="mx-auto -translate-y-40 lg:-translate-y-64" @click="emit('contact', true)" />
     <div class="relative mx-auto grid max-w-[85rem] grid-cols-[auto_1fr_auto] grid-rows-[repeat(2,min-content)] items-end gap-4 lg:grid-rows-1">
@@ -17,7 +17,7 @@ const emit = defineEmits<{
         <span>&copy; 2023-2024</span>
         <NuxtLink to="https://shirsendu-bairagi.dev" target="__blank" class="flex items-center gap-1">
           <span>Made by</span>
-          <NuxtIcon name="local:shba007" filled class="text-[20px]" />
+          <NuxtIcon name="local:shba007" class="text-[20px]" filled />
         </NuxtLink>
       </div>
       <div class="col-span-full flex flex-col items-center justify-center gap-7 lg:col-span-1">

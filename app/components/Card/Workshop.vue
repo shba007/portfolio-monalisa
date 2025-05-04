@@ -14,7 +14,7 @@ defineProps<Workshop>()
       <p class="flex-1 text-xs lg:text-base">{{ address }}</p>
       <div class="flex justify-between gap-3">
         <NuxtLink :href="`https://maps.app.goo.gl/${mapLink}`" target="_blank">
-          <NuxtIcon name="local:map" class="text-[24px] transition-colors hover:text-primary-500 lg:text-[32px]" />
+          <NuxtIcon name="local:map" class="text-[24px] transition-colors hover:fill-primary-500 lg:text-[32px]" />
         </NuxtLink>
         <NuxtLink :href="registerLink" target="_blank" class="ml-auto rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Register</NuxtLink>
         <NuxtLink :href="paymentLink" target="_blank" class="rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Pay</NuxtLink>

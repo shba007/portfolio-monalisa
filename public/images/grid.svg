@@ -1,53 +1,41 @@
-<svg width="939" height="806" viewBox="0 0 939 806"  xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_117_108" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="939" height="806">
-<rect x="402.5" y="402.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="402.5" y="0.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="402.5" y="268.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="536.5" y="402.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="536.5" y="0.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="402.5" y="536.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="402.5" y="670.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="402.5" y="134.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="268.5" y="402.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="268.5" y="0.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="268.5" y="268.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="134.5" y="269.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="0.5" y="268.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="134.5" y="403.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="0.5" y="402.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="134.5" y="1.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="0.5" y="0.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="134.5" y="537.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="134.5" y="671.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="0.5" y="536.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="0.5" y="670.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="134.5" y="135.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="0.5" y="134.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="268.5" y="536.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="268.5" y="670.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="268.5" y="134.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="536.5" y="536.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="536.5" y="670.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="536.5" y="134.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="536.5" y="268.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="670.5" y="269.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="804.5" y="268.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="670.5" y="403.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="804.5" y="402.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="670.5" y="1.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="804.5" y="0.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="670.5" y="537.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="670.5" y="671.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="804.5" y="536.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="804.5" y="670.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="670.5" y="135.5" width="134" height="134" rx="13.5" stroke="black"/>
-<rect x="804.5" y="134.5" width="134" height="134" rx="13.5" stroke="black"/>
+<svg width="668" height="716" viewBox="0 0 668 716" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_823_330" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-135" y="-90" width="939" height="806">
+<rect x="267.5" y="312.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="267.5" y="-89.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="267.5" y="178.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="401.5" y="312.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="401.5" y="-89.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="267.5" y="446.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="267.5" y="580.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="267.5" y="44.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="133.5" y="312.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="133.5" y="-89.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="133.5" y="178.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="-0.5" y="179.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="-0.5" y="313.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="-0.5" y="-88.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="-0.5" y="447.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="-0.5" y="581.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="-0.5" y="45.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="133.5" y="446.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="133.5" y="580.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="133.5" y="44.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="401.5" y="446.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="401.5" y="580.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="401.5" y="44.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="401.5" y="178.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="535.5" y="179.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="535.5" y="313.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="535.5" y="-88.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="535.5" y="447.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="535.5" y="581.5" width="134" height="134" rx="13.5" stroke="black"/>
+<rect x="535.5" y="45.5" width="134" height="134" rx="13.5" stroke="black"/>
 </mask>
-<g mask="url(#mask0_117_108)">
-<rect x="25" y="74" width="888" height="658" fill="url(#paint0_radial_117_108)"/>
+<g mask="url(#mask0_823_330)">
+<rect x="-110" y="-16" width="888" height="658" fill="url(#paint0_radial_823_330)" fill-opacity="0.2"/>
 </g>
 <defs>
-<radialGradient id="paint0_radial_117_108" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(469 354.5) rotate(90) scale(322 444)">
+<radialGradient id="paint0_radial_823_330" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(334 264.5) rotate(90) scale(322 444)">
 <stop offset="0.697917" stop-color="#D9D9D9"/>
 <stop offset="0.890625" stop-color="#D9D9D9" stop-opacity="0.1"/>
 </radialGradient>

@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-07-04',
+  compatibilityDate: '2024-11-01',
   future: {
     compatibilityVersion: 4,
   },
@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vite-pwa/nuxt',
     '@vueuse/nuxt',
+    'nuxt-charts',
     'nuxt-splide',
   ],
   nitro: {
@@ -55,8 +56,12 @@ export default defineNuxtConfig({
       notionApiKey: '',
       notionDbId: '',
       youtubeBaseUrl: '',
-      youtubeApiKey: '',
+      youtubeAnalyticsUrl: '',
       youtubeChannelId: '',
+      youtubeApiKey: '',
+      youtubeClientId: '',
+      youtubeClientSecret: '',
+      youtubeRefreshToken: '',
     },
   },
   app: {

@@ -37,15 +37,15 @@ export default {
       transparent: 'transparent',
       white: '#FFFFFF',
       light: {
-        400: '#F9F8F2',
-        500: '#D9D9D9',
-        600: '#ABABAB',
+        400: '#F8FAFC',
+        500: '#F1F5F9',
+        600: '#CBD5E1',
       },
       black: '#000000',
       dark: {
-        400: '#10121E',
-        500: '',
-        600: '',
+        400: '#171717',
+        500: '#262626',
+        600: '#404040',
       },
       primary: {
         400: '#ADE1A2',

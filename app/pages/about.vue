@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { differenceInYears, formatDuration } from 'date-fns'
 import arrow from '@/assets/images/arrow-2.svg?raw'
 
 const title = `About Me`
@@ -13,6 +14,14 @@ useSeoMeta({
   ogImage: url + '/previews/about.webp',
   ogUrl: url + '/about',
 })
+
+const DOE = '2021-01-01'
+
+const now = useNow()
+
+const experience = computed(() => {
+  return formatDuration({ years: differenceInYears(now.value, DOE) }, { format: ['years'] })
+})
 </script>
 
 <template>
@@ -23,9 +32,8 @@ useSeoMeta({
       <h2 class="text-2xl lg:text-4xl">I'm Monalisa Bairagi</h2>
       <h3 class="text-md lg:text-xl">A Passionate Clinical Psychologist</h3>
       <p class="mt-2 md:max-w-full lg:mt-8 lg:max-w-[36.25rem]">
-        I completed M.Phil. in Clinical Psychology. With a 3+ year of experience, I have worked in clinical settings helping individuals overcome various challenges. I utilize evidence-based
-        approaches such as CBT, DBT and mindfulness, tailoring each session to meet the unique needs of my clients.
-        <br /><br />
+        I completed M.Phil. in Clinical Psychology. With a {{ experience }} of experience, I have worked in clinical settings helping individuals overcome various challenges. I utilize evidence-based
+        approaches such as CBT, DBT and mindfulness, tailoring each session to meet the unique needs of my clients. <br /><br />
         My expertise includes dealing with anxiety, depression, obsessions and behavioral and emotional problems of child and adolescence. I believe in creating a safe and non-judgmental space where
         clients can explore their thoughts and feelings. I am committed to fostering positive change, resilience, and empowering individuals to lead fulfilling lives.
         <br /><br />
