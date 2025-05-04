@@ -1,5 +1,21 @@
 # porfolio-monalisa
 
+## v1.12.0
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.11.2...v1.12.0)
+
+### 🚀 Enhancements
+
+- Youtube analytics API integration, migrate to bun, migrated nuxt-icon, color corrected ([c149532](https://github.com/Algostract/portfolio-monalisa/commit/c149532))
+
+### 🩹 Fixes
+
+- Migrated from nuxt-icons to @nuxt/icon ([9db6d43](https://github.com/Algostract/portfolio-monalisa/commit/9db6d43))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## 1.11.2
 
 ### Patch Changes
