@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import type { BulletLegendItemInterface } from '@unovis/ts'
 import type { Video } from '~~/shared/types'
+
 const props = defineProps<Video>()
 
 const categories: Record<string, BulletLegendItemInterface> = {
   view: { name: 'view', color: '#98DA8B' },
 }
-
 const totalViews = computed(() => {
   const totalCount = props.viewData.reduce((total, { view }) => total + view, 0)
 
@@ -35,7 +36,7 @@ const totalViews = computed(() => {
         <NuxtTime :datetime="publishedAt" relative />
       </div>
       <div class="col-span-2">
-        <AreaChart :data="viewData" :categories="categories" :height="24" :hide-legend="true" :hide-tooltip="true" :x-formatter="() => ''" :y-formatter="() => ''" />
+        <AreaChart :data="viewData" :categories="categories" :height="24" :hide-legend="true" :hide-tooltip="true" />
       </div>
     </div>
   </NuxtLink>

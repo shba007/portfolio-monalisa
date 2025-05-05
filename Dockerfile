@@ -22,6 +22,7 @@ ARG BUILD_TIME
 WORKDIR /app
 
 COPY --from=builder /app/.output ./.output
+COPY --from=builder /app/node_modules/@emotion ./.output/server/node_modules/@emotion
 
 ENV NODE_ENV=production
 ENV NUXT_APP_VERSION=$VERSION

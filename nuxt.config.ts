@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vite-pwa/nuxt',
     '@vueuse/nuxt',
-    'nuxt-charts',
     'nuxt-splide',
   ],
   nitro: {
@@ -98,7 +97,7 @@ export default defineNuxtConfig({
   },
   site: {
     name: 'Monalisa Bairagi',
-    url: 'https://monalisa-bairagi.com',
+    url: process.env.NUXT_PUBLIC_SITE_URL,
   },
   robots: {
     disallow: ['/_nuxt/'],
