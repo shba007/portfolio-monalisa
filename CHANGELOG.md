@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.12.1
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.12.0...v1.12.1)
+
+### 🩹 Fixes
+
+- Cannot find module '@emotion/cache' and updated dependencies ([7161fc2](https://github.com/Algostract/portfolio-monalisa/commit/7161fc2))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.12.0
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.11.2...v1.12.0)
