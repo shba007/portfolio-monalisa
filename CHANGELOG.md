@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.13.0
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.12.1...v1.13.0)
+
+### 🚀 Enhancements
+
+- Integrate Notion API for workshop data ([e8187ca](https://github.com/Algostract/portfolio-monalisa/commit/e8187ca))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.12.1
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.12.0...v1.12.1)
