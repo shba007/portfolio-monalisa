@@ -3,16 +3,19 @@ import { differenceInYears, formatDuration } from 'date-fns'
 import arrow from '@/assets/images/arrow-2.svg?raw'
 
 const title = `About Me`
-const description = `Details About Monalisa Bairagi Clinical Psychologist`
-const url = 'https://monalisa-bairagi.com'
+const description = `Details About Clinical Psychologist Monalisa Bairagi`
+const {
+  public: { siteUrl },
+} = useRuntimeConfig()
+const imageUrl = `${siteUrl}/previews/about.webp`
 
 useSeoMeta({
   title: title,
   ogTitle: title,
   description: description,
   ogDescription: description,
-  ogImage: url + '/previews/about.webp',
-  ogUrl: url + '/about',
+  ogImage: imageUrl,
+  ogUrl: `${siteUrl}/about`,
 })
 
 const DOE = '2021-01-01'

@@ -2,16 +2,39 @@
 const title = `RCI Registered Clinical Psychologist in Kolkata`
 const description = `Monalisa Bairagi is a trusted RCI registered clinical psychologist based in Kolkata.
 She provides counseling sessions tailored to your unique needs near Rajpur, Sonarpur, Baruipur, Subhasgram, Harinavi & Narendrapur Area`
-const url = 'https://monalisa-bairagi.com'
+const {
+  public: { siteUrl },
+} = useRuntimeConfig()
+const imageUrl = `${siteUrl}/previews/landing.webp`
+
+useHead({
+  bodyAttrs: {
+    class: 'scrollbar-hidden',
+  },
+})
 
 useSeoMeta({
   title: title,
   ogTitle: title,
+  twitterTitle: title,
   description: description,
   ogDescription: description,
-  ogImage: url + '/previews/landing.webp',
-  ogUrl: url,
+  twitterDescription: description,
+  ogImage: imageUrl,
+  twitterImage: imageUrl,
+  ogUrl: siteUrl,
 })
+
+useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: '/' },
+      { name: 'Location', item: '/location' },
+      { name: 'Workshop', item: '/workshop' },
+      { name: 'About', item: '/about' },
+    ],
+  }),
+])
 
 const { proxy: gaProxy } = useScriptGoogleAnalytics()
 

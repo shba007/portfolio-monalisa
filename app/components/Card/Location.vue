@@ -35,13 +35,13 @@ const weekdays = ['Mon', 'Tue', 'Wed', 'Thus', 'Fri', 'Sat', 'Sun']
         </li>
       </ul>
       <div class="flex justify-between gap-3">
-        <NuxtLink :href="`mailto:${email}`" target="_blank">
+        <NuxtLink :to="`mailto:${email}`" target="_blank">
           <NuxtIcon name="local:email" class="text-[24px] transition-colors hover:fill-primary-500 lg:text-[32px]" />
         </NuxtLink>
-        <NuxtLink :href="`tel:+91${phone}`" target="_blank">
+        <NuxtLink :to="`tel:+91${phone}`" target="_blank">
           <NuxtIcon name="local:phone" class="text-[24px] transition-colors hover:fill-primary-500 lg:text-[32px]" />
         </NuxtLink>
-        <NuxtLink class="ml-auto" :href="`https://maps.app.goo.gl/${mapLink}`" target="_blank">
+        <NuxtLink :to="`https://maps.app.goo.gl/${mapLink}`" target="_blank" class="ml-auto">
           <NuxtIcon name="local:map" class="text-[24px] transition-colors hover:fill-primary-500 lg:text-[32px]" />
         </NuxtLink>
       </div>

@@ -1,24 +1,27 @@
 <script setup lang="ts">
+const { data: workshops } = await useFetch('/api/workshop')
+
 const title = `Workshops`
 const description = `Workshops`
-const url = 'https://monalisa-bairagi.com'
+const {
+  public: { siteUrl },
+} = useRuntimeConfig()
+const imageUrl = workshops.value?.length ? `${siteUrl}/${workshops.value[workshops.value?.length - 1]?.image}` : `${siteUrl}/preview/workshop.webp`
 
 useSeoMeta({
   title: title,
   ogTitle: title,
   description: description,
   ogDescription: description,
-  ogImage: url + '/previews/workshops.webp',
-  ogUrl: url + '/workshops',
+  ogImage: imageUrl,
+  ogUrl: `${siteUrl}/workshop`,
 })
-
-const { data } = useFetch('/api/workshop')
 </script>
 
 <template>
   <section class="mx-auto my-2.5 grid grid-cols-1 content-start justify-between justify-items-center gap-4 md:grid-cols-2 lg:my-4 xl:grid-cols-3">
     <CardWorkshop
-      v-for="{ image, name, url, place, address, mapLink, registerLink, paymentLink, feedbackLink } in data"
+      v-for="{ image, name, url, place, address, mapLink, registerLink, paymentLink, feedbackLink } in workshops"
       :key="name"
       :image="image"
       :name="name"

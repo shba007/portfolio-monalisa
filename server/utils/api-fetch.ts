@@ -1,4 +1,4 @@
-let accessToken: string | null = null
+let oauthAccessToken: string | null = null
 
 export default async function apiFetch<T>(
   path: string,
@@ -16,18 +16,18 @@ export default async function apiFetch<T>(
   try {
     return (await $fetch(path, {
       baseURL,
-      headers: accessToken ? { ...headers, Authorization: `Bearer ${accessToken}` } : headers,
+      headers: oauthAccessToken ? { ...headers, Authorization: `Bearer ${oauthAccessToken}` } : headers,
       body: rest.body as BodyInit | Record<string, unknown> | null,
       ...rest,
     })) as T
   } catch (err: unknown) {
     const status = (err as { response?: { status?: number } })?.response?.status
 
-    const { youtubeRefreshToken, youtubeClientId, youtubeClientSecret } = useRuntimeConfig().private
+    const { oauthClientId, oauthClientSecret, oauthRefreshToken } = useRuntimeConfig().private
 
-    if (status === 401 && !_retry && youtubeRefreshToken) {
-      const safeId = encodeURIComponent(youtubeClientId)
-      const safeSecret = encodeURIComponent(youtubeClientSecret)
+    if (status === 401 && !_retry && oauthRefreshToken) {
+      const safeId = encodeURIComponent(oauthClientId)
+      const safeSecret = encodeURIComponent(oauthClientSecret)
 
       const basicAuth = Buffer.from(`${safeId}:${safeSecret}`).toString('base64')
 
@@ -39,12 +39,12 @@ export default async function apiFetch<T>(
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: new URLSearchParams({
-          refresh_token: youtubeRefreshToken,
+          refresh_token: oauthRefreshToken,
           grant_type: 'refresh_token',
         }).toString(),
       })
 
-      accessToken = tokens.access_token
+      oauthAccessToken = tokens.access_token
       return apiFetch<T>(path, { ...options, _retry: true })
     }
 

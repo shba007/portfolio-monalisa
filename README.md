@@ -13,7 +13,3 @@
 </p>
 
 ![Landing](public/previews/landing.webp)
-
-https://g.page/r/Cbn4JN1kdinSEBM/review
-
-- Breadcrums

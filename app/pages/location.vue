@@ -1,18 +1,21 @@
 <script setup lang="ts">
-const title = `Locations`
-const description = `Appointment Locations`
-const url = 'https://monalisa-bairagi.com'
+const title = `All Appointment Locations`
+const description = `All Appointment Locations where clinical Clinical Psychologist is Available`
+const {
+  public: { siteUrl },
+} = useRuntimeConfig()
+const imageUrl = `${siteUrl}/previews/locations.webp`
 
 useSeoMeta({
   title: title,
   ogTitle: title,
   description: description,
   ogDescription: description,
-  ogImage: url + '/previews/locations.webp',
-  ogUrl: url + '/location',
+  ogImage: imageUrl,
+  ogUrl: `${siteUrl}/location`,
 })
 
-const { data } = useFetch('/api/location')
+const { data } = await useFetch('/api/location')
 </script>
 
 <template>

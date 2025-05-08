@@ -42,13 +42,16 @@ export default defineNuxtConfig({
   runtimeConfig: {
     app: {
       version: '',
+      buildTime: '',
     },
     public: {
+      siteUrl: '',
       scripts: {
         googleAnalytics: {
           id: '',
         },
       },
+      vapidKey: '',
     },
     private: {
       rootDir: '',
@@ -58,9 +61,10 @@ export default defineNuxtConfig({
       youtubeAnalyticsUrl: '',
       youtubeChannelId: '',
       youtubeApiKey: '',
-      youtubeClientId: '',
-      youtubeClientSecret: '',
-      youtubeRefreshToken: '',
+      oauthClientId: '',
+      oauthClientSecret: '',
+      oauthRefreshToken: '',
+      paymentUpiInfo: '',
     },
   },
   app: {
@@ -98,6 +102,10 @@ export default defineNuxtConfig({
   site: {
     name: 'Monalisa Bairagi',
     url: process.env.NUXT_PUBLIC_SITE_URL,
+  },
+  sitemap: {
+    autoLastmod: true,
+    sources: ['/api/__sitemap__/urls'],
   },
   robots: {
     disallow: ['/_nuxt/'],

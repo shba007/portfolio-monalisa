@@ -2,13 +2,20 @@
 const title = `RCI Registered Clinical Psychologist in Kolkata`
 const description = `Monalisa Bairagi is a trusted RCI registered clinical psychologist based in Kolkata.
 She provides counseling sessions tailored to your unique needs near Rajpur, Sonarpur, Baruipur, Subhasgram, Harinavi & Narendrapur Area`
-const url = 'https://monalisa-bairagi.com'
+const {
+  public: { siteUrl },
+} = useRuntimeConfig()
+
+useHead({
+  bodyAttrs: {
+    class: 'scrollbar-hidden',
+  },
+})
 
 useSeoMeta({
   ogType: 'profile',
   ogImageWidth: 1200,
   ogImageHeight: 630,
-  ogUrl: url,
   fbAppId: 966242223397117,
   twitterCard: 'summary_large_image',
   colorScheme: 'light dark',
@@ -18,7 +25,7 @@ useSchemaOrg([
   definePerson({
     name: 'Monalisa Bairagi',
     description: 'She is a RCI registered clinical psychologist',
-    image: url + '/logo.png',
+    image: siteUrl + '/logo.png',
     sameAs: ['https://linkedin.com/in/monalisa-bairagi', 'https://instagram.com/mindful.healing.path', 'https://youtube.com/@mindful-healing-path'],
   }),
   defineLocalBusiness({
@@ -30,7 +37,7 @@ useSchemaOrg([
       postalCode: '700146',
       addressCountry: 'IN',
     },
-    image: url + '/logo.png',
+    image: siteUrl + '/logo.png',
   }),
   defineWebPage({
     datePublished: new Date(2024, 0, 1).toISOString(),
@@ -38,7 +45,7 @@ useSchemaOrg([
     author: 'Shirsendu Bairagi',
   }),
   defineWebSite({
-    url: url,
+    siteUrl: siteUrl,
     name: title,
     description: description,
   }),
@@ -58,10 +65,9 @@ useSchemaOrg([
 
 <style>
 * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   scrollbar-width: 6px;
+  @apply antialiased;
 }
 
 *::-webkit-scrollbar {
@@ -84,15 +90,12 @@ svg.iconify--local {
   @apply !m-0 !box-content;
 }
 
-.scrollbar-hidden {
-  -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
-  scrollbar-width: none;
-  /* Firefox */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-  /* Safari and Chrome */
+  width: 0;
+  height: 0;
 }
 </style>
