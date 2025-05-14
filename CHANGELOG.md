@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.14.0
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.13.0...v1.14.0)
+
+### 🚀 Enhancements
+
+- Add push notification support, add certificate ([84bfbc9](https://github.com/Algostract/portfolio-monalisa/commit/84bfbc9))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.13.0
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.12.1...v1.13.0)
