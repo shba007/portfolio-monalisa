@@ -278,6 +278,7 @@ export default defineNuxtConfig({
         },
       ],
       navigateFallback: undefined,
+      importScripts: ['/sw-push.js'],
     },
     client: {
       installPrompt: true,

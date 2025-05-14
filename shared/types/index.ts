@@ -190,7 +190,32 @@ export interface NotionWorkshop {
       type: string
       number: number
     }
+    Participants: {
+      type: 'relation'
+      relation: { id: string }[]
+    }
   }
   url: string
   public_url: null
+}
+
+export interface NotionParticipant {
+  id: string
+  created_time: Date
+  last_edited_time: Date
+  cover: NotionMediaAsset
+  icon: NotionMediaAsset
+  properties: {
+    Name: {
+      title: {
+        type: string
+        text: {
+          content: string
+          link: null
+        }
+        plain_text: string
+        href: null
+      }[]
+    }
+  }
 }

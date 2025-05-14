@@ -36,6 +36,8 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
           place: properties.Place.select.name,
           address: properties.Address.rich_text.map(({ plain_text }) => plain_text ?? '').join('') as string,
           mapLink: properties.Map.url,
+          registrationDate: { start: properties['Registration date'].date.start, end: properties['Registration date'].date.end },
+          workshopDate: { start: properties['Workshop date'].date.start, end: properties['Workshop date'].date.end },
           registerLink: '',
           paymentLink: generateUpiDeepLink(payment.accountId, payment.vpa, payment.accountName, amount, title),
           feedbackLink: '',
@@ -43,7 +45,7 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
         }
       })
     } catch (error: unknown) {
-      console.error('API workshops GET', error)
+      console.error('API workshop GET', error)
 
       throw createError({
         statusCode: 500,

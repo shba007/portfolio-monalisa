@@ -35,12 +35,18 @@ export default defineCachedEventHandler<Promise<{ name: string; image: string; u
       const title = workshop.properties.Name.title.map(({ plain_text }) => plain_text ?? '').join('') as string
 
       return {
+        id: workshop.id,
         name: title,
         image: workshop.cover?.type === 'external' ? workshop.cover.external.url : '',
+        place: workshop.properties.Place.select.name,
+        address: workshop.properties.Address.rich_text.map(({ plain_text }) => plain_text ?? '').join('') as string,
+        mapLink: workshop.properties.Map.url,
+        registrationDate: { start: workshop.properties['Registration date'].date.start, end: workshop.properties['Registration date'].date.end },
+        workshopDate: { start: workshop.properties['Workshop date'].date.start, end: workshop.properties['Workshop date'].date.end },
         url: `/workshop/${slugify(title)}_${workshop.id}`,
       }
     } catch (error: unknown) {
-      console.error('API workshops GET', error)
+      console.error('API workshop/[...slug] GET', error)
 
       throw createError({
         statusCode: 500,
