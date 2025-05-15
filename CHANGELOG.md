@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.14.1
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.0...v1.14.1)
+
+### 🩹 Fixes
+
+- Add signature image to certificate, og tag fixed ([380171e](https://github.com/Algostract/portfolio-monalisa/commit/380171e))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.14.0
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.13.0...v1.14.0)
