@@ -36,10 +36,10 @@ function flippedClass(method: string) {
       :to="link"
       target="__blank"
       :aria-label="method"
-      class="flex aspect-square cursor-pointer flex-col items-center justify-center gap-3 px-9 pt-6 text-white transition-colors"
+      class="flex aspect-square cursor-pointer flex-col items-center justify-center gap-3 fill-white px-9 pt-6 text-white transition-colors"
       :class="flippedClass(method)"
       @click="contact(method)">
-      <NuxtIcon :name="icon" class="text-[56px]" :class="flippedClass(method)" />
+      <NuxtIcon :name="`local:${icon}`" class="text-[56px]" :class="flippedClass(method)" />
       <span class="font-semi-bold capitalize" :class="flippedClass(method)">{{ method }}</span>
     </NuxtLink>
   </ModalBase>

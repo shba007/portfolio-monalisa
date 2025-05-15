@@ -19,18 +19,25 @@ const {
 } = useRuntimeConfig()
 // const imageUrl = `${siteUrl}/${data.value.image}`
 
+defineOgImageScreenshot({
+  selector: '.content',
+})
+
 useSeoMeta({
   title: title,
   ogTitle: title,
+  twitterTitle: title,
   description: description,
   ogDescription: description,
+  twitterDescription: description,
   // ogImage: imageUrl,
+  // twitterImage: imageUrl,
   ogUrl: `${siteUrl}/certificate/${slug}`,
 })
 </script>
 
 <template>
-  <main class="flex min-h-screen w-full items-center justify-center bg-light-400">
-    <TemplateCertificate :participant="data.participant" :workshop-title="data.workshopTitle" :workshop-date="data.workshopDate" />
+  <main class="content flex min-h-screen w-full items-center justify-center bg-light-400">
+    <TemplateCertificate :participant="data.participant" :workshop-title="data.workshopTitle" :workshop-date="data.workshopDate.start" />
   </main>
 </template>

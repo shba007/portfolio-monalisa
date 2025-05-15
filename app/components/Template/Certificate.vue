@@ -55,7 +55,7 @@ const formattedDate = computed(() => {
 
       <text x="50%" y="200" text-anchor="middle" font-size="28" fill="black">This is to certify that</text>
 
-      <text x="50%" y="290" text-anchor="middle" font-weight="500" font-size="60" fill="black">
+      <text x="50%" y="290" text-anchor="middle" font-family="Dancing Script" font-weight="500" font-size="60" fill="black">
         {{ participant }}
       </text>
 
@@ -71,7 +71,8 @@ const formattedDate = computed(() => {
       <!-- Trainer -->
 
       <g transform="translate(140, 510)">
-        <text x="-32" y="0" text-anchor="center" font-size="20" fill="black">Monalisa Bairagi</text>
+        <image href="/assets/images/signature.png" x="-40" y="-50" width="162.6" height="81.4" />
+        <!-- <text x="-32" y="0" text-anchor="center" font-size="20" fill="black">Monalisa Bairagi</text> -->
         <text x="0" y="32" text-anchor="center" font-size="20" fill="black">Trainer</text>
       </g>
 

@@ -6,14 +6,17 @@ const description = `Workshops`
 const {
   public: { siteUrl },
 } = useRuntimeConfig()
-const imageUrl = workshops.value?.length ? `${siteUrl}/${workshops.value[workshops.value?.length - 1]?.image}` : `${siteUrl}/preview/workshop.webp`
+const imageUrl = workshops.value?.length ? workshops.value[0]?.image : `${siteUrl}/preview/workshop.webp`
 
 useSeoMeta({
   title: title,
   ogTitle: title,
+  twitterTitle: title,
   description: description,
   ogDescription: description,
+  twitterDescription: description,
   ogImage: imageUrl,
+  twitterImage: imageUrl,
   ogUrl: `${siteUrl}/workshop`,
 })
 </script>

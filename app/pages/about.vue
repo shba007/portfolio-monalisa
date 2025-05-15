@@ -12,9 +12,12 @@ const imageUrl = `${siteUrl}/previews/about.webp`
 useSeoMeta({
   title: title,
   ogTitle: title,
+  twitterTitle: title,
   description: description,
   ogDescription: description,
+  twitterDescription: description,
   ogImage: imageUrl,
+  twitterImage: imageUrl,
   ogUrl: `${siteUrl}/about`,
 })
 

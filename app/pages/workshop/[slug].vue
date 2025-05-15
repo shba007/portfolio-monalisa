@@ -13,14 +13,19 @@ const description = `${data.value.name}`
 const {
   public: { siteUrl },
 } = useRuntimeConfig()
-const imageUrl = `${siteUrl}/${data.value.image}`
+const imageUrl = data.value.image
 
 useSeoMeta({
   title: title,
   ogTitle: title,
+  twitterTitle: title,
   description: description,
   ogDescription: description,
+  twitterDescription: description,
   ogImage: imageUrl,
+  twitterImage: imageUrl,
+  ogImageWidth: 768,
+  ogImageHeight: 1024,
   ogUrl: `${siteUrl}/workshop/${slug}`,
 })
 </script>
