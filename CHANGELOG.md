@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.14.2
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.1...v1.14.2)
+
+### 🎨 Styles
+
+- Certificate design modified, docker swarm added ([b950524](https://github.com/Algostract/portfolio-monalisa/commit/b950524))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.14.1
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.0...v1.14.1)
