@@ -70,18 +70,26 @@ const formattedDate = computed(() => {
       <!-- Signatures & Date -->
       <!-- Trainer -->
 
-      <g transform="translate(140, 510)">
-        <image href="/assets/images/signature.png" x="-40" y="-50" width="162.6" height="81.4" />
-        <!-- <text x="-32" y="0" text-anchor="center" font-size="20" fill="black">Monalisa Bairagi</text> -->
-        <text x="0" y="32" text-anchor="center" font-size="20" fill="black">Trainer</text>
+      <g transform="translate(100, 490)">
+        <image href="/assets/images/signature.png" x="0" y="-50" width="162.6" height="81.4" />
+        <text x="0" y="32" text-anchor="left" font-size="16" fill="black">
+          <tspan x="0" dy="0">RCI Registered Clinical Psychologist</tspan>
+          <tspan x="0" dy="24">CRR: A85263</tspan>
+        </text>
       </g>
 
       <!-- Date -->
-      <g transform="translate(676, 510)">
-        <text x="-32" y="0" text-anchor="center" font-size="20" fill="black">
+      <g transform="translate(700, 490)">
+        <!-- Date, centered at the group origin -->
+        <text x="0" y="0" text-anchor="right" font-size="16" fill="black">
           {{ formattedDate }}
         </text>
-        <text x="0" y="32" text-anchor="center" font-size="20" fill="black">Date</text>
+
+        <!-- Title, split into two lines using tspans -->
+        <text x="0" y="32" text-anchor="middle" font-size="16" fill="black">
+          <tspan x="0" dy="0">Healing Minds: Centre for</tspan>
+          <tspan x="0" dy="24">Counseling and Education</tspan>
+        </text>
       </g>
 
       <!-- Clip path -->

@@ -3,7 +3,14 @@ import { z } from 'zod'
 
 let notion: Client
 
-export default defineCachedEventHandler<Promise<{ id: string; participant: string; workshopTitle: string }>>(
+interface Certificate {
+  id: string
+  participant: string
+  workshopTitle: string
+  workshopDate: { start: string; end: string }
+}
+
+export default defineCachedEventHandler<Promise<Certificate>>(
   async (event) => {
     try {
       const config = useRuntimeConfig()
