@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.14.3
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.2...v1.14.3)
+
+### 💅 Refactors
+
+- Remove Notion client initialization from multiple API endpoints ([f81dff8](https://github.com/Algostract/portfolio-monalisa/commit/f81dff8))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.14.2
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.1...v1.14.2)
