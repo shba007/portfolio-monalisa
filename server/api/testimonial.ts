@@ -1,6 +1,5 @@
 import { createAvatar } from '@dicebear/core'
 import { micah } from '@dicebear/collection'
-import { Client } from '@notionhq/client'
 
 interface NotionTestimonial {
   id: string
@@ -63,19 +62,12 @@ function shortenName(name: string) {
   return `${firstName[0]}. ${lastName}`
 }
 
-let notion: Client
-
 export default defineCachedEventHandler<Promise<Testimonial[]>>(
   async () => {
     try {
       const config = useRuntimeConfig()
-      if (!config.private.notionApiKey) {
-        throw new Error('Notion API Key Not Found')
-      }
 
       const notionDbId = config.private.notionDbId as unknown as { testimonial: string }
-
-      notion = notion ?? new Client({ auth: config.private.notionApiKey })
       const data = await notion.databases.query({ database_id: notionDbId.testimonial })
 
       const testimonials = data.results as unknown as NotionTestimonial[]
@@ -86,9 +78,9 @@ export default defineCachedEventHandler<Promise<Testimonial[]>>(
         .map(({ properties }) => {
           if (!properties.Consent.checkbox) return null
 
-          const name = properties['Full Name'].title.map(({ plain_text }) => plain_text).join('')
+          const name = notionTextStringify(properties['Full Name'].title)
           const gender = 'female'
-          const message = properties.Review.rich_text.map(({ plain_text }) => plain_text).join('')
+          const message = notionTextStringify(properties.Review.rich_text)
 
           return {
             image: generateAvatar(name, gender),

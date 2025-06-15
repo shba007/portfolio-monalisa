@@ -1,7 +1,4 @@
-import { Client } from '@notionhq/client'
 import { z } from 'zod'
-
-let notion: Client
 
 interface Certificate {
   id: string
@@ -13,19 +10,12 @@ interface Certificate {
 export default defineCachedEventHandler<Promise<Certificate>>(
   async (event) => {
     try {
-      const config = useRuntimeConfig()
-      if (!config.private.notionApiKey) {
-        throw new Error('Notion API Key Not Found')
-      }
-
       const { slug } = await getValidatedRouterParams(
         event,
         z.object({
           slug: z.string().min(1),
         }).parse
       )
-
-      notion = notion ?? new Client({ auth: config.private.notionApiKey })
 
       const [workshopId, participantId] = slug.split(',')
 
@@ -51,8 +41,8 @@ export default defineCachedEventHandler<Promise<Certificate>>(
 
       return {
         id: `${workshop.id}_${participant.id}`,
-        participant: participant.properties.Name.title.map(({ plain_text }) => plain_text ?? '').join('') as string,
-        workshopTitle: workshop.properties.Name.title.map(({ plain_text }) => plain_text ?? '').join('') as string,
+        participant: notionTextStringify(participant.properties.Name.title),
+        workshopTitle: notionTextStringify(workshop.properties.Name.title),
         workshopDate: { start: workshop.properties['Workshop date'].date.start, end: workshop.properties['Workshop date'].date.end },
       }
     } catch (error: unknown) {

@@ -9,7 +9,7 @@ definePageMeta({
 const { data } = await useFetch(`/api/certificate/${slug}`)
 
 if (!data.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: 'Certificate not found', fatal: true })
 }
 
 function formatDate(dateStr: string) {
@@ -51,5 +51,6 @@ defineOgImageScreenshot({
 <template>
   <main class="content flex min-h-screen w-full items-center justify-center bg-light-400">
     <TemplateCertificate v-if="data" :participant="data.participant" :workshop-title="data.workshopTitle" :workshop-date="data.workshopDate.start" />
+    <h1 v-else class="text-xl">No Certificate Found</h1>
   </main>
 </template>

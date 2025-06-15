@@ -71,6 +71,8 @@ export const resourceTypes = ['testimonial', 'workshop', 'blog'] as const
 
 export type ResourceType = (typeof resourceTypes)[number]
 
+export type NotionDB = { [K in ResourceType]: string }
+
 export interface ResourceRecordMap {
   testimonial: null
   workshop: NotionWorkshop
@@ -82,8 +84,6 @@ export interface Resource<T extends ResourceType = ResourceType> {
   notificationStatus: boolean
   record: ResourceRecordMap[T]
 }
-
-export type NotionDB = { [K in ResourceType]: string }
 
 type NotionMediaAsset =
   | {

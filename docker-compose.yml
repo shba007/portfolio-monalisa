@@ -9,7 +9,19 @@ services:
       - .env.prod
     ports:
       - 4200:3000
+  browserless:
+    image: ghcr.io/browserless/chromium:latest
+    restart: on-failure:3
+    user: root
+    volumes:
+      - portfolio-monalisa_data:/usr/src/app/user-data-dir
+    environment:
+      - CORS=true
+    ports:
+      - 1202:3000
 
 volumes:
   portfolio-monalisa_static:
+    external: true
+  portfolio-monalisa_data:
     external: true

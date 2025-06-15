@@ -1,18 +1,8 @@
-import { Client } from '@notionhq/client'
-
-let notion: Client
-
 export default defineCachedEventHandler<Promise<Workshop[]>>(
   async () => {
     try {
       const config = useRuntimeConfig()
-      if (!config.private.notionApiKey) {
-        throw new Error('Notion API Key Not Found')
-      }
-
       const notionDbId = config.private.notionDbId as unknown as NotionDB
-
-      notion = notion ?? new Client({ auth: config.private.notionApiKey })
 
       const data = await notion.databases.query({
         database_id: notionDbId.workshop,
@@ -26,7 +16,7 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
       }
 
       return workshops.map(({ id, cover, properties }) => {
-        const title = properties.Name.title.map(({ plain_text }) => plain_text ?? '').join('') as string
+        const title = notionTextStringify(properties.Name.title)
         const amount = properties.Cost.number
 
         return {
@@ -34,7 +24,7 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
           name: title,
           image: cover?.type === 'external' ? cover.external.url : '',
           place: properties.Place.select.name,
-          address: properties.Address.rich_text.map(({ plain_text }) => plain_text ?? '').join('') as string,
+          address: notionTextStringify(properties.Address.rich_text),
           mapLink: properties.Map.url,
           registrationDate: { start: properties['Registration date'].date.start, end: properties['Registration date'].date.end },
           workshopDate: { start: properties['Workshop date'].date.start, end: properties['Workshop date'].date.end },

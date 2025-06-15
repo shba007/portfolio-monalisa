@@ -4,8 +4,6 @@
 
 # Portfolio Monalisa
 
-> Monalisa's portfolio showcasing her experience and contacts in a visually appealing manner
-
 <p align="center">
   <a href="https://monalisa-bairagi.betteruptime.com">
     <img src="https://uptime.betterstack.com/status-badges/v3/monitor/10ar6.svg" alt="Better Stack Badge">
@@ -13,6 +11,20 @@
 </p>
 
 ![Landing](public/previews/landing.webp)
+
+> Monalisa's portfolio showcasing her experience and contacts in a visually appealing manner
+
+- 📦 SSR
+- 🖼️ OG Tags
+- 🚀 PWA
+- ✋ Push Notification
+- 🗂️ CMS (Notion)
+- 📊 Chart
+- 🤖 Automation (Email, Whatsapp)
+- 🐋 Containerized
+- 🪄 CI/CD (Github Action)
+- ⚡️ API Route Caching
+- 📐 Analytics
 
 ## How to Deploy
 
@@ -41,23 +53,30 @@ docker volume create \
   --name portfolio-monalisa_static \
   --driver local \
   --opt type=none \
-  --opt device=~/Algostract/portfolio-monalisa/static \
+  --opt device="$(pwd)/static" \
+  --opt o=bind
+
+docker volume create \
+  --name portfolio-monalisa_data \
+  --driver local \
+  --opt type=none \
+  --opt device="$(pwd)/.data" \
   --opt o=bind
 ```
 
 5. Use Docker Stack to deploy multi-container application
 
 ```bash
-export $(cat .env.prod) && docker stack deploy --compose-file docker-compose.prod.yml portfolio-monalisa
+docker stack deploy --compose-file docker-compose.prod.yml portfolio-monalisa
 ```
 
-6. Scale the service
+6. Scale service
 
 ```bash
-docker service scale portfolio-monalisa_app=5
+docker service scale portfolio-monalisa_app=2
 ```
 
-7. Check
+7. Verify
 
 ```bash
 docker service ls
