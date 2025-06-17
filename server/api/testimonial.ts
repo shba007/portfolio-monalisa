@@ -39,7 +39,7 @@ interface NotionTestimonial {
   public_url: string | null
 }
 
-function generateAvatar(name: string, gender: 'male' | 'female') {
+export function generateAvatar(name: string, gender: 'male' | 'female') {
   const avatar = createAvatar(micah, {
     seed: name,
     baseColor: ['ac6651', 'f9c9b6'],

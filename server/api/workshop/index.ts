@@ -15,25 +15,27 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
         vpa: string
       }
 
-      return workshops.map(({ id, cover, properties }) => {
+      const results = workshops.map(({ id, cover, properties }) => {
         const title = notionTextStringify(properties.Name.title)
-        const amount = properties.Cost.number
+        if (properties.Status.status.name !== 'Live' && properties.Status.status.name !== 'Complete') return null
 
         return {
           id,
           name: title,
-          image: cover?.type === 'external' ? cover.external.url : '',
+          image: cover?.type === 'external' ? cover.external?.url : '',
           place: properties.Place.select.name,
           address: notionTextStringify(properties.Address.rich_text),
           mapLink: properties.Map.url,
           registrationDate: { start: properties['Registration date'].date.start, end: properties['Registration date'].date.end },
           workshopDate: { start: properties['Workshop date'].date.start, end: properties['Workshop date'].date.end },
           registerLink: '',
-          paymentLink: generateUpiDeepLink(payment.accountId, payment.vpa, payment.accountName, amount, title),
+          paymentLink: generateUpiDeepLink(payment.accountId, payment.vpa, payment.accountName, properties.Cost.number, title),
           feedbackLink: '',
-          url: `/workshop/${slugify(title)}_${id}`,
+          url: `/workshop/${id}`,
         }
       })
+
+      return results.filter((item) => item !== null).sort((a, b) => new Date(b.workshopDate.start).getTime() - new Date(a.workshopDate.start).getTime())
     } catch (error: unknown) {
       console.error('API workshop GET', error)
 

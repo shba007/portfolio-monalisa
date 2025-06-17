@@ -1,12 +1,13 @@
 <script setup lang="ts">
 const route = useRoute()
-const slug = route.params.slug?.toString()
+const workshopId = route.params.workshopId?.toString()
+const participantId = route.params.participantId?.toString()
 
 definePageMeta({
   layout: false,
 })
 
-const { data } = await useFetch(`/api/certificate/${slug}`)
+const { data } = await useFetch(`/api/workshop/${workshopId}/certificate/${participantId}`)
 
 if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Certificate not found', fatal: true })
@@ -40,7 +41,7 @@ useSeoMeta({
   twitterDescription: description,
   // ogImage: imageUrl,
   // twitterImage: imageUrl,
-  ogUrl: `${siteUrl}/certificate/${slug}`,
+  ogUrl: `${siteUrl}/certificate/${participantId}`,
 })
 
 defineOgImageScreenshot({

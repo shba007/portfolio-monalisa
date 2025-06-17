@@ -10,17 +10,16 @@ interface Certificate {
 export default defineCachedEventHandler<Promise<Certificate>>(
   async (event) => {
     try {
-      const { slug } = await getValidatedRouterParams(
+      const { workshopId, participantId } = await getValidatedRouterParams(
         event,
         z.object({
-          slug: z.string().min(1),
+          workshopId: z.string().min(1),
+          participantId: z.string().min(1),
         }).parse
       )
 
-      const [workshopId, participantId] = slug.split(',')
-
       if (!(workshopId && participantId)) {
-        throw createError({ statusCode: 404, statusMessage: `pageId ${slug} not found` })
+        throw createError({ statusCode: 404, statusMessage: `pageId ${participantId} not found` })
       }
 
       const workshop = (await notion.pages.retrieve({ page_id: workshopId })) as unknown as NotionWorkshop
@@ -35,7 +34,7 @@ export default defineCachedEventHandler<Promise<Certificate>>(
       }
 
       const participant = (await notion.pages.retrieve({ page_id: participantId })) as unknown as NotionParticipant
-      if (!participant) {
+      if (!participant || participant.properties.Status.status.name !== 'Attended') {
         throw createError({ statusCode: 404, statusMessage: `participant ${participantId} not found` })
       }
 

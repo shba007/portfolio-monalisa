@@ -115,7 +115,7 @@ jobs:
           script: |
             cd ~/${{ env.REPO }}
             curl -O https://raw.githubusercontent.com/${{ env.REPO }}/refs/heads/main/docker-compose.prod.yml
-            docker stack deploy --compose-file docker-compose.prod.yml monalisa-bairagi
+            docker stack deploy --compose-file docker-compose.prod.yml portfolio-monalisa
 
   # build-desktop:
   #   env:

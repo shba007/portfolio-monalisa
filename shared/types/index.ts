@@ -67,7 +67,7 @@ export interface BlogDetails extends Blog {
 }
 
 /* Server Only */
-export const resourceTypes = ['testimonial', 'workshop', 'blog'] as const
+export const resourceTypes = ['testimonial', 'workshop', 'content', 'participant'] as const
 
 export type ResourceType = (typeof resourceTypes)[number]
 
@@ -76,7 +76,8 @@ export type NotionDB = { [K in ResourceType]: string }
 export interface ResourceRecordMap {
   testimonial: null
   workshop: NotionWorkshop
-  blog: NotionBlog
+  content: NotionContent
+  participant: NotionParticipant
 }
 
 export interface Resource<T extends ResourceType = ResourceType> {
@@ -101,7 +102,7 @@ type NotionMediaAsset =
     }
   | null
 
-export interface NotionBlog {
+export interface NotionContent {
   id: string
   created_time: string
   last_edited_time: string
@@ -148,6 +149,11 @@ export interface NotionWorkshop {
         plain_text: string
         href: null
       }[]
+    }
+    Status: {
+      status: {
+        name: 'Plan' | 'Live' | 'Complete' | 'Cancelled'
+      }
     }
     Place: {
       type: string
@@ -216,6 +222,11 @@ export interface NotionParticipant {
         plain_text: string
         href: null
       }[]
+    }
+    Status: {
+      status: {
+        name: 'Attending' | 'Attended' | 'Unattended' | 'Cancelled'
+      }
     }
   }
 }

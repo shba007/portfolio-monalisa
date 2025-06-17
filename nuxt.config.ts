@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    '/': { isr: 3600 },
+    '/': { swr: true },
     '/_ipx/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/images/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/fonts/**': { headers: { 'cache-control': 'max-age=31536000' } },
