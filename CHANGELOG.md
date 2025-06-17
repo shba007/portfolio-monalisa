@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.14.4
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.3...v1.14.4)
+
+### 💅 Refactors
+
+- Implement workshop and certificate pages with API integration ([3b54abb](https://github.com/Algostract/portfolio-monalisa/commit/3b54abb))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.14.3
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.2...v1.14.3)
