@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.15.0
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.4...v1.15.0)
+
+### 🚀 Enhancements
+
+- Added new location, updated workshop links ([2d62cea](https://github.com/Algostract/portfolio-monalisa/commit/2d62cea))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.14.4
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.3...v1.14.4)
