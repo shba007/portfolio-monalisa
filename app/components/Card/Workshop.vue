@@ -16,9 +16,9 @@ defineProps<Workshop>()
         <NuxtLink :to="mapLink" target="_blank">
           <NuxtIcon name="local:map" class="text-[24px] transition-colors hover:fill-primary-500 lg:text-[32px]" />
         </NuxtLink>
-        <NuxtLink :to="registerLink" target="_blank" class="ml-auto rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Register</NuxtLink>
-        <NuxtLink :to="paymentLink" target="_blank" class="rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Pay</NuxtLink>
-        <NuxtLink :to="feedbackLink" target="_blank" class="rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Feedback</NuxtLink>
+        <NuxtLink v-if="registerLink" :to="registerLink" target="_blank" class="ml-auto rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Register</NuxtLink>
+        <NuxtLink v-if="paymentLink" :to="paymentLink" target="_blank" class="rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Pay</NuxtLink>
+        <NuxtLink v-if="feedbackLink" :to="feedbackLink" target="_blank" class="rounded-lg bg-primary-500 px-3 py-1 transition-colors hover:bg-primary-400">Feedback</NuxtLink>
       </div>
     </div>
   </div>

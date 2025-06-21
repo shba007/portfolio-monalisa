@@ -43,10 +43,21 @@
 - id: '4'
   image: location-4
   name: Matri Medical Hub
-  address: NSC Bose Road, Malancha Phari, Kolkata 7002145
+  address: NSC Bose Road, Malancha Phari, Kolkata 7000145
   mapLink: qwiDNnCLKarMp1Tz7
   availableWeekdays:
     - Wed
   email: ''
   phone: '7439384019'
+  website: ''
+
+- id: '5'
+  image: location-5
+  name: Zaman Medical Hall & Doctors Chambers
+  address: Opposite Hospital Gate, Barasat, 14, Jessore Rd, Kolkata 700124
+  mapLink: v4NYL5RW2S2ruVr48
+  availableWeekdays:
+    - Wed
+  email: ''
+  phone: '9830894624'
   website: ''

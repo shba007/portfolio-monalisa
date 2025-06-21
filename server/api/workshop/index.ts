@@ -28,9 +28,11 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
           mapLink: properties.Map.url,
           registrationDate: { start: properties['Registration date'].date.start, end: properties['Registration date'].date.end },
           workshopDate: { start: properties['Workshop date'].date.start, end: properties['Workshop date'].date.end },
-          registerLink: '',
-          paymentLink: generateUpiDeepLink(payment.accountId, payment.vpa, payment.accountName, properties.Cost.number, title),
-          feedbackLink: '',
+          registerLink: Date.now() < new Date(properties['Registration date'].date.end).getTime() ? 'https://monalisa-bairagi.notion.site/1f223e46b4d780708424dc2ea258c899' : null,
+          paymentLink:
+            Date.now() < new Date(properties['Registration date'].date.end).getTime() ? generateUpiDeepLink(payment.accountId, payment.vpa, payment.accountName, properties.Cost.number, title) : null,
+          feedbackLink:
+            Date.now() - new Date(properties['Workshop date'].date.end).getTime() <= 7 * 24 * 60 * 60 * 1000 ? 'https://monalisa-bairagi.notion.site/21923e46b4d78079967fffcf8aa37167' : null,
           url: `/workshop/${id}`,
         }
       })

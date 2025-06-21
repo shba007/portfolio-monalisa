@@ -36,9 +36,9 @@ export interface Workshop {
   place: string
   address: string
   mapLink: string
-  registerLink: string
-  paymentLink: string
-  feedbackLink: string
+  registerLink: string | null
+  paymentLink: string | null
+  feedbackLink: string | null
 }
 
 export interface WorkshopFile extends Omit<Workshop, 'paymentLink'> {
