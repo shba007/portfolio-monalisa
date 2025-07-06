@@ -30,7 +30,9 @@ coverage
 .idea
 
 # Env files
-.env*
+.env
+.env.*
+!.env.example
 
 # Static files
 static/**/*.*

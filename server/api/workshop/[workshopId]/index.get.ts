@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { generateAvatar } from '~~/server/api/testimonial'
+import { generateAvatar } from '~~/server/api/testimonial.get'
 
 export default defineCachedEventHandler(
   async (event) => {

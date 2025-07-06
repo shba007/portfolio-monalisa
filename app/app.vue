@@ -1,16 +1,12 @@
 <script setup lang="ts">
 const title = `RCI Registered Clinical Psychologist in Kolkata`
 const description = `Monalisa Bairagi is a trusted RCI registered clinical psychologist based in Kolkata.
-She provides counseling sessions tailored to your unique needs near Rajpur, Sonarpur, Baruipur, Subhasgram, Harinavi & Narendrapur Area`
-const {
-  public: { siteUrl },
-} = useRuntimeConfig()
+She provides counseling sessions tailored to your unique needs near Garia, Moulali, Malancha bazar`
 
-useHead({
-  bodyAttrs: {
-    class: 'scrollbar-hidden',
-  },
-})
+const {
+  app: { buildTime },
+  public: { siteUrl, vapidKey },
+} = useRuntimeConfig()
 
 useHead({
   htmlAttrs: {
@@ -32,16 +28,19 @@ useSeoMeta({
   fbAppId: 966242223397117,
   twitterCard: 'summary_large_image',
   colorScheme: 'light dark',
-  viewport: {
-    initialScale: 1.0,
-    maximumScale: 1.0,
-    minimumScale: 1.0,
-    userScalable: 'no',
-    viewportFit: 'cover',
-  },
 })
 
 useSchemaOrg([
+  defineWebPage({
+    datePublished: new Date(2023, 10, 22).toISOString(),
+    dateModified: buildTime,
+    author: 'Shirsendu Bairagi',
+  }),
+  defineWebSite({
+    url: siteUrl,
+    name: title,
+    description: description,
+  }),
   definePerson({
     name: 'Monalisa Bairagi',
     description: 'She is a RCI registered clinical psychologist',
@@ -49,7 +48,12 @@ useSchemaOrg([
     sameAs: ['https://linkedin.com/in/monalisa-bairagi', 'https://instagram.com/mindful.healing.path', 'https://youtube.com/@mindful-healing-path'],
   }),
   defineLocalBusiness({
+    '@type': 'ProfessionalService',
     name: 'Monalisa Bairagi',
+    description: description,
+    image: `${siteUrl}/previews/landing.webp`,
+    logo: siteUrl + '/logo.png',
+    url: siteUrl,
     address: {
       streetAddress: 'RN Bhattacharya Road, Kumorpara 2nd Lane',
       addressLocality: 'Kolkata',
@@ -57,30 +61,48 @@ useSchemaOrg([
       postalCode: '700146',
       addressCountry: 'IN',
     },
-    image: siteUrl + '/logo.png',
-  }),
-  defineWebPage({
-    datePublished: new Date(2024, 0, 1).toISOString(),
-    dateModified: new Date(2024, 0, 1).toISOString(),
-    author: 'Shirsendu Bairagi',
-  }),
-  defineWebSite({
-    siteUrl: siteUrl,
-    name: title,
-    description: description,
+    sameAs: ['https://linkedin.com/in/monalisa-bairagi', 'https://instagram.com/mindful.healing.path', 'https://youtube.com/@mindful-healing-path'],
   }),
 ])
+
+const { isSupported, permissionGranted } = useWebNotification()
+
+async function getExistingSubscription() {
+  const registration = await navigator.serviceWorker.ready
+  let subscription = await registration.pushManager.getSubscription()
+
+  if (!subscription) {
+    subscription = await registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: vapidKey,
+    })
+  }
+
+  await $fetch('/api/notification/push/subscribe', {
+    method: 'POST',
+    body: subscription.toJSON(),
+  })
+
+  return subscription
+}
+
+onMounted(async () => {
+  if (isSupported.value && permissionGranted.value) await getExistingSubscription()
+})
+
+watch(permissionGranted, async (value) => {
+  if (value) await getExistingSubscription()
+})
 </script>
 
 <template>
   <NuxtRouteAnnouncer />
-  <NuxtPwaManifest />
   <NuxtPwaAssets />
   <NuxtLoadingIndicator color="#98DA8B" />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
-  <AppInstallPrompt />
+  <LazyAppInstallPrompt hydrate-on-idle />
 </template>
 
 <style>
@@ -103,7 +125,7 @@ html {
 }
 
 body {
-  @apply relative min-h-screen overflow-x-hidden bg-primary-500 fill-black font-main text-black dark:fill-white;
+  @apply relative min-h-screen overflow-x-hidden bg-primary-400 fill-black font-main text-black;
 }
 
 svg.iconify--local {

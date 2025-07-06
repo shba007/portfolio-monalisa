@@ -1,5 +1,3 @@
-// import WAWebJS from 'whatsapp-web.js'
-import { renderANSI } from 'uqr'
 import { consola } from 'consola'
 
 export const messageTemplates = {
@@ -8,6 +6,9 @@ export const messageTemplates = {
 }
 
 export default defineNitroPlugin(async () => {
+  // eslint-disable-next-line no-constant-condition
+  if (!(import.meta.env.NODE_ENV === 'production' && import.meta.env.PLATFORM_ENV !== 'native' && false)) return
+
   consola.info('Whatsapp Bot Initializing...')
 
   whatsapp.on('authenticated', () => {
