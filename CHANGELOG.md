@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.16.0
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.15.0...v1.16.0)
+
+### 🚀 Enhancements
+
+- Create workshop details API endpoint with participant data ([7a83621](https://github.com/Algostract/portfolio-monalisa/commit/7a83621))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.15.0
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.14.4...v1.15.0)
