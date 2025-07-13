@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.17.0
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.16.0...v1.17.0)
+
+### 🚀 Enhancements
+
+- Add tauri for native app ([f2e651e](https://github.com/Algostract/portfolio-monalisa/commit/f2e651e))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.16.0
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.15.0...v1.16.0)
