@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: videos } = await useFetch('/api/video')
+const { data: videos } = await useAPI('/api/video')
 </script>
 
 <template>

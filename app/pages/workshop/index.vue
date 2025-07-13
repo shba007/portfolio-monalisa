@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: workshops } = await useFetch('/api/workshop')
+const { data: workshops } = await useAPI('/api/workshop')
 
 const title = `Workshops`
 const description = `Workshops`

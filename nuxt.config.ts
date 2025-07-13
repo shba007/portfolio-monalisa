@@ -1,3 +1,42 @@
+const host = process.env.TAURI_DEV_HOST || 'localhost'
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3000
+
+const nativeConfig =
+  process.env.PLATFORM_ENV === 'native'
+    ? {
+        ssr: false,
+        devServer: { host },
+        ignore: ['**/src-tauri/**', '**/node_modules/**', '**/dist/**', '**/.git/**', '**/.nuxt/**', '**/.output/**'],
+        vite: {
+          clearScreen: false,
+          envPrefix: ['VITE_', 'TAURI_'],
+          server: {
+            strictPort: true,
+            port,
+            host: host || false,
+            hmr: host
+              ? {
+                  protocol: 'ws',
+                  host,
+                  port,
+                }
+              : undefined,
+          },
+        },
+        nitro: {
+          storage: {
+            fs: {
+              driver: 'fs',
+              base: './static',
+            },
+          },
+          prerender: {
+            routes: [],
+          },
+        },
+      }
+    : {}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
@@ -33,6 +72,7 @@ export default defineNuxtConfig({
     '/_ipx/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/images/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/fonts/**': { headers: { 'cache-control': 'max-age=31536000' } },
+    '/api/**': { cors: true },
     '/locations/**': { redirect: { to: '/location/**', statusCode: 301 } },
     '/location/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/workshops/**': { redirect: { to: '/workshop/**', statusCode: 301 } },
@@ -76,7 +116,7 @@ export default defineNuxtConfig({
   },
   icon: {
     componentName: 'NuxtIcon',
-    provider: 'server',
+    provider: 'none',
     mode: 'svg',
     customCollections: [
       {
@@ -84,6 +124,9 @@ export default defineNuxtConfig({
         dir: './app/assets/icons',
       },
     ],
+    clientBundle: {
+      scan: true,
+    },
   },
   image: {
     format: ['avif', 'webp'],
@@ -306,4 +349,5 @@ export default defineNuxtConfig({
   splide: {
     theme: 'core',
   },
+  ...nativeConfig,
 })

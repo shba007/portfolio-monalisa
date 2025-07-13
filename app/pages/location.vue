@@ -18,7 +18,7 @@ useSeoMeta({
   ogUrl: `${siteUrl}/location`,
 })
 
-const { data } = await useFetch('/api/location')
+const { data } = await useAPI('/api/location')
 </script>
 
 <template>

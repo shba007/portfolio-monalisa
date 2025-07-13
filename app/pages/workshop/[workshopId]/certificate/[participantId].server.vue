@@ -7,7 +7,7 @@ definePageMeta({
   layout: false,
 })
 
-const { data } = await useFetch(`/api/workshop/${workshopId}/certificate/${participantId}`)
+const { data } = await useAPI(`/api/workshop/${workshopId}/certificate/${participantId}`)
 
 if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Certificate not found', fatal: true })

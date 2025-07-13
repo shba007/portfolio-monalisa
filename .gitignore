@@ -18,10 +18,11 @@ logs
 .fleet
 .idea
 
-# Local env files
+# Env files
 .env
 .env.*
 !.env.example
+!.env.native
 
 # Static files
 static/**/*.*

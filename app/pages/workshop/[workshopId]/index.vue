@@ -2,7 +2,7 @@
 const route = useRoute()
 const workshopId = route.params.workshopId?.toString()
 
-const { data: workshop } = await useFetch(`/api/workshop/${workshopId}`)
+const { data: workshop } = await useAPI(`/api/workshop/${workshopId}`)
 
 if (!workshop.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })

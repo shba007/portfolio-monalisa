@@ -16,7 +16,7 @@ const splideOption = {
   },
 }
 
-const { data: testimonials } = await useFetch('/api/testimonial')
+const { data: testimonials } = await useAPI('/api/testimonial')
 </script>
 
 <template>
