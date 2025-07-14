@@ -63,7 +63,7 @@
     "date-fns": "^4.1.0",
     "eslint": "^9.31.0",
     "notion-to-md": "^3.1.9",
-    "nuxt": "^3.17.6",
+    "nuxt": "^3.17.7",
     "nuxt-splide": "^1.1.1",
     "vue": "latest",
     "vue-router": "latest",
