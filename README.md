@@ -82,3 +82,11 @@ docker service scale portfolio-monalisa_app=2
 docker service ls
 docker service ps portfolio-monalisa_app
 ```
+
+## License
+
+Published under the [GNU GPLv3](https://github.com/shba007/portfolio-monalisa/blob/main/LICENSE) license.
+<br><br>
+<a href="https://github.com/shba007/portfolio-monalisa/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=shba007/portfolio-monalisa" />
+</a>

@@ -39,7 +39,7 @@ const nativeConfig =
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-05-15',
   future: {
     compatibilityVersion: 4,
   },
@@ -164,7 +164,8 @@ export default defineNuxtConfig({
       description: 'Monalisa Bairagi is a RCI registered clinical psychologist',
       theme_color: '#98DA8B',
       background_color: '#98DA8B',
-      orientation: 'portrait',
+      orientation: 'any',
+      display: 'fullscreen',
       shortcuts: [
         {
           name: 'Book an Appointment by call',

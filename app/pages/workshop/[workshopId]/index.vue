@@ -33,5 +33,10 @@ useSeoMeta({
 <template>
   <section v-if="workshop" class="relative flex h-[calc(100vh-3.375rem)] items-center justify-center gap-4 overflow-hidden p-[1px] lg:h-[calc(100vh-4.5rem)]">
     <NuxtImg :src="workshop.image" :alt="workshop.name" fit="fill" format="webp" loading="lazy" class="h-full rounded-sm object-contain dark:bg-dark-500" />
+    <!---
+    <div class="relative flex h-full w-fit flex-wrap justify-center gap-5 overflow-y-auto py-4">
+      <CardWorkshopParticipant v-for="{ id, name, image } in workshop.participants" :id="id" :key="id" :name="name" :image="image" :workshop-id="workshop.id" />
+    </div>
+    -->
   </section>
 </template>
