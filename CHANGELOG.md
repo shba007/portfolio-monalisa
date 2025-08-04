@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.17.2
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.17.1...v1.17.2)
+
+### 🏡 Chore
+
+- Update nuxt configuration and package dependencies ([1e710aa](https://github.com/Algostract/portfolio-monalisa/commit/1e710aa))
+
+### ❤️ Contributors
+
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.17.1
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.17.0...v1.17.1)
