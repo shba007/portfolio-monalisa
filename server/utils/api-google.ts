@@ -1,6 +1,6 @@
 let oauthAccessToken: string | null = null
 
-export default async function apiFetch<T>(
+export default async function apiGoogle<T>(
   path: string,
   options: {
     baseURL: string
@@ -45,7 +45,7 @@ export default async function apiFetch<T>(
       })
 
       oauthAccessToken = tokens.access_token
-      return apiFetch<T>(path, { ...options, _retry: true })
+      return apiGoogle<T>(path, { ...options, _retry: true })
     }
 
     throw err

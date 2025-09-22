@@ -17,13 +17,14 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
 
       const results = workshops.map(({ id, cover, properties }) => {
         const title = notionTextStringify(properties.Name.title)
+
         if (properties.Status.status.name !== 'Live' && properties.Status.status.name !== 'Complete') return null
 
         return {
           id,
           name: title,
           image: cover?.type === 'external' ? cover.external?.url : '',
-          place: properties.Place.select.name,
+          place: properties.Place.select?.name ?? '',
           address: notionTextStringify(properties.Address.rich_text),
           mapLink: properties.Map.url,
           registrationDate: { start: properties['Registration date'].date.start, end: properties['Registration date'].date.end },

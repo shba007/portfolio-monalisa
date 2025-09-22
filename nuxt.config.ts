@@ -1,3 +1,5 @@
+import vue from '@vitejs/plugin-vue'
+
 const host = process.env.TAURI_DEV_HOST || 'localhost'
 const port = process.env.PORT ? parseInt(process.env.PORT) : 3000
 
@@ -30,6 +32,9 @@ const nativeConfig =
               base: './static',
             },
           },
+          rollupConfig: {
+            plugins: [vue()],
+          },
           prerender: {
             routes: [],
           },
@@ -45,6 +50,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   modules: [
+    // '@hannoeru/nuxt-otel',
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
@@ -57,6 +63,7 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@vueuse/nuxt',
     'nuxt-splide',
+    'nuxt-nodemailer',
   ],
   nitro: {
     compressPublicAssets: true,
@@ -66,7 +73,22 @@ export default defineNuxtConfig({
         base: './static',
       },
     },
+    rollupConfig: {
+      plugins: [vue()],
+    },
   },
+  /*   vite: {
+      // FIXME: temporary fix for email remove when not needed
+      $server: {
+        build: {
+          rollupOptions: {
+            output: {
+              preserveModules: true,
+            },
+          },
+        },
+      },
+    }, */
   routeRules: {
     '/': { swr: true },
     '/_ipx/**': { headers: { 'cache-control': 'max-age=31536000' } },
@@ -77,7 +99,7 @@ export default defineNuxtConfig({
     '/location/**': { headers: { 'cache-control': 'max-age=31536000' } },
     '/workshops/**': { redirect: { to: '/workshop/**', statusCode: 301 } },
     '/workshop/**': { headers: { 'cache-control': 'max-age=31536000' } },
-    '/about': { ssr: true },
+    '/about': { isr: true },
   },
   runtimeConfig: {
     app: {
@@ -95,8 +117,10 @@ export default defineNuxtConfig({
     },
     private: {
       rootDir: '',
-      notionApiKey: '',
       notionDbId: '',
+      vapidKey: '',
+      vapidSubject: '',
+      emailMetaData: '',
       youtubeBaseUrl: '',
       youtubeAnalyticsUrl: '',
       youtubeChannelId: '',

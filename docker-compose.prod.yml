@@ -1,13 +1,14 @@
 version: '3.9'
 services:
   app:
-    image: 'ghcr.io/algostract/portfolio-monalisa:latest'
+    image: ghcr.io/algostract/portfolio-monalisa:latest
+    env_file:
+      - .env
     volumes:
       - portfolio-monalisa_static:/app/static
-    env_file:
-      - .env.prod
-    ports:
-      - 4200:3000
+      - portfolio-monalisa_data:/app/.data
+    expose:
+      - 3000
     networks:
       - front-tier
     deploy:
@@ -18,7 +19,17 @@ services:
 
 volumes:
   portfolio-monalisa_static:
-    external: true
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /root/portfolio-monalisa/static
+  portfolio-monalisa_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /root/portfolio-monalisa/.data
 
 networks:
   front-tier:

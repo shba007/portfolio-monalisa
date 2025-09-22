@@ -79,7 +79,7 @@ export default defineCachedEventHandler<Promise<Video[]>>(
 
             const publishedDate = parseISO(snippet.publishedAt)
 
-            const { rows } = await apiFetch<{ rows: string[][] }>('/reports', {
+            const { rows } = await apiGoogle<{ rows: string[][] }>('/reports', {
               baseURL: youtubeAnalyticsUrl,
               query: {
                 ids: `channel==${youtubeChannelId}`,
