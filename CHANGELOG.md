@@ -1,5 +1,18 @@
 # porfolio-monalisa
 
+## v1.17.3
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.17.2...v1.17.3)
+
+### 🏡 Chore
+
+- Update Tauri dependencies to latest versions (tauri-build 2.4.1, tauri 2.8.5) ([a262806](https://github.com/Algostract/portfolio-monalisa/commit/a262806))
+- Remove deprecated blog API handler ([92722a9](https://github.com/Algostract/portfolio-monalisa/commit/92722a9))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.17.2
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.17.1...v1.17.2)
