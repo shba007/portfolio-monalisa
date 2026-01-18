@@ -29,3 +29,5 @@ static/**/*.*
 !static/**/*.gitkeep
 !static/data/*
 static/data/testimonials.yml
+# Test coverage
+coverage/

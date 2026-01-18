@@ -128,13 +128,6 @@ export default defineNuxtConfig({
       paymentUpiInfo: '',
     },
   },
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
-    },
-  },
   icon: {
     componentName: 'NuxtIcon',
     provider: 'none',
