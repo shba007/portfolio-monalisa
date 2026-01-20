@@ -66,7 +66,7 @@
     "nodemailer": "^7.0.6",
     "notion-to-md": "^3.1.9",
     "nuxt": "^4.1.2",
-    "nuxt-nodemailer": "1.1.2",
+    "nuxt-nodemailer": "1.1.4",
     "nuxt-splide": "^1.1.2",
     "vue": "latest",
     "vue-router": "latest",
