@@ -1,5 +1,20 @@
 # porfolio-monalisa
 
+## v1.17.4
+
+[compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.17.3...v1.17.4)
+
+### 🏡 Chore
+
+- Deps updated ([6f80ca3](https://github.com/Algostract/portfolio-monalisa/commit/6f80ca3))
+- Update docker-compose and nuxt configuration ([374af92](https://github.com/Algostract/portfolio-monalisa/commit/374af92))
+- Update nuxt.config.ts and package.json for improved configuration and dependencies ([963bd91](https://github.com/Algostract/portfolio-monalisa/commit/963bd91))
+- Update dependencies and package manager version ([6641088](https://github.com/Algostract/portfolio-monalisa/commit/6641088))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.17.3
 
 [compare changes](https://github.com/Algostract/portfolio-monalisa/compare/v1.17.2...v1.17.3)
