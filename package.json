@@ -1,12 +1,12 @@
 {
-  "name": "porfolio-monalisa",
+  "name": "portfolio-monalisa",
   "version": "1.17.3",
   "description": "Monalisa's portfolio showcasing her experience and contacts in a visually appealing manner",
   "author": "Shirsendu Bairagi <shirsendu2001@gmail.com>",
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Algostract/portfolio-monalisa.git"
+    "url": "git+https://github.com/shba007/portfolio-monalisa.git"
   },
   "type": "module",
   "private": true,
@@ -81,12 +81,12 @@
   "devDependencies": {
     "@commitlint/cli": "^20.4.1",
     "@commitlint/config-conventional": "^20.4.1",
-    "@tauri-apps/cli": "^2.9.6",
+    "@tauri-apps/cli": "^2.10.0",
     "@vitest/coverage-v8": "^4.0.18",
     "@vue-email/components": "^0.0.21",
     "@vue-email/render": "^0.0.9",
     "@vue/test-utils": "^2.4.6",
-    "happy-dom": "^20.4.0",
+    "happy-dom": "^20.5.0",
     "husky": "^9.1.7",
     "playwright-core": "^1.58.1",
     "prettier": "^3.8.1",
