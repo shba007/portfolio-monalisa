@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import * as z from 'zod'
 import { generateAvatar } from '~~/server/api/testimonial.get'
 
 export default defineCachedEventHandler(
