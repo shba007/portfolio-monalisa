@@ -59,7 +59,7 @@ export function generateAvatar(name: string, gender: 'male' | 'female') {
 
 function shortenName(name: string) {
   const [firstName, lastName] = name.split(' ')
-  return `${firstName[0]}. ${lastName}`
+  return `${firstName![0]}. ${lastName}`
 }
 
 export default defineCachedEventHandler<Promise<Testimonial[]>>(
@@ -68,9 +68,7 @@ export default defineCachedEventHandler<Promise<Testimonial[]>>(
       const config = useRuntimeConfig()
 
       const notionDbId = config.private.notionDbId as unknown as { testimonial: string }
-      const data = await notion.databases.query({ database_id: notionDbId.testimonial })
-
-      const testimonials = data.results as unknown as NotionTestimonial[]
+      const testimonials = await notionQueryDb<NotionTestimonial>(notion, notionDbId.testimonial)
 
       if (!testimonials) throw createError({ statusCode: 500, statusMessage: 'testimonials is undefined' })
 

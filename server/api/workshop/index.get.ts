@@ -4,11 +4,7 @@ export default defineCachedEventHandler<Promise<Workshop[]>>(
       const config = useRuntimeConfig()
       const notionDbId = config.private.notionDbId as unknown as NotionDB
 
-      const data = await notion.databases.query({
-        database_id: notionDbId.workshop,
-      })
-
-      const workshops = data.results as unknown as NotionWorkshop[]
+      const workshops = await notionQueryDb<NotionWorkshop>(notion, notionDbId.workshop)
       const payment = config.private.paymentUpiInfo as unknown as {
         accountName: string
         accountId: string

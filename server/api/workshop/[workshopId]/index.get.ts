@@ -25,11 +25,7 @@ export default defineCachedEventHandler(
 
       const title = notionTextStringify(workshop.properties.Name.title)
 
-      const participants = (
-        await notion.databases.query({
-          database_id: notionDbId.participant,
-        })
-      ).results as unknown as NotionParticipant[]
+      const participants = await notionQueryDb<NotionParticipant>(notion, notionDbId.participant)
 
       return {
         id: workshop.id,
