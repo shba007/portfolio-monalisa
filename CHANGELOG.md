@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.17.6
+
+[compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.17.5...v1.17.6)
+
+### 🏡 Chore
+
+- Update dependencies and improve API data fetching ([862978d](https://github.com/shba007/portfolio-monalisa/commit/862978d))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.17.5
 
 [compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.17.3...v1.17.5)
