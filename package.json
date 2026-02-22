@@ -43,8 +43,8 @@
     "test:nuxt": "vitest --project nuxt"
   },
   "dependencies": {
-    "@dicebear/collection": "^9.3.1",
-    "@dicebear/core": "^9.3.1",
+    "@dicebear/collection": "^9.3.2",
+    "@dicebear/core": "^9.3.2",
     "@dotenvx/dotenvx": "^1.52.0",
     "@hannoeru/nuxt-otel": "^0.0.8",
     "@notionhq/client": "^5.9.0",
