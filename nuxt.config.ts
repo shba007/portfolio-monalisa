@@ -55,6 +55,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils/module',
     '@nuxtjs/color-mode',
+    '@nuxtjs/mcp-toolkit',
     '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
     '@vite-pwa/nuxt',
@@ -155,6 +156,10 @@ export default defineNuxtConfig({
     preference: 'light',
     fallback: 'light',
     classSuffix: '',
+  },
+  mcp: {
+    name: 'Monalisa Bairagi MCP Server',
+    version: '1.0.0',
   },
   site: {
     name: 'Monalisa Bairagi',

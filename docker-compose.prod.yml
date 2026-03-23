@@ -1,7 +1,6 @@
-version: '3.9'
 services:
   app:
-    image: ghcr.io/algostract/portfolio-monalisa:latest
+    image: ghcr.io/shba007/portfolio-monalisa:latest
     env_file:
       - .env
     volumes:
