@@ -1,5 +1,21 @@
 # porfolio-monalisa
 
+## v1.18.0
+
+[compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.17.6...v1.18.0)
+
+### 🚀 Enhancements
+
+- Added mcp server and updated packages ([3e9d452](https://github.com/shba007/portfolio-monalisa/commit/3e9d452))
+
+### 🩹 Fixes
+
+- Update keystore filename in .gitignore for Android build ([4c265cc](https://github.com/shba007/portfolio-monalisa/commit/4c265cc))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.17.6
 
 [compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.17.5...v1.17.6)
