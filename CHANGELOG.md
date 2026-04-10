@@ -1,5 +1,21 @@
 # porfolio-monalisa
 
+## v1.18.1
+
+[compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.0...v1.18.1)
+
+### 💅 Refactors
+
+- Update dependencies and add new plugins ([959efae](https://github.com/shba007/portfolio-monalisa/commit/959efae))
+
+### 🏡 Chore
+
+- Update dependencies and Node.js engine version in package.json ([06f5771](https://github.com/shba007/portfolio-monalisa/commit/06f5771))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.18.0
 
 [compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.17.6...v1.18.0)
