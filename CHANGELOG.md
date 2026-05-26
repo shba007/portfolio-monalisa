@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.18.3
+
+[compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.2...v1.18.3)
+
+### 🏡 Chore
+
+- Update dependencies and pnpm version in package.json ([b4de353](https://github.com/shba007/portfolio-monalisa/commit/b4de353))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.18.2
 
 [compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.0...v1.18.2)
