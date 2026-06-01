@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/shba007/portfolio-monalisa:latest
+    image: ghcr.io/shba007/portfolio-monalisa:latest@sha256:f726fb4771367c7555c606f2653db8261e02652239221ac26650da13657f9ae1
     env_file:
       - .env
     volumes:
