@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@dicebear/collection": "^9.4.2",
-    "@dicebear/core": "^9.4.2",
+    "@dicebear/core": "^10.0.1",
     "@dotenvx/dotenvx": "^1.66.0",
     "@hannoeru/nuxt-otel": "^0.0.8",
     "@notionhq/client": "^5.22.0",
