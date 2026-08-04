@@ -1,5 +1,25 @@
 # porfolio-monalisa
 
+## v1.18.4
+
+[compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.2...v1.18.4)
+
+### 🏡 Chore
+
+- Update dependencies and pnpm version in package.json ([b4de353](https://github.com/shba007/portfolio-monalisa/commit/b4de353))
+- Update dependencies to latest versions ([70cce8c](https://github.com/shba007/portfolio-monalisa/commit/70cce8c))
+- Update nuxt.config.ts for improved configuration and meta structure ([cfb32e3](https://github.com/shba007/portfolio-monalisa/commit/cfb32e3))
+
+### 🤖 CI
+
+- **release:** Update version ([fcf3181](https://github.com/shba007/portfolio-monalisa/commit/fcf3181))
+- **release:** Update version ([3f8c7cf](https://github.com/shba007/portfolio-monalisa/commit/3f8c7cf))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+- Shba007 ([@shba007](https://github.com/shba007))
+
 ## v1.18.3
 
 [compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.2...v1.18.3)
