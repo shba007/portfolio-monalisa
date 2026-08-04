@@ -25,8 +25,8 @@ COPY --from=builder /app/.output ./.output
 COPY --from=builder /app/node_modules/@emotion ./.output/server/node_modules/@emotion
 
 ENV NODE_ENV=production
-ENV NUXT_APP_VERSION=$VERSION
-ENV NUXT_APP_BUILD_TIME=$BUILD_TIME
+ENV NUXT_META_VERSION=$VERSION
+ENV NUXT_META_BUILD_TIME=$BUILD_TIME
 
 EXPOSE 3000
 

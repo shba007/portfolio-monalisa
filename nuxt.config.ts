@@ -100,7 +100,7 @@ export default defineNuxtConfig({
     '/about': { isr: true },
   },
   runtimeConfig: {
-    app: {
+    meta: {
       version: '',
       buildTime: '',
     },
