@@ -1,5 +1,5 @@
-import { createAvatar } from '@dicebear/core'
-import { micah } from '@dicebear/collection'
+import { Style, Avatar } from '@dicebear/core'
+import definition from '@dicebear/styles/micah.json'
 
 interface NotionTestimonial {
   id: string
@@ -40,16 +40,17 @@ interface NotionTestimonial {
 }
 
 export function generateAvatar(name: string, gender: 'male' | 'female') {
-  const avatar = createAvatar(micah, {
+  const style = new Style(definition)
+  const avatar = new Avatar(style, {
     seed: name,
     baseColor: ['ac6651', 'f9c9b6'],
     backgroundColor: ['b6e3f4', 'c0aede', 'd1d4f9'],
-    mouth: ['laughing', 'smile', 'smirk'],
-    scale: 70,
+    mouthVariant: ['laughing', 'smile', 'smirk'],
+    scale: 1,
     translateY: 12,
-    shirt: gender === 'female' ? ['open'] : ['collared', 'crew'],
-    hair: gender === 'female' ? ['dannyPhantom', 'full', 'pixie'] : ['fonze', 'mrClean', 'turban'],
-    eyebrows: gender === 'female' ? ['eyelashesDown', 'eyelashesUp'] : ['down', 'up'],
+    // shirt: gender === 'female' ? ['open'] : ['collared', 'crew'],
+    hairVariant: gender === 'female' ? ['dannyPhantom', 'full', 'pixie'] : ['fonze', 'mrClean', 'turban'],
+    eyebrowsVariant: gender === 'female' ? ['eyelashesDown', 'eyelashesUp'] : ['down', 'up'],
     facialHairProbability: gender === 'female' ? 0 : 100,
     earringsProbability: gender === 'female' ? 100 : 0,
   })
