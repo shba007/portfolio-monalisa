@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.18.5
+
+[compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.4...v1.18.5)
+
+### 🏡 Chore
+
+- Update dependencies and package manager version ([c41b2bf](https://github.com/shba007/portfolio-monalisa/commit/c41b2bf))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.18.4
 
 [compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.2...v1.18.4)
