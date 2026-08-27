@@ -23,6 +23,7 @@ WORKDIR /app
 
 COPY --from=builder /app/.output ./.output
 COPY --from=builder /app/node_modules/@emotion ./.output/server/node_modules/@emotion
+COPY --from=builder /app/node_modules/srvx ./.output/server/node_modules/srvx
 
 ENV NODE_ENV=production
 ENV NUXT_META_VERSION=$VERSION

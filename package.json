@@ -43,7 +43,6 @@
     "test:nuxt": "vitest --project nuxt"
   },
   "dependencies": {
-    "@dicebear/collection": "^9.4.2",
     "@dicebear/core": "^10.7.0",
     "@dicebear/styles": "^10.6.0",
     "@dotenvx/dotenvx": "^2.21.0",
@@ -99,12 +98,8 @@
     "vitest": "^4.1.11"
   },
   "trustedDependencies": [
-    "@parcel/watcher",
-    "esbuild",
     "maplibre-gl",
     "protobufjs",
-    "sharp",
-    "unrs-resolver",
-    "vue-demi"
+    "unrs-resolver"
   ]
 }
