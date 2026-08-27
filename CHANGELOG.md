@@ -1,5 +1,17 @@
 # porfolio-monalisa
 
+## v1.18.6
+
+[compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.5...v1.18.6)
+
+### 🏡 Chore
+
+- Remove unused dependencies from package.json ([99c54af](https://github.com/shba007/portfolio-monalisa/commit/99c54af))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.18.5
 
 [compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.4...v1.18.5)
