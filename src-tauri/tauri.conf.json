@@ -35,6 +35,15 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IHJzaWduIGVuY3J5cHRlZCBzZWNyZXQga2V5ClJXUlRZMEl5MDUwUzhqQisxcDQ2MHlzZEFzZW5IbnVZTVRWaFFpSDIvbEJtTmVLdllsc0FBQkFBQUFBQUFBQUFBQUlBQUFBQVVMaXlHeWpOUVFKSFp1YUVHa3pZdUFwSXgzNGZueFNUVmFxTlpXbFcrZGVmSHFaR3BYRWJneXdXN0JuRkdLczkyK3k2a1BYbk94RHU5MGg2TjJPczE4N1l4dzFrbTNlOC9CUVRROXByalJiSTNUSmJkQkVnSmwyU0NuNWtRM2lHb2h4VGtDZTh3LzA9Cg==",
+      "endpoints": [
+        "https://github.com/shba007/portfolio-monalisa/releases/latest/download/latest.json"
+      ]
+    }
   }
 }
