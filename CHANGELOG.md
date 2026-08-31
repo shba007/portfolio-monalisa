@@ -1,5 +1,18 @@
 # porfolio-monalisa
 
+## v1.18.7
+
+[compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.6...v1.18.7)
+
+### 🏡 Chore
+
+- Update dependencies and add new capabilities ([990a93c](https://github.com/shba007/portfolio-monalisa/commit/990a93c))
+- Update deploy workflow for Tauri signing and Android NDK version ([eabbd4d](https://github.com/shba007/portfolio-monalisa/commit/eabbd4d))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.18.6
 
 [compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.5...v1.18.6)
