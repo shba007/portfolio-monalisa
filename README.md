@@ -28,25 +28,7 @@
 
 ## How to Deploy
 
-1. Initialize Swarm on the Manager Node
-
-```bash
-docker swarm init --advertise-addr <MANAGER-IP>
-```
-
-2. Join Worker Nodes to the Swarm
-
-```bash
-docker swarm join --token <WORKER-TOKEN> <MANAGER-IP>:2377
-```
-
-3. Check Node Status
-
-```bash
-docker node ls
-```
-
-4. Create a docker volume
+1. Create a docker volume
 
 ```bash
 docker volume create \
@@ -64,23 +46,10 @@ docker volume create \
   --opt o=bind
 ```
 
-5. Use Docker Stack to deploy multi-container application
+2. Use Docker Stack to deploy multi-container application
 
 ```bash
 docker stack deploy --compose-file docker-compose.prod.yml portfolio-monalisa
-```
-
-6. Scale service
-
-```bash
-docker service scale portfolio-monalisa_app=2
-```
-
-7. Verify
-
-```bash
-docker service ls
-docker service ps portfolio-monalisa_app
 ```
 
 ## License
