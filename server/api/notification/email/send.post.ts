@@ -1,23 +1,22 @@
-import type { EmailTemplateData } from '~~/server/emails'
-import type { TransactionalEmail } from './[id]/send.post'
-import { sendEmail } from './[id]/send.post'
+import type { EmailPayload } from '~~/server/utils/email'
 
 export default defineEventHandler<Promise<{ success: boolean }>>(async (event) => {
   try {
-    const body = await readBody<TransactionalEmail<keyof EmailTemplateData>>(event)
+    const body = await readBody<EmailPayload>(event)
 
-    return { success: await sendEmail(body.template, [body.data]) }
+    const success = await sendEmail(body)
+
+    return { success }
   } catch (error: unknown) {
-    const { code: errorCode } = error as { code?: string }
-    if (errorCode === 'ESOCKET' || errorCode === 'ECONNECTION') {
-      throw createError({ statusCode: 500, statusMessage: 'Failed to establish secure SMTP connection. Please check SSL/TLS settings.' })
+    if (error instanceof Error && 'statusCode' in error) {
+      throw error
     }
 
     console.error('API notification/email/send POST', error)
 
     throw createError({
       statusCode: 500,
-      statusMessage: 'Some Unknown Error Found',
+      statusMessage: 'Failed to send email via external API',
     })
   }
 })

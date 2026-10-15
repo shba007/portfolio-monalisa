@@ -61,7 +61,6 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@vueuse/nuxt',
     'nuxt-splide',
-    'nuxt-nodemailer',
   ],
   nitro: {
     compressPublicAssets: true,
@@ -75,18 +74,6 @@ export default defineNuxtConfig({
       plugins: [vue()],
     },
   },
-  /*   vite: {
-      // FIXME: temporary fix for email remove when not needed
-      $server: {
-        build: {
-          rollupOptions: {
-            output: {
-              preserveModules: true,
-            },
-          },
-        },
-      },
-    }, */
   routeRules: {
     '/': { swr: true },
     '/_ipx/**': { headers: { 'cache-control': 'max-age=31536000' } },
@@ -118,7 +105,9 @@ export default defineNuxtConfig({
       notionDbId: '',
       vapidKey: '',
       vapidSubject: '',
-      emailMetaData: '',
+      emailApiKey: '',
+      emailApiUrl: '',
+      emailFrom: '',
       youtubeBaseUrl: '',
       youtubeAnalyticsUrl: '',
       youtubeChannelId: '',
@@ -149,8 +138,13 @@ export default defineNuxtConfig({
   },
   scripts: {
     registry: {
-      googleAnalytics: true,
+      googleAnalytics: {
+        trigger: 'onNuxtReady',
+      },
     },
+  },
+  aiReady: {
+    database: false,
   },
   colorMode: {
     preference: 'light',

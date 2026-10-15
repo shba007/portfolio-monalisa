@@ -1,4 +1,4 @@
-name: 'portfolio-monalisa-dev'
+name: 'psychologist-portfolio-dev'
 services:
   app:
     build: .
