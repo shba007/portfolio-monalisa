@@ -159,6 +159,9 @@ export default defineNuxtConfig({
     name: 'Monalisa Bairagi',
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },
+  ogImage: {
+    browser: true,
+  },
   sitemap: {
     autoLastmod: true,
     sources: ['/api/__sitemap__/urls'],

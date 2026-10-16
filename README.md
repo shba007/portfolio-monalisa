@@ -19,23 +19,23 @@
   <a href="https://github.com/shba007/portfolio-monalisa/releases">
     <img src="https://img.shields.io/github/v/release/shba007/portfolio-monalisa?include_prereleases&color=98DA8B&style=flat-square" alt="GitHub Release" />
   </a>
-  <a href="https://nuxt.com">
-    <img src="https://img.shields.io/badge/Nuxt-4.5-00DC82?logo=nuxt.js&logoColor=white&style=flat-square" alt="Nuxt 4" />
-  </a>
   <a href="https://bun.sh">
     <img src="https://img.shields.io/badge/Bun-1.4.0-black?logo=bun&logoColor=white&style=flat-square" alt="Bun 1.4" />
   </a>
   <a href="https://tauri.app">
-    <img src="https://img.shields.io/badge/Tauri-v2-FFC131?logo=tauri&logoColor=black&style=flat-square" alt="Tauri v2" />
+    <img src="https://img.shields.io/badge/Tauri-2.12-24C8DB?logo=tauri&logoColor=white" alt="Tauri 2">
+  </a>
+  <a href="https://nuxt.com">
+    <img src="https://img.shields.io/badge/Nuxt-4.5.2-00DC82?logo=nuxt" alt="Nuxt 4">
   </a>
   <a href="https://github.com/shba007/portfolio-monalisa/actions/workflows/integrate.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/shba007/portfolio-monalisa/integrate.yml?branch=develop&label=CI&style=flat-square" alt="Nuxt CI" />
+    <img src="https://github.com/shba007/portfolio-monalisa/actions/workflows/integrate.yml/badge.svg" alt="Nuxt CI Status">
   </a>
   <a href="https://github.com/shba007/portfolio-monalisa/pkgs/container/portfolio-monalisa">
     <img src="https://img.shields.io/badge/Docker-GHCR-2496ED?logo=docker&logoColor=white&style=flat-square" alt="Docker GHCR" />
   </a>
   <a href="https://github.com/shba007/portfolio-monalisa/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg?style=flat-square" alt="License: GPL-3.0-only" />
+    <img src="https://img.shields.io/github/license/shba007/portfolio-monalisa?color=98DA8B" alt="License: GPL-3.0">
   </a>
 </p>
 
@@ -58,11 +58,11 @@ The system connects directly to Notion databases as a headless CMS for dynamic w
 
 ---
 
-## Visual Previews
+## Visual Preview
 
-|                                                                  Landing Page                                                                  |                                                              About & Practice                                                              |                                                                  Clinic Locations                                                                  |
-| :--------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://raw.githubusercontent.com/shba007/portfolio-monalisa/main/public/previews/landing.webp" alt="Landing Preview" width="280" /> | <img src="https://raw.githubusercontent.com/shba007/portfolio-monalisa/main/public/previews/about.webp" alt="About Preview" width="280" /> | <img src="https://raw.githubusercontent.com/shba007/portfolio-monalisa/main/public/previews/locations.webp" alt="Locations Preview" width="280" /> |
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shba007/portfolio-monalisa/main/public/previews/landing.webp" alt="Psychologist Portfolio Landing Page Preview" width="800" />
+</p>
 
 ---
 
