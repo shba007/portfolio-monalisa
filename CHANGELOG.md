@@ -1,5 +1,21 @@
 # porfolio-monalisa
 
+## v1.19.0
+
+[compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.8...v1.19.0)
+
+### 🚀 Enhancements
+
+- Add performance load testing script using k6 ([c3718d3](https://github.com/shba007/portfolio-monalisa/commit/c3718d3))
+
+### 💅 Refactors
+
+- Rename from "portfolio-monalisa" to "psychologist-portfolio" and update related files ([b74d98a](https://github.com/shba007/portfolio-monalisa/commit/b74d98a))
+
+### ❤️ Contributors
+
+- Shirsendu Bairagi ([@shba007](https://github.com/shba007))
+
 ## v1.18.8
 
 [compare changes](https://github.com/shba007/portfolio-monalisa/compare/v1.18.7...v1.18.8)
